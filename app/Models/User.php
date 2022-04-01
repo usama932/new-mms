@@ -48,20 +48,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function role()
-    {
-        return $this->hasOne('App\Models\Role_user');
-    }
-    public function orders()
-    {
-        return $this->hasMany(Order::class);
-    }
-    public function news()
-    {
-        return $this->hasMany(News::class,'added_by','id');
-    }
-    public function products()
-    {
-        return $this->hasMany(Product::class,'added_by','id');
-    }
+    // public function role()
+    // {
+    //     return $this->hasOne('App\Models\Role_user');
+    // }
+    // public function orders()
+    // {
+    //     return $this->hasMany(Order::class);
+    // }
+    // public function news()
+    // {
+    //     return $this->hasMany(News::class,'added_by','id');
+    // }
+    // public function products()
+    // {
+    //     return $this->hasMany(Product::class,'added_by','id');
+    // }
 }
