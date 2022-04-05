@@ -80,7 +80,7 @@
                                     </a>
                                 </li>
 
-                                </li>  -->
+                                </li>
 
                             </ul> .
                         </div><!-- .nk-sidebar-menu -->
@@ -136,8 +136,7 @@
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
                                                     <li><a href="{{route('customer_profiles.index')}}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                </ul> -->
-                                            </div>
+                                                </ul>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
 

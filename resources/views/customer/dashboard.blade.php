@@ -206,13 +206,13 @@
             </div>
          </div>
          @endforeach
-         
+
       </div>
    </div>
    <!-- .col -->
    <!-- <div class="nk-block-between">
       <div class="nk-block-head-content">
-      
+
           <h4 class="nk-block-title page-title m-2">Discover Exclusive Products</h4>
       </div>
       </div> -->
@@ -227,7 +227,7 @@
    </div>
    <!-- .nk-block-head -->
    <div class="slider-init row" data-slick='{"slidesToShow": 4, "centerMode": false, "slidesToScroll": 1, "infinite":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 3}},{"breakpoint": 992,"settings":{"slidesToShow": 2}}, {"breakpoint": 576,"settings":{"slidesToShow": 1}} ]}'>
-    @foreach($products as $product)  
+    @foreach($products as $product)
     <div class="col">
          <div class="card card-bordered product-card">
             <div class="product-thumb bg-lighter">
@@ -252,7 +252,7 @@
          </div>
       </div>
       <!-- .col -->
-      
+
       <!-- .col -->
    </div>
    @endforeach
