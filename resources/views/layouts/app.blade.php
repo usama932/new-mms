@@ -116,8 +116,15 @@
                                                     <em class="icon ni ni-user-alt  "></em>
                                                 </div>
                                                 <div class="user-info d-none d-xl-block  ">
-                                                    <div  style="color: #DBAE58;"   class="user-status user-status-active ">{{Auth::user()->name}}</div>
-                                                    <div class="user-name dropdown-indicator">{{Auth::user()->email}}</div>
+                                                    @if(!Auth::check())
+                                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                                                    @else
+                                                        <div  style="color: #DBAE58;"   class="user-status user-status-active ">{{Auth::user()->name}}</div>
+                                                        <div class="user-name dropdown-indicator">{{Auth::user()->email}}</div>
+
+                                                    @endif
+
                                                 </div>
                                             </div>
                                         </a>
@@ -128,8 +135,14 @@
                                                         <span>AB</span>
                                                     </div>
                                                     <div class="user-info" >
+                                                    @if(!Auth::check())
+                                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                                                    @else
                                                         <span class="lead-text" >{{Auth::user()->name}}</span>
                                                         <span class="sub-text">{{Auth::user()->name}}</span>
+
+                                                    @endif
                                                     </div>
                                                 </div>
                                             </div>
