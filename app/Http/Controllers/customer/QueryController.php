@@ -38,7 +38,21 @@ class QueryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = null;
+        if ($image = $request->file('attachments')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+           $image =  $image->move($destinationPath, $profileImage);
+        }
+
+        Query::create([
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'send_by' => $request->send_by,
+            'attachments' => $image,
+        ]);
+        return redirect()->route('customer_queries.index');
+
     }
 
     /**

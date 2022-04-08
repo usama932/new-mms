@@ -53,9 +53,6 @@ Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
     Route::resource('staff_customers',Staff_CustomerController::class);
     Route::resource('staff_queries',Staff_QueryController::class);
     Route::resource('staff_profiles',Staff_ProfileContoller::class);
-
-
-
 });
 Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], function() {
 

@@ -64,4 +64,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Product::class,'added_by','id');
     }
+    public function queries()
+    {
+        return $this->hasMany(Query::class,'send_by','id');
+    }
 }
