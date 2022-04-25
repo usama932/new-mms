@@ -116,30 +116,30 @@
                                                 <div class="form-group">
                                                     <label class="form-label" for="product-title">Grades</label>
                                                     <div class="nk-tb-col nk-tb-col-check">
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" name="grade" value="A+" id="uid5">
-                                                            <label class="custom-control-label"  for="uid5">A+</label>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>A+</strong></label>
                                                         </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input"  name="grade" value="A"  id="uid6">
-                                                            <label class="custom-control-label" for="uid6">A</label>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>A</strong></label>
                                                         </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input"name="grade" value="B"  id="uid7">
-                                                            <label class="custom-control-label"  for="uid7">B</label>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>B+</strong></label>
                                                         </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input"  name="grade" value="C"  id="uid8">
-                                                            <label class="custom-control-label" for="uid8">C</label>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>C</strong></label>
                                                         </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" name="grade" value="D"  id="uid9">
-                                                            <label class="custom-control-label"   for="uid9">D</label>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>D</strong></label>
                                                         </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox notext">
-                                                            <input type="checkbox" class="custom-control-input" name="grade" value="F" id="uid10">
-                                                            <label class="custom-control-label"   for="uid10">F</label>
-                                                        </div>
+                                                        <div class="custom-control custom-control-sm custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="com-email">
+                                                            <label class="custom-control-label" for="com-email"><strong>F</strong></label>
+                                                        </div>  
 
                                                     </div>
 
@@ -150,12 +150,7 @@
                                             </div>
 
                                             <div class="col-12 ">
-                                                <!-- <button class="btn btn-primary float-right"> <span>Next</span></button> -->
-
                                                     <li><button type="submit" class="btn btn-primary d-none d-md-inline-flex float-right" ><span>Submit</span></button></li>
-                                                    <!-- <a href="html/ecommerce/supports.html" data-target="addProduct"  class="toggle btn btn-icon btn-primary d-md-none"></a> -->
-                                                    <!-- <a href="html/ecommerce/Customerprofile.html" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex float-right"><span>Next</span></a> -->
-
                                             </div>
                                         </div>
                                     </form>
