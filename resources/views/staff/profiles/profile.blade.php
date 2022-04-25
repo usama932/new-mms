@@ -67,7 +67,16 @@
                          </div>
                          <!-- .tab-content -->
                       </div>
-                      <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
+
+                      <!-- card-aside -->
+                   </div>
+                   <!-- .card-aside-wrap -->
+                </div>
+                <!-- .card -->
+             </div>
+             <!-- .nk-block -->
+          </div>
+          <div class="card-aside card-aside-left user-aside toggle-slide toggle-slide-left toggle-break-lg" data-content="userAside" data-toggle-screen="lg" data-toggle-overlay="true">
                          <div class="card-inner-group" data-simplebar>
                             <div class="card-inner">
                                <div class="user-card">
@@ -204,14 +213,6 @@
                          </div>
                          <!-- .card-inner-group -->
                       </div>
-                      <!-- card-aside -->
-                   </div>
-                   <!-- .card-aside-wrap -->
-                </div>
-                <!-- .card -->
-             </div>
-             <!-- .nk-block -->
-          </div>
        </div>
     </div>
 @endsection
