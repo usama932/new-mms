@@ -148,7 +148,7 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href=""><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                                    <li><a href="{{ route('profiles.index') }}"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
                                                 </ul>
                                             </div>
                                             <div class="dropdown-inner">

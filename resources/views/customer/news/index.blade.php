@@ -34,7 +34,7 @@
                                   <h6 class="card-title">{{$recent_news->title}}
                                   </h6>
                                   <p class="card-text">{{$recent_news->description}}</p>
-                                  <a href="#" class="btn btn-primary">Explore</a>
+
                                </div>
                             </div>
                          </div>
