@@ -68,8 +68,6 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
 
 
 });
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'login' ] );
 
 require __DIR__.'/auth.php';
