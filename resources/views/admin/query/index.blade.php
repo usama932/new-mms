@@ -4,13 +4,7 @@
             <div class="nk-msg nk-msg-boxed">
                 <div class="nk-msg-aside">
                     <div class="nk-msg-nav">
-                        <ul class="nk-msg-menu">
-                            <li class="nk-msg-menu-item active"><a href="">Active</a></li>
-                            <li class="nk-msg-menu-item"><a href="">Closed</a></li>
-
-                            <li class="nk-msg-menu-item"><a href="">All</a></li>
-                            <li class="nk-msg-menu-item ml-auto"><a href="" class="search-toggle toggle-search" data-target="search"><em class="icon ni ni-search"></em></a></li>
-                        </ul><!-- .nk-msg-menu -->
+                        <!-- .nk-msg-menu -->
                         <div class="search-wrap" data-search="search">
                             <div class="search-content">
                                 <a href="#" class="search-back btn btn-icon toggle-search" data-target="search"><em class="icon ni ni-arrow-left"></em></a>
@@ -1127,8 +1121,6 @@
     document.getElementById('div3').style.display='none';
     document.getElementById('div4').style.display='none';
     document.getElementById('div5').style.display='none';
-
-
     document.getElementById('div'+num).style.display='block'
 }
     </script>
