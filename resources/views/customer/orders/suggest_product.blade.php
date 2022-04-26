@@ -36,7 +36,7 @@
                                         <li><a href="{{ route('product.detail',$product->id) }}">Item # {{ $product->product_id }}</a></li>
                                     </ul>
                                     <span class="product-title"><a href="{{ route('product.detail',$product->id) }}"><b>{{ $product->title }}</b></a></span>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$98.00</small>$78.00</div>
+                                    <div class="product-price text-primary h5">{{ $product->price }}</div>
                                 </div>
                             </div>
                         </div>

@@ -62,6 +62,7 @@ class ProductController extends Controller
        }
        if($page->filter('.ProductDetailsProductName')->count() > 0){
            $resp['title'] = $page->filter('.ProductDetailsProductName')->text();
+           $resp['price'] = $page->filter('#lblPrice')->text();
            $resp['itemNo'] = $page->filter('.ProductItemNr')->text();
            $resp['description'] = $page->filter('.ProductDetailsBullets')->text();
            $resp['features'] = $page->filter('#desc2 > ul > li')->each(function($item) {
@@ -76,24 +77,35 @@ class ProductController extends Controller
 
        }
         }
-       //dd($resp);
-        $product= new Product;
-        $product->title =  $resp['title'];
-        $product->product_id =  $resp['itemNo'];
-        $product->description =  $resp['description'];
-        $product->added_by =  auth()->user()->id;
-        $product->status =  '1';
-        $product->save();
-        $product_media = new Product_media;
-        foreach($resp['images'] as $key =>  $image){
-            $product_media->product_id =  $product->id;
-            $product_media->image = $image;
-            $product_media->save();
+        $item = Product::where('product_id', $resp['itemNo'])->count();
+
+        if($item < 1)
+        {
+            $product= new Product;
+            $product->title =  $resp['title'];
+            $product->product_id =  $resp['itemNo'];
+            $product->description =  $resp['description'];
+            $product->price =  $resp['price'];
+            $product->added_by =  auth()->user()->id;
+            $product->availability ="Gold";
+            $product->status =  '1';
+            $product->save();
+            $product_media = new Product_media;
+            foreach($resp['images'] as $key =>  $image){
+                $product_media->product_id =  $product->id;
+                $product_media->image = $image;
+                $product_media->save();
+
+            }
+            return redirect()->route('products.index')->with('success', 'Product Added Successfully');
+
         }
-		return redirect()
-			->route('products.index')
-			->with('success', 'Question Added Successfully');
-    }
+            return redirect()->route('products.index')->with('success', 'Product exit already');
+
+        }
+
+
+
 
     /**
      * Display the specified resource.

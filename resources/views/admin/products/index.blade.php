@@ -33,6 +33,11 @@ v<x-app-layout>
        </div>
        <!-- .nk-block-head -->
        <!-- .nk-block -->
+       @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                   {{ session()->get('success') }}
+                                </div>
+                                @endif
        <div class="card card-preview">
           <div class="card-inner">
              <table class="datatable-init table">
@@ -42,6 +47,8 @@ v<x-app-layout>
                       <th>Title</th>
                       <th>Product #</th>
                       <th>Description</th>
+                      <th>Price</th>
+                      <th>Category</th>
                       <th>Status</th>
                       <th>Added_By</th>
                       <th>Action</th>
@@ -50,10 +57,19 @@ v<x-app-layout>
                 <tbody>
                    @foreach($product as $products)
                    <tr>
-                    <td><img src="{{$products->images->image}}"  style="width:70px; height:70px;"></td>
-                      <td>{{$products->title}}</td>
+                    <td>
+                        @if($products->images != null)
+                        <img src="{{$products->images->image}}"  style="width:70px; height:70px;">
+                        @else
+                         No image
+                        @endif
+                    </td>
+
+                        <td>{{$products->title}}</td>
                       <td>{{$products->product_id}}</td>
                       <td>{{$products->description}}</td>
+                      <td>{{$products->price}}</td>
+                      <td>{{$products->availability}}</td>
                       <td>{{$products->status}}</td>
                       <td>{{$products->user->name}}</td>
                       <td>

@@ -29,6 +29,11 @@
                                         </div><!-- .nk-block-head-content -->
                                     </div><!-- .nk-block-between -->
                                 </div><!-- .nk-block-head -->
+                                @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                   {{ session()->get('success') }}
+                                </div>
+                                @endif
                                 <div class="card card-preview">
                                     <div class="card-inner">
                                         <table class="datatable-init table">
@@ -38,6 +43,8 @@
                                                   <th>Title</th>
                                                   <th>Product_#</th>
                                                   <th>Description</th>
+                                                  <th>Price</th>
+                                                  <th>Category</th>
                                                   <th>Status</th>
                                                   <th>Added_By</th>
                                                   <th>Action</th>
@@ -50,6 +57,8 @@
                                                   <td>{{$products->title}}</td>tyle=
                                                   <td>{{$products->product_id}}</td>
                                                   <td>{{$products->description}}</td>
+                                                  <td>{{$products->price}}</td>
+                                                  <td>{{$products->availability}}</td>
                                                   <td>{{$products->status}}</td>
                                                   <td>{{$products->user->name}}</td>
                                                   <td>

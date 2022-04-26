@@ -128,7 +128,7 @@
          <div class="card">
             <div class="d-flex">
                <div class="card m-2">
-                  <img src="./images/product2.png" class="rounded w-50% h-20% py-4 px-1" alt="">
+                  <img src="{{ $new->image }}" class="rounded w-50% h-20% py-4 px-1" alt="">
                </div>
                <div class="col-10 m-2">
                   <b>

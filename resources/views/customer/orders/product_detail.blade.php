@@ -33,7 +33,7 @@
                                 </div><!-- .col -->
                                 <div class="col-lg-6">
                                     <div class="product-info mt-5 mr-xxl-5">
-                                        <h4 class="product-price text-primary">$78.00 <small class="text-muted fs-14px">$98.00</small></h4>
+                                        <h4 class="product-price text-primary">{{ $products->price }} </h4>
                                         <small class="product-title"><b>{{ $products->title }}</b></small>
                                         <p>Item # :{{ $products->product_id }}</p>
                                         <div class="product-rating">
@@ -44,7 +44,7 @@
                                                 <li><em class="icon ni ni-star-fill"></em></li>
                                                 <li><em class="icon ni ni-star-half"></em></li>
                                             </ul>
-                                            <div class="amount">(10 reviews)</div>
+                                            <div class="amount">{{ $products->availability }}</div>
                                         </div>
                                         <div class="product-excrept text-soft">
                                             <p class="lead">{{ $products->description }}  </p>
