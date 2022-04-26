@@ -33,39 +33,36 @@
                                     <div class="card-inner">
                                         <table class="datatable-init table">
                                             <thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>Product ID</th>
-                                                    <th>Price</th>
-                                                    <th>Category</th>
-                                                    <th>Availability</th>
-                                                    <th>Status</th>
-                                                    <th>Added_By</th>
-                                                    <th>Action</th>
-                                                </tr>
+                                               <tr>
+                                                <th>Image</th>
+                                                  <th>Title</th>
+                                                  <th>Product_#</th>
+                                                  <th>Description</th>
+                                                  <th>Status</th>
+                                                  <th>Added_By</th>
+                                                  <th>Action</th>
+                                               </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($product as $products)
-                                                <tr>
-                                                    <td>{{$products->title}}</td>
-                                                    <td>{{$products->product_id}}</td>
-                                                    <td>{{$products->price}}</td>
-                                                    <td>{{$products->category}}</td>
-                                                    <td>{{$products->availability}}</td>
-                                                    <td>{{$products->status}}</td>
-                                                    <td>{{$products->user->name}}</td>
-                                                    <td>
-                                                        <form action="{{ route('staff_products.destroy',$products->id) }}" method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger btn-xs">Delete</button>
-                                                        </form>
-                                                    </td>
-
-                                                </tr>
-                                                @endforeach
+                                               @foreach($product as $products)
+                                               <tr>
+                                                <td><img src="{{$products->images->image}}"  style="width:70px; height:70px;" ></td>
+                                                  <td>{{$products->title}}</td>tyle=
+                                                  <td>{{$products->product_id}}</td>
+                                                  <td>{{$products->description}}</td>
+                                                  <td>{{$products->status}}</td>
+                                                  <td>{{$products->user->name}}</td>
+                                                  <td>
+                                                     <form action="{{ route('products.destroy',$products->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                                     </form>
+                                                  </td>
+                                               </tr>
+                                               @endforeach
                                             </tbody>
-                                        </table>
+                                         </table>
                                     </div>
                                 </div><!-- .nk-block -->
 

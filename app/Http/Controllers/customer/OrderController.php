@@ -10,7 +10,7 @@ use App\Models\Order;
 class OrderController extends Controller
 {
     public function suggest_product(){
-        $products = Product::latest()->get();
+        $products = Product::with('user','images')->latest()->get();
 
         return view('customer.orders.suggest_product',compact('products'));
     }
@@ -20,5 +20,9 @@ class OrderController extends Controller
     }
     public function purchase_history(){
         return view('customer.orders.purchase_history');
+    }
+    public function product_detail(Request $request, $id){
+        $products = Product::where('id',$id)->with('user','images')->first();
+        return view('customer.orders.product_detail',compact('products'));
     }
 }

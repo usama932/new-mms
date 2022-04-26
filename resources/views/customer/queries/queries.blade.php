@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                        Launch demo modal
+                        Create Query
                       </button>
 
                       <!-- Modal -->
@@ -83,7 +83,7 @@
                                 <div class="nk-msg-info">
                                     <div class="nk-msg-from">
                                         <div class="nk-msg-sender">
-                                            <div class="name">{{ $query->send_by }}</div>
+                                            <div class="name">{{ $query->user->name  }}</div>
                                             <div class="lable-tag dot bg-pink"></div>
                                         </div>
                                         <div class="nk-msg-meta">
@@ -118,7 +118,7 @@
                             <ul class="nk-msg-tags">
                                 <li><span class="label-tag">
                                     <!-- <em class="icon ni ni-flag-fill"></em>  -->
-                                    <span>{{ $query->send_by }}</span></span></li>
+                                    <span>{{ $query->user->name }}</span></span></li>
                             </ul>
                         </div>
 
@@ -136,21 +136,18 @@
                                 <div class="user-avatar sm bg-blue">
                                     <span>{{ $query->id }}</span>
                                 </div>
-                                <div class="user-name">{{ $query->send_by}}</div>
+                                <div class="user-name">{{ $query->user->name}}</div>
                             </div>
                             <div class="date-time">{{ $query->created_at}}</div>
                         </div>
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
                                 <p>Hello team,</p>
-                                <p>{{ $query->message }} </p> <p>Thank you <br> {{ $query->send_by}}</p>
+                                <p>{{ $query->message }} </p> <p>Thank you <br> {{$query->user->name  }} </p>
                             </div>
                             <div class="attach-files">
 
-                                <div class="attach-foot">
-                                    <span class="attach-info">2 files attached</span>
-                                    <a class="attach-download link" href="#"><em class="icon ni ni-download"></em><span>Download All</span></a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div><!-- .nk-reply-item -->
@@ -173,16 +170,10 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="reply-form">
                                 <div class="nk-reply-form-editor">
-                                    <div class="nk-reply-form-field">
-                                        <textarea class="form-control form-control-simple no-resize" placeholder="Hello"></textarea>
-                                    </div>
                                     <div class="nk-reply-form-tools">
                                         <ul class="nk-reply-form-actions g-1">
                                             <li class="mr-2"><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Reply</button></li>
-
-
                                         </ul>
-
                                     </div><!-- .nk-reply-form-tools -->
                                 </div><!-- .nk-reply-form-editor -->
                             </div>
@@ -191,7 +182,6 @@
                                     <div class="nk-reply-form-field">
                                         <textarea class="form-control form-control-simple no-resize" placeholder="Type your private note, that only visible to internal team."></textarea>
                                     </div>
-
                                 </div><!-- .nk-reply-form-editor -->
                             </div>
                         </div>
@@ -212,8 +202,6 @@
                         <form method='post' action="{{ route('customer_queries.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row g-3">
-
-
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label class="form-label" for="category">Query</label>

@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\customer;
+namespace App\Http\Controllers\staff;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Query;
+use App\Models\Order;
 
-
-class QueryController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,7 @@ class QueryController extends Controller
      */
     public function index()
     {
-        $queries = Query::with('user')->get();
-        return view('customer.queries.queries',compact('queries'));
+        return view('staff.customers.order');
     }
 
     /**
@@ -39,21 +36,7 @@ class QueryController extends Controller
      */
     public function store(Request $request)
     {
-        $image = null;
-        if ($image = $request->file('attachments')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-           $image =  $image->move($destinationPath, $profileImage);
-        }
-
-        Query::create([
-            'subject' => $request->subject,
-            'message' => $request->message,
-            'send_by' => auth()->user()->id,
-            'attachments' => $image,
-        ]);
-        return redirect()->route('customer_queries.index');
-
+        //
     }
 
     /**

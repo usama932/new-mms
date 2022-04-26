@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index(){
 
         $news = News::latest()->get();
-        $products = Product::with('user')->get();
+        $products = Product::with('user','images')->get();
 
         if(Auth::user()->hasrole('staff')){
             return view('staff.dashboard');

@@ -14,7 +14,7 @@ use App\Http\Controllers\staff\ProductController as Staff_ProductController;
 use App\Http\Controllers\staff\QueryController as Staff_QueryController;
 use App\Http\Controllers\staff\CustomerController as Staff_CustomerController;
 use App\Http\Controllers\staff\ProfileController as Staff_ProfileContoller;
-
+use App\Http\Controllers\staff\OrderController as Staff_OrderController;
 
 use App\Http\Controllers\customer\NewsController as customer_NewsController;
 use App\Http\Controllers\customer\QueryController as Customer_QueryController;
@@ -53,6 +53,7 @@ Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
     Route::resource('staff_customers',Staff_CustomerController::class);
     Route::resource('staff_queries',Staff_QueryController::class);
     Route::resource('staff_profiles',Staff_ProfileContoller::class);
+    Route::resource('staff_orders',Staff_OrderController::class);
 });
 Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], function() {
 
@@ -62,6 +63,7 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::resource('customer_profiles',Customer_ProfileController::class);
     //Orders
     Route::get('suggest', [customer_OrderController::class, 'suggest_product'])->name('suggest');
+    Route::get('product_detail/{id}', [customer_OrderController::class, 'product_detail'])->name('product.detail');
     Route::get('/market_price;', [customer_OrderController::class, 'market_price'])->name('market_price');
     Route::get('/purchase_history', [customer_OrderController::class, 'purchase_history'])->name('purchase_history');
 

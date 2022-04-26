@@ -13,73 +13,7 @@
             <!-- .nk-block-between -->
          </div>
          <!-- .nk-block-head -->
-         <div class="nk-block">
-            <div class="row g-gs">
-               <div class="col-xxl-4 col-md-6">
-                  <div class="card   h-100">
-                     <div class="d-flex">
-                        <div class="m-5">
-                           <h6 style="color:#488A99 ;">WELCOME</h6>
-                           <h5  style="color: #DBAE58;"><b>{{Auth::user()->name}}</b></h5>
-                           <p style="color: #AC3E31;">User Since {{Auth::user()->created_at}}</p>
-                        </div>
-                        <div class="card mt-4 mr-3 mb-4 p-3">
-                           <!-- <div class="row"> -->
-                           <div class="col-12">
-                              <h1  style="color: #488A99;" class="text-center pt-3"><b>A +</b></h1>
-                              <small  style="color: #AC3E31;"><b>Overall Portfolio Grade</b></small>
-                              <!-- </div> -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xxl-4 col-md-6">
-                  <div class="card    h-100">
-                     <div class="d-flex">
-                        <!-- <div class="user-card">
-                           <img src="./images/product2.png" alt="" class="rounded bg-black-dim   mt-4 mx-3" width="30%" height="30%">
-                           <p class="mt-4">Gold<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
-                           </div> -->
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                           <img src="./images/product2.png" alt="">
-                        </div>
-                        <p class="mt-4 text-grey">
-                           <b style="color: #DBAE58;font-size: 15px;">Gold</b><br>
-                           <small>
-                              Current $31043
-                        <p style="color:#AC3E31;padding-top: 3rem; padding-left: 5px;">(+6%)</p></small> </p>
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                           <img src="./images/platinum.PNG" alt="">
-                        </div>
-                        <p class="mt-4">
-                           <b style="color: #DBAE58;font-size: 15px;">Platinum</b><br>
-                           <small>
-                              Current $31043
-                        <p style="color:#AC3E31;padding-top: 3rem; padding-left: 5px;">(+6%)</p></small> </p>
-                     </div>
-                     <div class="d-flex">
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                           <img src="./images/silver.PNG" alt="">
-                        </div>
-                        <p class="mt-4">
-                           <b style="color: #DBAE58;font-size: 15px;">Silver</b><br>
-                           <small>
-                              Current $31043
-                        <p style="color:#AC3E31;padding-top: 3rem; padding-left: 5px;">(+6%)</p></small> </p>
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                           <img src="./images/platinum.PNG" alt="">
-                        </div>
-                        <p class="mt-4">
-                           <b style="color: #DBAE58;font-size: 15px;">Palladium</b><br>
-                           <small>
-                              Current $31043
-                        <p style="color:#AC3E31;padding-top: 3rem; padding-left: 5px;">(+6%)</p></small> </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+
       </div>
       <div class="col-xxl-12">
          <div class="row g-gs">
@@ -232,7 +166,7 @@
          <div class="card card-bordered product-card">
             <div class="product-thumb bg-lighter">
                <a href="html/product-details.html">
-               <img  src="./images/product1.png" alt="" class=" py-5 px-4">
+               <img  src="{{ $product->images->image }}" alt="" class=" py-5 px-4">
                </a>
                <ul class="product-badges">
                   <li><span class="badge badge-success">New</span></li>

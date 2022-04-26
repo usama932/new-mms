@@ -38,11 +38,10 @@ v<x-app-layout>
              <table class="datatable-init table">
                 <thead>
                    <tr>
+                    <th>Image</th>
                       <th>Title</th>
-                      <th>Product ID</th>
-                      <th>Price</th>
-                      <th>Category</th>
-                      <th>Availability</th>
+                      <th>Product #</th>
+                      <th>Description</th>
                       <th>Status</th>
                       <th>Added_By</th>
                       <th>Action</th>
@@ -51,11 +50,10 @@ v<x-app-layout>
                 <tbody>
                    @foreach($product as $products)
                    <tr>
+                    <td><img src="{{$products->images->image}}"  style="width:70px; height:70px;"></td>
                       <td>{{$products->title}}</td>
                       <td>{{$products->product_id}}</td>
-                      <td>{{$products->price}}</td>
-                      <td>{{$products->category}}</td>
-                      <td>{{$products->availability}}</td>
+                      <td>{{$products->description}}</td>
                       <td>{{$products->status}}</td>
                       <td>{{$products->user->name}}</td>
                       <td>

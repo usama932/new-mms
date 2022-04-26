@@ -32,6 +32,7 @@
                 </div><!-- .nk-msg-nav -->
                 <div class="nk-msg-list" data-simplebar>
                     <div class="nk-msg-list" data-simplebar>
+
                         @foreach ($queries as $query)
 
 
@@ -61,6 +62,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         @endforeach
 
                     </div>

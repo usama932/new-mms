@@ -25,4 +25,8 @@ class Product extends Model
     {
         return $this->belongsTo(User::class,'added_by');
     }
+    public function images()
+    {
+        return $this->hasOne(Product_media::class,'product_id','id');
+    }
 }
