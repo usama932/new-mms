@@ -117,29 +117,32 @@
                                                     <label class="form-label" for="product-title">Grades</label>
                                                     <div class="nk-tb-col nk-tb-col-check">
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>A+</strong></label>
+                                                            <div>
+                                                                <input class="form-check-input" type="checkbox" name="grade" id="checkboxNoLabel" value="A+" aria-label="..." />
+                                                              </div>
+                                                            <strong>A+</strong>
                                                         </div>
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>A</strong></label>
-                                                        </div>
+                                                            <div>
+                                                                <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabe2" value="A" aria-label="..." />
+                                                              </div>
+                                                            <strong>A</strong>   </div>
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>B+</strong></label>
-                                                        </div>
+                                                            <div>
+                                                                <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabe3" value="B" aria-label="..." />
+                                                              </div>
+                                                            <strong>B</strong> </div>
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>C</strong></label>
-                                                        </div>
+                                                            <div>
+                                                                <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabel4" value="C" aria-label="..." />
+                                                              </div>
+                                                            <strong>C</strong>    </div>
                                                         <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>D</strong></label>
-                                                        </div>
-                                                        <div class="custom-control custom-control-sm custom-checkbox">
-                                                            <input type="checkbox" class="custom-control-input" id="com-email">
-                                                            <label class="custom-control-label" for="com-email"><strong>F</strong></label>
-                                                        </div>  
+                                                            <div>
+                                                                <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabel5" value="D" aria-label="..." />
+                                                              </div>
+                                                            <strong>D</strong>          </div>
+
 
                                                     </div>
 

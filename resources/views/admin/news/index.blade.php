@@ -103,12 +103,9 @@
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label" for="tags">Image</label>
-                                    <div class="upload-zone ">
 
-                                        <div class="dz-message">
                                             <input type="file" name="image" class="form-control" placeholder="image">
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary"><span>Save</span></button>

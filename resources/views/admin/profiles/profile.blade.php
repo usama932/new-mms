@@ -16,6 +16,14 @@
                                   </div>
                                </div>
                                <!-- .nk-block-head -->
+                                @if(session()->has('message'))
+                                <div class="alert alert-success">
+                                   {{ session()->get('message') }}
+                                </div>
+                                @endif
+                               <form action="{{route('profiles.update',$data->id)}}" method="post">
+                                 @csrf
+                                 @method('put')
                                <div class="nk-block">
                                   <div class="nk-data data-list">
                                      <div class="data-head">
@@ -24,7 +32,7 @@
                                      <div class="data-item " data-toggle="modal" data-target="#profile-edit">
                                         <div class="data-col">
                                            <span class="data-label"> Name</span>
-                                           <span class="data-value">{{$data->name}}</span>
+                                         <input type="text" class="form-control" name="name" value="{{ $data->name }}">
                                         </div>
                                      </div>
                                      <!-- data-item -->
@@ -32,14 +40,15 @@
                                      <div class="data-item">
                                         <div class="data-col">
                                            <span class="data-label">Email</span>
-                                           <span class="data-value">{{$data->email}}</span>
+                                           <input type="email" class="form-control" name="email" value="{{$data->email}}">
+
                                         </div>
                                      </div>
                                      <!-- data-item -->
                                      <div class="data-item" data-toggle="modal" data-target="#profile-edit">
                                         <div class="data-col">
                                            <span class="data-label">Contact</span>
-                                           <span class="data-value text-soft">{{$data->contact}}</span>
+                                           <input type="text" class="form-control" name="contact" value="{{$data->contact}}">
                                         </div>
                                      </div>
                                      <!-- data-item -->
@@ -47,21 +56,23 @@
                                      <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
                                         <div class="data-col">
                                            <span class="data-label">Address</span>
-                                           <span class="data-value"><br>{{$data->address}}</span>
+                                           <input type="text" class="form-control" name="address" value="{{$data->address}}">
                                         </div>
                                      </div>
                                      <div class="data-item" data-toggle="modal" data-target="#profile-edit">
                                         <div class="data-col">
                                            <span class="data-label">Role</span>
-                                           <span class="data-value">{{$data->roled_as}}</span>
+                                           <input type="roled_as" class="form-control" name="roled_as" value="{{$data->roled_as}}" disabled>
                                         </div>
                                      </div>
                                      <!-- data-item -->
                                   </div>
                                   <!-- data-list -->
                                </div>
+                               <button type="submit"  style="float: right;">Update Profile</button>
                                <!-- .nk-block -->
                             </div>
+                           </form>
                             <!-- .tab-pane -->
                          </div>
                          <!-- .tab-content -->

@@ -73,7 +73,14 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id = auth()->user()->id;
+        $user = User::where('id',$id)->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'contact' => $request->contact,
+            'email' => $request->email,
+        ]);
+        return redirect()->route('staff_profiles.index')->with('message','Profile update Successfully.');
     }
 
     /**

@@ -18,7 +18,7 @@ use App\Http\Controllers\staff\ProfileController as Staff_ProfileContoller;
 
 use App\Http\Controllers\customer\NewsController as customer_NewsController;
 use App\Http\Controllers\customer\QueryController as Customer_QueryController;
-use App\Http\Controllers\admin\ProfileController as Customer_ProfileController;
+use App\Http\Controllers\customer\ProfileController as Customer_ProfileController;
 use App\Http\Controllers\customer\OrderController as customer_OrderController;
 /*
 |--------------------------------------------------------------------------

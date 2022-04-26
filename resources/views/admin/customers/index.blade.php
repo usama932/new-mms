@@ -110,43 +110,49 @@
                 @csrf
                 @method('put')
                 <div class="row g-3">
-                   <div class="col-12">
-                      <div class="form-group">
-                         <label class="form-label" for="product-title">Grades</label>
-                         <div class="nk-tb-col nk-tb-col-check">
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input" name="grade"  value="A+" id="uid5">
-                               <label class="custom-control-label" for="uid5">A+</label>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label class="form-label" for="product-title">Grades</label>
+                            <div class="nk-tb-col nk-tb-col-check">
+                                <div class="custom-control custom-control-sm custom-checkbox">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" name="grade" id="checkboxNoLabel" value="A+" aria-label="..." />
+                                      </div>
+                                    <strong>A+</strong>
+                                </div>
+                                <div class="custom-control custom-control-sm custom-checkbox">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabe2" value="A" aria-label="..." />
+                                      </div>
+                                    <strong>A</strong>   </div>
+                                <div class="custom-control custom-control-sm custom-checkbox">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabe3" value="B" aria-label="..." />
+                                      </div>
+                                    <strong>B</strong> </div>
+                                <div class="custom-control custom-control-sm custom-checkbox">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabel4" value="C" aria-label="..." />
+                                      </div>
+                                    <strong>C</strong>    </div>
+                                <div class="custom-control custom-control-sm custom-checkbox">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" name="grade"  id="checkboxNoLabel5" value="D" aria-label="..." />
+                                      </div>
+                                    <strong>D</strong>          </div>
+
+
                             </div>
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input" name="grade"  value="A" id="uid6">
-                               <label class="custom-control-label" for="uid6">A</label>
-                            </div>
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input"  name="grade"  value="B" id="uid7">
-                               <label class="custom-control-label" for="uid7">B</label>
-                            </div>
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input"  name="grade"  value="C" id="uid8">
-                               <label class="custom-control-label" for="uid8">C</label>
-                            </div>
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input"   name="grade" value="D" id="uid9">
-                               <label class="custom-control-label" for="uid9">D</label>
-                            </div>
-                            <div class="custom-control custom-control-sm custom-checkbox notext">
-                               <input type="checkbox" class="custom-control-input"  name="grade" value="F" id="uid10">
-                               <label class="custom-control-label" for="uid10">F</label>
-                            </div>
-                         </div>
-                         <!-- <div class="form-control-wrap">
-                            <input type="text" class="form-control" id="product-title">
+
+                            <!-- <div class="form-control-wrap">
+                                <input type="text" class="form-control" id="product-title">
                             </div> -->
-                      </div>
-                   </div>
-                   <div class="col-12 ">
-                      <button class="btn btn-primary float-right"> <span>Next</span></button>
-                   </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 ">
+                            <li><button type="submit" class="btn btn-primary d-none d-md-inline-flex float-right" ><span>Submit</span></button></li>
+                    </div>
                 </div>
              </form>
           </div>
