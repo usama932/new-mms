@@ -143,13 +143,7 @@
 
       </div>
    </div>
-   <!-- .col -->
-   <!-- <div class="nk-block-between">
-      <div class="nk-block-head-content">
 
-          <h4 class="nk-block-title page-title m-2">Discover Exclusive Products</h4>
-      </div>
-      </div> -->
 </div>
 <div class="nk-block nk-block-lg">
    <div class="nk-block-head mt-4">
@@ -165,7 +159,7 @@
     <div class="col">
          <div class="card card-bordered product-card">
             <div class="product-thumb bg-lighter">
-               <a href="html/product-details.html">
+               <a href="{{ route('product.detail',$product->id) }}">
                <img  src="{{ $product->images->image }}" alt="" class=" py-5 px-4">
                </a>
                <ul class="product-badges">
@@ -177,11 +171,13 @@
                </ul>
             </div>
             <div class="card-inner text-center">
+
                <ul class="product-tags">
-                  <li><a  style="color: #488A99;" href="#">{{$product->product_id}}</a></li>
+                  <li> <a href="{{ route('product.detail',$product->id) }}">{{$product->product_id}}</a></li>
                </ul>
-               <h6 class="product-title"><a href="html/product-details.html">{{$product->title}}</a></h6>
+               <h6 class="product-title"> <a href="{{ route('product.detail',$product->id) }}">{{$product->title}}</a></h6>
                <div  style="color: #DBAE58;"class="product-price  h5">{{$product->price}}</div>
+
             </div>
          </div>
       </div>

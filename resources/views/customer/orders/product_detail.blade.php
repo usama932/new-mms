@@ -101,116 +101,14 @@
                                 </div>
                                 <div class="card-inner text-center">
                                     <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
+                                        <li><a href="#">Item # :{{ $products->product_id }}</a></li>
                                     </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$350</small> $324</div>
+                                    <h5 class="product-title"><a href="#">:{{ $products->title }}</a></h5>
+                                    <div class="product-price text-primary h5">:{{ $products->price }}</div>
                                 </div>
                             </div>
                         </div><!-- .col -->
-                        <div class="col">
-                            <div class="card card-bordered product-card">
-                                <div class="product-thumb bg-light">
-                                    <a href="#">
-                                        <img class=" py-5  px-4" src="./images/product1.png" alt="">
-                                    </a>
-                                    <ul class="product-actions">
-                                        <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-inner text-center">
-                                    <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
-                                    </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$209</small> $119</div>
-                                </div>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col">
-                            <div class="card card-bordered product-card">
-                                <div class="product-thumb bg-light">
-                                    <a href="#">
-                                        <img class=" py-5  px-4" src="./images/product1.png" alt="">
-                                    </a>
-                                    <ul class="product-badges">
-                                        <li><span class="badge badge-danger">Hot</span></li>
-                                    </ul>
-                                    <ul class="product-actions">
-                                        <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-inner text-center">
-                                    <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
-                                    </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$129</small> $89</div>
-                                </div>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col">
-                            <div class="card card-bordered product-card">
-                                <div class="product-thumb bg-light">
-                                    <a href="#">
-                                        <img class=" py-5  px-4" src="./images/product1.png" alt="">
-                                    </a>
-                                    <ul class="product-actions">
-                                        <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-inner text-center">
-                                    <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
-                                    </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$169</small> $120</div>
-                                </div>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col">
-                            <div class="card card-bordered product-card">
-                                <div class="product-thumb bg-light">
-                                    <a href="#">
-                                        <img class=" py-5  px-4" src="./images/product1.png" alt="">
-                                    </a>
-                                    <ul class="product-actions">
-                                        <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-inner text-center">
-                                    <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
-                                    </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5"><small class="text-muted del fs-13px">$109</small> $78</div>
-                                </div>
-                            </div>
-                        </div><!-- .col -->
-                        <div class="col">
-                            <div class="card card-bordered product-card">
-                                <div class="product-thumb bg-light ">
-                                    <a href="#">
-                                        <img class=" py-5  px-4" src="./images/product1.png" alt="">
-                                    </a>
-                                    <ul class="product-actions">
-                                        <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                                        <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-                                    </ul>
-                                </div>
-                                <div class="card-inner text-center">
-                                    <ul class="product-tags">
-                                        <li><a href="#">Item # : HQ83621</a></li>
-                                    </ul>
-                                    <h5 class="product-title"><a href="#">Peace Silver Pendent</a></h5>
-                                    <div class="product-price text-primary h5">$329</div>
-                                </div>
-                            </div>
-                        </div><!-- .col -->
+
                     </div>
                 </div>
 
@@ -218,58 +116,30 @@
             </div>
         </div>
     </div>
-     <!-- <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
-                    <div class="nk-block-head">
-                        <div class="nk-block-head-content">
-                            <h5 class="nk-block-title">New Product</h5>
-                            <div class="nk-block-des">
-                                <p>Add information and add new product.</p>
-                            </div>
-                        </div>
-                    </div>.nk-block-head -->
+
                     <div class="nk-block">
-
-
-
                         <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any" data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
                             <div class="nk-block-head d-flex ">
                                 <div class="nk-block-head-content mr-5">
                                     <h5 class="nk-block-title">Your Cart (1 item)</h5>
                                 </div>
-                                <div class="nk-block-head-content ml-5">
-                                    <h5 class="nk-block-title"><em class="icon ni ni-cart"></em></h5>
-                                </div>
+
                             </div>
                             <hr class="hr border-dark">
                             <div class="row pb-5">
                                 <div class="col-lg-6">
-                                    <div class="product-gallery mr-xl-1 mr-xxl-5">
+                                    <div class="product-gallery mr-xl-1 mr-xxl-5" style="margin-top: 30px">
                                         <!-- <div class="slider-init" id="sliderFor" data-slick='{"arrows": false, "fade": true, "asNavFor":"#sliderNav", "slidesToShow": 1, "slidesToScroll": 1}'> -->
-                                            <div class="slider-item rounded">
-                                                <img src="./images/product1.png" class="rounded w-150 bg-light py-5 " alt="">
+                                            <div class="slider-item rounded" >
+                                                <img src="{{ $products->images->image }}" alt="">
                                             </div>
                                     </div><!-- .product-gallery -->
                                 </div><!-- .col -->
                                 <div class="col-lg-6">
                                     <div class="product-info mt-5 mr-xxl-5">
 
-                                        <h6 class="product-title">Peace Silver Pendent</h6>
-                                        <p class="text-primary">$78.00 </p>
-                                        <div class="product-meta">
-                                            <ul class="flex-wrap ailgn-center g-2 pt-1 ">
-                                                <li class="w-140px d-flex">
-                                                    <div class="form-control-wrap number-spinner-wrap">
-                                                        <button class="btn btn-icon btn-outline-light number-spinner-btn number-minus" data-number="minus"><em class="icon ni ni-minus"></em></button>
-                                                        <input type="number" class="form-control number-spinner" value="0">
-                                                        <button class="btn btn-icon btn-outline-light number-spinner-btn number-plus" data-number="plus"><em class="icon ni ni-plus"></em></button>
-
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-icon btn-trigger text-danger"><em class="icon ni ni-trash"></em></button>
-                                                    </div>
-
-                                            </ul>
-                                        </div>
+                                        <h6 class="product-title">:{{ $products->title }}</h6>
+                                        <p class="text-primary">:{{ $products->price}} </p>
 
                                         <!-- .product-meta -->
                                     </div><!-- .product-info -->
@@ -281,19 +151,10 @@
 
                                     <div class="d-flex  ">
                                         <div><p>SUBTOTAL:</p></div>
-                                   <div><p>$78.00</p></div>
-                                    </div>
-
-                                    <div class="d-flex  ">
-                                        <div><p>TAX:</p></div>
-                                   <div><p>$19</p></div>
-                                    </div>
-                                    <div class="d-flex  ">
-                                        <div><p>Shipping</p></div>
-                                   <div><p>$19</p></div>
+                                   <div><p>:{{ $products->price }}</p></div>
                                     </div>
                                     <div class="col-12">
-                                        <a href="html/ecommerce/Checkout.html" > <button class="btn btn-primary"><span>Check out</span></button></a>
+                                        <a href="{{ route('checkout', $products->id) }}" > <button class="btn btn-primary"><span>Check out</span></button></a>
                                     </div>
                                 </div>
                             </div><!-- .nk-block -->

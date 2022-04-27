@@ -66,6 +66,12 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::get('product_detail/{id}', [customer_OrderController::class, 'product_detail'])->name('product.detail');
     Route::get('/market_price;', [customer_OrderController::class, 'market_price'])->name('market_price');
     Route::get('/purchase_history', [customer_OrderController::class, 'purchase_history'])->name('purchase_history');
+    Route::get('checkout/{id}',[customer_OrderController::class,'checkout'])->name('checkout');
+    Route::post('order/store', [customer_OrderController::class, 'order_store'])->name('order.store');
+  
+    //stripe
+     Route::get('stripe', [customer_OrderController::class, 'stripe']);
+    Route::post('stripe', [customer_OrderController::class, 'stripePost'])->name('stripe.post');
 
 
 
