@@ -35,8 +35,9 @@ class OrderController extends Controller
     {
         return view('customer.orders.payment');
     }
-    public function order_store(Request $request){
-        return view('customer.orders.payment');
+    public function order_store(Request $request,$id){
+        $products = Product::where('id',$id)->with('user','images')->first();
+        return view('customer.orders.payment',compact('products'));
 
     }
 
@@ -47,6 +48,8 @@ class OrderController extends Controller
      */
     public function stripePost(Request $request)
     {
+        // $key = getenv('STRIPE_SECRET');
+        // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
                 "amount" => 100 * 100,
