@@ -59,23 +59,14 @@ class OrderController extends Controller
 
     public function stripePost(Request $request)
     {
-
         // $key = getenv('STRIPE_SECRET');
         // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        $stripetoken =  Stripe\Token::create(array(
-            "card" => array(
-                "number"    => $request->get('number'),
-                "exp_month" =>$request->get('expiry_month'),
-                "exp_year"  => $request->get('expiry_year'),
-                "cvc"       => $request->get('cvc'),
-                "name"      => $request->get('name')
-            )
-        ));
+
         Stripe\Charge::create ([
                 "amount" => 100* 100,
                 "currency" => "usd",
-                "source" =>  $stripetoken,
+                "source" =>  $request->stripeToken,
                 "description" => "This payment is tested purpose "
         ]);
 
