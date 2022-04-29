@@ -55,6 +55,7 @@
                                 <th>Description</th>
                                 <th>Customer</th>
                                 <th>Total</th>
+                                <th>Status</th>
                                 <th>Action</th>
                              </tr>
                           </thead>
@@ -79,6 +80,11 @@
                                 </td>
                                 <td>
                                     {{ $order->total }}
+                                </td>
+                                <td>
+                                    <span class="dot bg-warning d-mb-none"></span>
+                                    <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex"> {{ $order->status }}</span>
+
                                 </td>
                                 <td>
                                     <div class="drodown mr-n1">
