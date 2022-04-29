@@ -72,7 +72,7 @@ class OrderController extends Controller
 
         Session::flash('success', 'Payment successful!');
 
-        return back();
+        return redirect()->route('purchase_history');
     }
     public function order_delete($id){
 
