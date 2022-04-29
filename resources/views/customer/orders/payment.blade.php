@@ -52,7 +52,7 @@
                                        @endif
                                        <form role="form" action="{{ route('stripe.post') }}" method="post" class="validation"
                                           data-cc-on-file="false"
-                                          data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
+                                          data-stripe-publishable-key="sk_test_51Kt84ZFmfKjVIRdxvTHGLgAaoOm2tkBElgffQZnAsc75zi34QC6h2Wt3917GkbaIC2fK79RpXMfUfeojdaFn8nx100S90p0gAu"
                                           id="payment-form">
                                           @csrf
                                           <div class='form-row row'>
