@@ -52,7 +52,7 @@
                                        @endif
                                        <form role="form" action="{{ route('stripe.post') }}" method="post" class="validation"
                                           data-cc-on-file="false"
-                                          data-stripe-publishable-key="pk_test_51Kt84ZFmfKjVIRdxIp5U6KEmkVmp2Uir9ffvOgmTwYtl7yu0n3WSyGeHz0rZgonMS6CbHa8bT2egBwCFScHVxdIT0059ZQAGJV"
+                                          data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
                                           id="payment-form">
                                           @csrf
                                           <div class='form-row row'>
@@ -87,7 +87,7 @@
                                           </div>
                                           <div class="row">
                                              <div class="col-12">
-                                                <button class="btn btn-danger btn-lg btn-block" type="submit">Pay Now</button>
+                                                <button class="btn btn-danger btn-lg btn-block" type="submit">Pay Now </button>
                                              </div>
                                           </div>
                                        </form>
