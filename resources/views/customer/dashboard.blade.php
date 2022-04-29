@@ -154,38 +154,36 @@
       </div>
    </div>
    <!-- .nk-block-head -->
-   <div class="slider-init row" data-slick='{"slidesToShow": 4, "centerMode": false, "slidesToScroll": 1, "infinite":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 3}},{"breakpoint": 992,"settings":{"slidesToShow": 2}}, {"breakpoint": 576,"settings":{"slidesToShow": 1}} ]}'>
-    @foreach($products as $product)
-    <div class="col">
-         <div class="card card-bordered product-card">
-            <div class="product-thumb bg-lighter">
-               <a href="{{ route('product.detail',$product->id) }}">
-               <img  src="{{ $product->images->image }}" alt="" class=" py-5 px-4">
-               </a>
-               <ul class="product-badges">
-                  <li><span class="badge badge-success">New</span></li>
-               </ul>
-               <ul class="product-actions">
-                  <li><a href="#"><em class="icon ni ni-cart"></em></a></li>
-                  <li><a href="#"><em class="icon ni ni-heart"></em></a></li>
-               </ul>
+   <div class="nk-block">
+    <div class="row g-gs">
+        @foreach ($products as $product)
+        <a href="#">
+        <div class="col-xxl-3 col-lg-3 col-sm-6">
+            <div class="card card-bordered product-card">
+                <div class="product-thumb bg-light pt-5">
+                    <a href="{{ route('product.detail',$product->id) }}l">
+                        <img  src="{{ $product->images->image }}" alt=""  >
+                    </a>
+                    <ul class="product-badges">
+                        <li><span class="badge badge-success">New</span></li>
+                    </ul>
+
+                </div>
+                <div class="card-inner text-center">
+                    <ul class="product-tags">
+                        <li><a href="{{ route('product.detail',$product->id) }}">Item # {{ $product->product_id }}</a></li>
+                    </ul>
+                    <span class="product-title"><a href="{{ route('product.detail',$product->id) }}"><b>{{ $product->title }}</b></a></span>
+                    <div class="product-price text-primary h5">{{ $product->price }}</div>
+                </div>
             </div>
-            <div class="card-inner text-center">
-
-               <ul class="product-tags">
-                  <li> <a href="{{ route('product.detail',$product->id) }}">{{$product->product_id}}</a></li>
-               </ul>
-               <h6 class="product-title"> <a href="{{ route('product.detail',$product->id) }}">{{$product->title}}</a></h6>
-               <div  style="color: #DBAE58;"class="product-price  h5">{{$product->price}}</div>
-
-            </div>
-         </div>
-      </div>
-      <!-- .col -->
-
-      <!-- .col -->
-   </div>
-   @endforeach
+        </div>
+        </a>
+        @endforeach
+        <!-- .col -->
+        <!-- .col -->
+    </div>
+</div>
 </div>
 </div><!-- .row -->
 </div><!-- .nk-block -->
