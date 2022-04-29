@@ -29,4 +29,5 @@ class Product extends Model
     {
         return $this->hasOne(Product_media::class,'product_id','id');
     }
+   
 }

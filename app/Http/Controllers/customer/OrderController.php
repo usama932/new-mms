@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
 use Session;
 use Stripe;
 
@@ -21,7 +22,9 @@ class OrderController extends Controller
 
     }
     public function purchase_history(){
-        return view('customer.orders.purchase_history');
+        $orders = Order::where('user_id',auth()->user()->id)->latest()->get();
+
+        return view('customer.orders.purchase_history',compact('orders'));
     }
     public function product_detail(Request $request, $id){
         $products = Product::where('id',$id)->with('user','images')->first();
@@ -37,29 +40,54 @@ class OrderController extends Controller
     }
     public function order_store(Request $request,$id){
         $products = Product::where('id',$id)->with('user','images')->first();
+        Order::create([
+            'name' => $request->name,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'zip_code' => $request->zip_code,
+            'phone' =>  $request->phone,
+            'status' => 'Pending',
+            'description' => $request->description,
+            'total' => $request->total,
+            'user_id' => auth()->user()->id,
+            'product_id' => $request->product_id
+        ]);
         return view('customer.orders.payment',compact('products'));
 
     }
 
-    /**
-     * success response method.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function stripePost(Request $request)
     {
+
         // $key = getenv('STRIPE_SECRET');
         // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $stripetoken =  Stripe\Token::create(array(
+            "card" => array(
+                "number"    => $request->get('number'),
+                "exp_month" =>$request->get('expiry_month'),
+                "exp_year"  => $request->get('expiry_year'),
+                "cvc"       => $request->get('cvc'),
+                "name"      => $request->get('name')
+            )
+        ));
         Stripe\Charge::create ([
-                "amount" => 100 * 100,
+                "amount" => 100* 100,
                 "currency" => "usd",
-                "source" => $request->stripeToken,
-                "description" => "This payment is tested purpose phpcodingstuff.com"
+                "source" =>  $stripetoken,
+                "description" => "This payment is tested purpose "
         ]);
 
         Session::flash('success', 'Payment successful!');
 
         return back();
+    }
+    public function order_delete($id){
+
+        $order = Order::where('id',$id)->first();
+        $order->delete();
+        return redirect()->route('purchase_history');
+
     }
 }

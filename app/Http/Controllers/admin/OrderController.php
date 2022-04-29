@@ -15,7 +15,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('admin.customers.order');
+
+        $orders = Order::with('product','user')->latest()->get();
+
+        return view('admin.customers.order',compact('orders'));
     }
 
     /**
@@ -71,7 +74,13 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+       Order::where('id',$id)->update([
+           'status' => $request->status,
+       ]);
+
+
+       return redirect()->route('orders.index')->with('success', 'successfully ');
     }
 
     /**
@@ -82,6 +91,9 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $order = Order::where('id',$id)->first();
+        $order->delete();
+        return redirect()->route('orders.index');
     }
 }

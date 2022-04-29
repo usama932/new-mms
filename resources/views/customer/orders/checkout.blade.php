@@ -43,15 +43,17 @@
                            <div class="">
                               <div class="tab-pane" id="">
                                  <div class="card-inner">
-                                    <form action={{ route('order.store',$products->id)   }} method= "post">
+                                    <form action={{ route('order.store',$products->id) }} method= "post">
                                         @csrf
                                        <div class="row g-gs">
-                                        <input type="hidden" class="form-control" id="fv-full-name" value="auth()->user()->name" name="name" required>
-
+                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  auth()->user()->name}}" name="name" required>
+                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->id}}" name="product_id" required>
+                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->price}}" name="total" required>
+                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->description}}" name="description" required>
 
                                           <div class="col-md-12">
                                              <div class="form-group">
-                                                <label class="form-label" for="fv-full-name">Address Line 1</label>
+                                                <label class="form-label" for="fv-full-name">Address </label>
                                                 <div class="form-control-wrap">
                                                    <input type="text" class="form-control" id="fv-full-name" name="address" required>
                                                 </div>
@@ -92,7 +94,7 @@
                                                 <div class="form-control-wrap">
                                                    <div class="input-group">
                                                       <div class="input-group-prepend">
-                                                         <span class="input-group-text" id="fv-phone">+880</span>
+                                                         <span class="input-group-text" id="fv-phone">+1</span>
                                                       </div>
                                                       <input type="text" class="form-control" name="phone" required>
                                                    </div>
@@ -160,4 +162,5 @@
    </div>
 </div>
 </div>
+<script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
 @endsection

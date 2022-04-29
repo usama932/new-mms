@@ -59,7 +59,65 @@
                              </tr>
                           </thead>
                           <tbody>
+                            @foreach($orders as $order)
+                            <tr>
+                                <td>
+                                    {{ $order->id }}
+                                </td>
+                                <td>
 
+                                    {{ date('d-m-Y', strtotime($order->created_at)) }}
+                                </td>
+                                <td>
+                                    {{ $order->product->title }}
+                                </td>
+                                <td>
+                                    {{ $order->description }}
+                                </td>
+                                <td>
+                                    {{ $order->user->name }}
+                                </td>
+                                <td>
+                                    {{ $order->total }}
+                                </td>
+                                <td>
+                                    <div class="drodown mr-n1">
+                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <ul class="link-list-opt no-bdr">
+                                                <li style=" text-align:center">
+                                                <form action="{{ route('staff_orders.destroy',$order->id) }}" method="POST">
+                                                     @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"  style="border:none; background-color:transparent" class="mr-3"><em class="icon ni ni-trash" ></em><span>Remove Order</span></a></button>
+                                                </form>
+                                                </li>
+                                                <li style=" text-align:center">
+                                                    <form action="{{ route('staff_orders.update',$order->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('put')
+                                                        <input type="hidden" name="status" value="Completed">
+                                                        <button type="submit" style="border:none; background-color:transparent" >
+                                                        <em class="icon ni ni-truck"></em><span>Mark as Completed</span>
+                                                        </button>
+                                                    </form>
+                                                    </li>
+                                                    <li style=" text-align:center">
+                                                        <form action="{{ route('staff_orders.update',$order->id) }}" method="POST">
+                                                            @csrf
+                                                            @method('put')
+                                                            <input type="hidden" name="status" value="Delivered">
+                                                            <button type="submit" style="border:none; background-color:transparent" >
+                                                            <em class="icon ni ni-truck"></em><span>Mark as Delivered</span>
+                                                            </button>
+                                                        </form>
+                                                    </li>
+                                                    </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
                           </tbody>
                        </table>
                     </div>

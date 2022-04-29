@@ -81,15 +81,25 @@
                     <table class="datatable-init table">
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Tags</th>
-                                <th>Added_By</th>
+                                <th>Order No</th>
+                                <th>Order Date</th>
+                                <th>Order to Name</th>
+                                <th>Total</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                            @foreach($orders as $order)
+                            <tr>
+                            <td>{{ $order->id }}</td>
+                            <td>{{ $order->created_at }}</td>
+                            <td>{{ $order->user_id }}</td>
+                            <td>{{ $order->total }}</td>
+                            <td>{{ $order->status  }}</td>
+                            <td><a href="{{ route('order.delete',$order->id) }}" class="btn btn-danger btn-sm">Delete</a></td>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

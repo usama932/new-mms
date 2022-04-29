@@ -25,7 +25,8 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('phone')->nullable();
-            $table->string('status')->default(1);
+            $table->string('state')->nullable();
+            $table->string('status')->defaul('pending');
             $table->timestamps();
         });
     }

@@ -21,22 +21,7 @@
                                                     <input type="text" class="form-control" id="default-04" placeholder="Search">
                                                 </div>
                                             </li>
-                                            <!-- <li>
-                                                <div class="drodown">
-                                                    <a href="#" class="dropdown-toggle dropdown-indicator btn btn-outline-light btn-white" data-toggle="dropdown">Status</a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <ul class="link-list-opt no-bdr">
-                                                            <li><a href="#"><span>On Hold</span></a></li>
-                                                            <li><a href="#"><span>Delevired</span></a></li>
-                                                            <li><a href="#"><span>Rejected</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li> -->
-                                            <!-- <li class="nk-block-tools-opt">
-                                                <a href="#" class="btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
-                                                <a href="#" class="btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Order</span></a>
-                                            </li> -->
+
                                         </ul>
                                     </div>
                                 </div>
@@ -54,11 +39,80 @@
                                     <th>Description</th>
                                     <th>Customer</th>
                                     <th>Total</th>
+                                    <th>Pending</th>
                                     <th>Action</th>
                                  </tr>
                               </thead>
                               <tbody>
+                                @foreach($orders as $order)
+                                <tr>
+                                    <td>
+                                        {{ $order->id }}
+                                    </td>
+                                    <td>
 
+                                        {{ date('d-m-Y', strtotime($order->created_at)) }}
+                                    </td>
+                                    <td>
+                                        {{ $order->product->title }}
+                                    </td>
+                                    <td>
+                                        {{ $order->description }}
+                                    </td>
+                                    <td>
+                                        {{ $order->user->name }}
+                                    </td>
+                                    <td>
+                                        {{ $order->total }}
+                                    </td>
+                                    <td> <span class="dot bg-warning d-mb-none"></span>
+                                        <span class="badge badge-sm badge-dot has-bg badge-warning d-none d-mb-inline-flex"> {{ $order->status }}</span>
+                                   </td>
+                                    <td>
+                                        <div class="nk-tb-col nk-tb-col-tools">
+                                            <ul class="nk-tb-actions gx-1">
+
+                                                <li>
+                                                    <div class="drodown mr-n1">
+                                                        <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <ul class="link-list-opt no-bdr">
+                                                                <li style=" text-align:center">
+                                                                <form action="{{ route('orders.destroy',$order->id) }}" method="POST">
+                                                                     @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit"  style="border:none; background-color:transparent" class="mr-3"><em class="icon ni ni-trash" ></em><span>Remove Order</span></a></button>
+                                                                </form>
+                                                                </li>
+                                                                <li style=" text-align:center">
+                                                                    <form action="{{ route('orders.update',$order->id) }}" method="POST">
+                                                                        @csrf
+                                                                        @method('put')
+                                                                        <input type="hidden" name="status" value="Completed">
+                                                                        <button type="submit" style="border:none; background-color:transparent" >
+                                                                        <em class="icon ni ni-truck"></em><span>Mark as Completed</span>
+                                                                        </button>
+                                                                    </form>
+                                                                    </li>
+                                                                    <li style=" text-align:center">
+                                                                        <form action="{{ route('orders.update',$order->id) }}" method="POST">
+                                                                            @csrf
+                                                                            @method('put')
+                                                                            <input type="hidden" name="status" value="Delivered">
+                                                                            <button type="submit" style="border:none; background-color:transparent" >
+                                                                            <em class="icon ni ni-truck"></em><span>Mark as Delivered</span>
+                                                                            </button>
+                                                                        </form>
+                                                                    </li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
                               </tbody>
                            </table>
                         </div>

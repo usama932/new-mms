@@ -13,6 +13,13 @@ class Order extends Model
         'user_id',
         'total',
         'status',
+        'state',
+        'city',
+        'address',
+        'zip_code',
+        'phone',
+        'description',
+
 
     ];
     public function user()
