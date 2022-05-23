@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('queries', function (Blueprint $table) {
             $table->id();
             $table->string('send_by')->nullable();
-            $table->string('message')->nullable();
-            $table->string('subject')->nullable();
+            $table->longText('message')->nullable();
+            $table->text('subject')->nullable();
             $table->string('attachments')->nullable();
             $table->string('reply_by')->nullable();
             $table->timestamps();

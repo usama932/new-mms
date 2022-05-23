@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('grade')->nullable();
             $table->string('is_active')->nullable();
             $table->string('password');
+            $table->string('profile_image')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

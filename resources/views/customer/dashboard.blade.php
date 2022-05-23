@@ -28,13 +28,12 @@
                         </div>
                         <div class="data">
                            <div class="data-group">
-                              <div class="amount">3,890</div>
+                              <div class="amount">${{ $total_order }}</div>
                               <div class="nk-ecwg6-ck">
                                  <canvas class="ecommerce-line-chart-s3" id="todayOrders"></canvas>
                               </div>
                            </div>
-                           <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><small> from previous period</small></div>
-                        </div>
+                                 </div>
                      </div>
                      <!-- .card-inner -->
                   </div>
@@ -53,12 +52,12 @@
                         </div>
                         <div class="data">
                            <div class="data-group">
-                              <div  style="color:#DBAE58"  class="amount">3,890</div>
+                              <div  style="color:#DBAE58"  class="amount">${{ $last_order->total ?? '' }}</div>
                               <div class="nk-ecwg6-ck">
                                  <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
                               </div>
                            </div>
-                           <div class="info"><span class="change down text-danger py-2"></span><small> lorem ipsum</small></div>
+                           <div class="info"><span class="change down text-danger py-2"></span><small> {{ $last_order->product_id  ?? ''}}</small></div>
                         </div>
                      </div>
                      <!-- .card-inner -->
@@ -83,8 +82,7 @@
                                  <canvas class="ecommerce-line-chart-s3" id="todayCustomers"></canvas>
                               </div>
                            </div>
-                           <div class="info"><span class="change up text-grey"><em class="icon ni ni-arrow-long-up"></em >4.63%</span><small> from previous period</small></div>
-                        </div>
+                            </div>
                      </div>
                      <!-- .card-inner -->
                   </div>
@@ -103,13 +101,12 @@
                         </div>
                         <div class="data">
                            <div class="data-group">
-                              <div style="color:#484848"  class="amount ">$2,578</div>
+                              <div style="color:#484848"  class="amount ">${{ $total_investment }}</div>
                               <div class="nk-ecwg6-ck">
                                  <canvas class="ecommerce-line-chart-s3" id="todayVisitors"></canvas>
                               </div>
                            </div>
-                           <div class="info"><span class="change up "><em class="icon ni ni-arrow-long-up"></em>4.63%</span><small> from previous period</small></div>
-                        </div>
+                                                </div>
                      </div>
                      <!-- .card-inner -->
                   </div>
@@ -134,8 +131,15 @@
                   <b>
                      <p>{{$new->title}}</p>
                   </b>
-                  <p>{{$new->description}}
+                  <p id='more'>
+                    {{\Illuminate\Support\Str::limit($new->description, 100, '') }}
+                    @if (strlen($new->description) > 100)
+                    <span id="dots">...</span>
+                    {{$new->description , 100}}
+                    @endif
                   </p>
+
+                <button onclick="myFunction()" id="myBtn">Read more</button>
                </div>
             </div>
          </div>
@@ -162,7 +166,11 @@
             <div class="card card-bordered product-card">
                 <div class="product-thumb bg-light pt-5">
                     <a href="{{ route('product.detail',$product->id) }}l">
-                        <img  src="{{ $product->images->image }}" alt=""  >
+                        @if($products->images != null)
+                        <img src="{{$products->images->image}}"  style="width:70px; height:70px;">
+                        @else
+                         No image
+                        @endif
                     </a>
                     <ul class="product-badges">
                         <li><span class="badge badge-success">New</span></li>
@@ -191,4 +199,21 @@
 </div>
 </div>
 </div>
+<script>
+    function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+    }
+}
+</script>
 @endsection

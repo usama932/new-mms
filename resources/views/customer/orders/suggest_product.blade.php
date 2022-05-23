@@ -24,7 +24,11 @@
                             <div class="card card-bordered product-card">
                                 <div class="product-thumb bg-light pt-5">
                                     <a href="{{ route('product.detail',$product->id) }}l">
-                                        <img  src="{{ $product->images->image }}" alt=""  >
+                                        @if($products->images != null)
+                                        <img src="{{$products->images->image}}"  style="width:70px; height:70px;">
+                                        @else
+                                         No image
+                                        @endif
                                     </a>
                                     <ul class="product-badges">
                                         <li><span class="badge badge-success">New</span></li>

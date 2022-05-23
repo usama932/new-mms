@@ -21,13 +21,25 @@
                                    {{ session()->get('message') }}
                                 </div>
                                 @endif
-                               <form action="{{route('profiles.update',$data->id)}}" method="post">
+                               <form action="{{route('profiles.update',$data->id)}}" method="post" enctype="multipart/form-data">
                                  @csrf
                                  @method('put')
                                <div class="nk-block">
                                   <div class="nk-data data-list">
                                      <div class="data-head">
                                         <h6 class="overline-title">Basics</h6>
+                                     </div>
+                                     <div class="data-item " data-toggle="modal" data-target="#profile-edit">
+                                        <div class="data-col">
+                                           <span class="data-label"> Profile Picture
+                                               <br>
+                                            <input type="file" name="profile_image"  placeholder="Upload Profile Image">
+                                           </span>
+
+                                           <img src="{{asset($data->profile_image)}}" style="width:15%; height:15%; margin-left:15%; border-radius:70%" class="card-img-top" alt="">
+
+
+                                        </div>
                                      </div>
                                      <div class="data-item " data-toggle="modal" data-target="#profile-edit">
                                         <div class="data-col">
