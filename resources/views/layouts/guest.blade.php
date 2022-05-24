@@ -30,7 +30,7 @@
                     <div class="container-fluid">
                         <div class="nk-header-wrap">
                             <div class="nk-menu-trigger d-xl-none ml-n1">
-                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                                <a href="{{ route('dashboard') }}" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                             </div>
                                     <a href="html/index.html" class="logo-link nk-sidebar-logo">
                                         <img class="logo-dark logo-img" src="./images/GMRGold_Logos.png"  alt="logo-dark">
