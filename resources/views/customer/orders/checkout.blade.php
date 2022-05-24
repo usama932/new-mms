@@ -101,9 +101,9 @@
                                                 </div>
                                              </div>
                                           </div>
-                                          <div class="col-md-12">
+                                          <div class="col-md-12" style="text-align:right">
                                              <div class="form-group">
-                                                <button type="submit">Payment method</button>
+                                                <button type="submit" class="btn btn-success" >Pay Now</button>
                                              </div>
                                           </div>
                                        </div>

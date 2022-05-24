@@ -132,14 +132,15 @@
                      <p>{{$new->title}}</p>
                   </b>
                   <p id='more'>
-                    {{\Illuminate\Support\Str::limit($new->description, 100, '') }}
-                    @if (strlen($new->description) > 100)
-                    <span id="dots">...</span>
-                    {{$new->description , 100}}
+                    @if(strlen($new->description) > 100)
+                    {{substr($new->description,0,100)}}
+                    <span class="read-more-show hide_content">Show More<i class="fa fa-angle-down"></i></span>
+                    <span class="read-more-content"> {{substr($new->description,100,strlen($new->description))}}
+                    <span class="read-more-hide hide_content">Show Less <i class="fa fa-angle-up"></i></span> </span>
+                    @else
+                    {{$new->description}}
                     @endif
                   </p>
-
-                <button onclick="myFunction()" id="myBtn">Read more</button>
                </div>
             </div>
          </div>
@@ -167,7 +168,7 @@
                 <div class="product-thumb bg-light pt-5">
                     <a href="{{ route('product.detail',$product->id) }}l">
                         @if($products->images != null)
-                        <img src="{{$products->images->image}}"  style="width:70px; height:70px;">
+                        <img src="{{asset($products->images->image)}}"  style="width:70px; height:70px;">
                         @else
                          No image
                         @endif
@@ -199,21 +200,5 @@
 </div>
 </div>
 </div>
-<script>
-    function myFunction() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-    }
-}
-</script>
 @endsection

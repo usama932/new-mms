@@ -29,11 +29,21 @@
                          <div class="col-3">
 
                             <div class="card">
-                               <img src="{{asset($recent_news->image)}}" class="card-img-top" alt="">
+                               <img src="{{asset($recent_news->image)}}" class="card-img-top" alt="" style="width:70px; height:70px">
                                <div class="card-inner">
                                   <h6 class="card-title">{{$recent_news->title}}
                                   </h6>
-                                  <p class="card-text">{{$recent_news->description}}</p>
+                                  <p class="card-text">
+                                    @if(strlen($recent_news->description) > 100)
+                                    {{substr($recent_news->description,0,100)}}
+                                    <span class="read-more-show hide_content">Show More<i class="fa fa-angle-down"></i></span>
+                                    <span class="read-more-content"> {{substr($recent_news->description,100,strlen($recent_news->description))}}
+                                    <span class="read-more-hide hide_content">Show Less <i class="fa fa-angle-up"></i></span> </span>
+                                    @else
+                                    {{$recent_news->description}}
+                                    @endif
+
+                                </p>
 
                                </div>
                             </div>
@@ -61,7 +71,16 @@
                       <b>
                          <p>{{$all_news->title}}</p>
                       </b>
-                      <p>{{$all_news->description}}
+
+                      <p>
+                        @if(strlen($all_news->description) > 100)
+                        {{substr($all_news->description,0,100)}}
+                        <span class="read-more-show hide_content">Show More<i class="fa fa-angle-down"></i></span>
+                        <span class="read-more-content"> {{substr($all_news->description,100,strlen($all_news->description))}}
+                        <span class="read-more-hide hide_content">Show Less <i class="fa fa-angle-up"></i></span> </span>
+                        @else
+                        {{$all_news->description}}
+                        @endif
                       </p>
                    </div>
                 </div>

@@ -110,7 +110,7 @@
                 </div>
             </div>
             @foreach ($queries as $row=>$query)
-            <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white profile-shown hide_msg">
+            <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white  hide_msg">
                 <div class="nk-msg-head">
                     <h4 class="title d-none d-lg-block">{{ $query->subject }} </h4>
                     <div class="nk-msg-head-meta">
@@ -123,7 +123,7 @@
                         </div>
 
                     </div>
-                    <a href="#" class="nk-msg-profile-toggle profile-toggle active"><em class="icon ni ni-arrow-left"></em></a>
+
                 </div><!-- .nk-msg-head -->
                 <div class="nk-msg-reply nk-reply" data-simplebar>
                     <div class="nk-msg-head py-4 d-lg-none">
@@ -142,12 +142,12 @@
                         </div>
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
-                                <p>Hello team,</p>
-                                <p>{{ $query->message }} </p> <p>Thank you <br> {{$query->user->name  }} </p>
+
+                                <p>{{ $query->message }} </p> <p> {{$query->user->name  }} </p>
                             </div>
                             <div class="attach-files">
 
-                                
+
                             </div>
                         </div>
                     </div><!-- .nk-reply-item -->
@@ -177,13 +177,7 @@
                                     </div><!-- .nk-reply-form-tools -->
                                 </div><!-- .nk-reply-form-editor -->
                             </div>
-                            <div class="tab-pane" id="note-form">
-                                <div class="nk-reply-form-editor">
-                                    <div class="nk-reply-form-field">
-                                        <textarea class="form-control form-control-simple no-resize" placeholder="Type your private note, that only visible to internal team."></textarea>
-                                    </div>
-                                </div><!-- .nk-reply-form-editor -->
-                            </div>
+
                         </div>
                     </div><!-- .nk-reply-form -->
                 </div><!-- .nk-reply -->
@@ -218,13 +212,14 @@
                                 </div>
                             </div>
                             <br>
-                            <button class="btn btn-primary "><span>Submit</span></button>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button class="btn btn-primary "><span>Submit</span></button>
+                              </div>
+
                          </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+
                   </div>
                 </div>
               </div>
