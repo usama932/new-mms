@@ -160,12 +160,12 @@
                             <ul class="nav nav-tabs-s2 nav-tabs nav-tabs-sm">
 
                             </ul>
-                            <div class="nk-reply-form-title">
+                            {{-- <div class="nk-reply-form-title">
                                 <div class="title">Reply as:</div>
                                 <div class="user-avatar xs bg-purple">
                                     <span>{{ $query->id }}</span>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="reply-form">
