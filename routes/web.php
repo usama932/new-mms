@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CountryStateCityController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\OrderController;
@@ -33,7 +34,12 @@ use App\Http\Controllers\customer\OrderController as customer_OrderController;
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard',[HomeController::class,'index' ] )->name('dashboard');
+
+
 });
+Route::get('country-state-city', [CountryStateCityController::class, 'index']);
+    Route::post('get-states-by-country', [CountryStateCityController::class, 'getState']);
+    Route::post('get-cities-by-state', [CountryStateCityController::class, 'getCity']);
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
 
     //admin Route

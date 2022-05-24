@@ -16,6 +16,7 @@
         "stripe/stripe-php": "^7.125"
     },
     "require-dev": {
+        "dipeshsukhia/laravel-country-state-city-data": "^2.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.8",
         "laravel/sail": "^1.0.1",
