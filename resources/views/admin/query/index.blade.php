@@ -71,7 +71,7 @@
                 </div>
             </div>
             @foreach ($queries as $row=>$query)
-            <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white profile-shown hide_msg">
+            <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white  hide_msg">
                 <div class="nk-msg-head">
                     <h4 class="title d-none d-lg-block">{{ $query->subject }} </h4>
                     <div class="nk-msg-head-meta">
@@ -103,8 +103,8 @@
                         </div>
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
-                                <p>Hello team,</p>
-                                <p>{{ $query->message }} </p> <p>Thank you <br> {{ $query->send_by}}</p>
+
+                                <p>{{ $query->message }} </p> <p>{{ $query->send_by}}</p>
                             </div>
                             <div class="attach-files">
 
@@ -121,22 +121,18 @@
 
                     <div class="nk-reply-form">
                         <div class="nk-reply-form-header">
-                            <ul class="nav nav-tabs-s2 nav-tabs nav-tabs-sm">
 
-                            </ul>
-                            <div class="nk-reply-form-title">
+                            {{-- <div class="nk-reply-form-title">
                                 <div class="title">Reply as:</div>
                                 <div class="user-avatar xs bg-purple">
                                     <span>{{ $query->id }}</span>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="reply-form">
                                 <div class="nk-reply-form-editor">
-                                    <div class="nk-reply-form-field">
-                                        <textarea class="form-control form-control-simple no-resize" placeholder="Hello"></textarea>
-                                    </div>
+
                                     <div class="nk-reply-form-tools">
                                         <ul class="nk-reply-form-actions g-1">
                                             <li class="mr-2"><button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Reply</button></li>
@@ -147,14 +143,7 @@
                                     </div><!-- .nk-reply-form-tools -->
                                 </div><!-- .nk-reply-form-editor -->
                             </div>
-                            <div class="tab-pane" id="note-form">
-                                <div class="nk-reply-form-editor">
-                                    <div class="nk-reply-form-field">
-                                        <textarea class="form-control form-control-simple no-resize" placeholder="Type your private note, that only visible to internal team."></textarea>
-                                    </div>
 
-                                </div><!-- .nk-reply-form-editor -->
-                            </div>
                         </div>
                     </div><!-- .nk-reply-form -->
                 </div><!-- .nk-reply -->
@@ -170,7 +159,7 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                        <form method='post' action="{{ route('customer_queries.store') }}" enctype="multipart/form-data">
+                        <form method='post' action="{{ route('queries.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row g-3">
                                 <input type="hidden" class="form-control" value={{ $query->subject }} name="subject" id="product-title" autocomplete="off" required>
@@ -192,13 +181,14 @@
                                 </div>
                             </div>
                             <br>
-                            <button class="btn btn-primary "><span>Submit</span></button>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button class="btn btn-primary "><span>Submit</span></button>
+                              </div>
+
                          </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+
                   </div>
                 </div>
               </div>

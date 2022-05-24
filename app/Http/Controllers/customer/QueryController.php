@@ -49,7 +49,7 @@ class QueryController extends Controller
         Query::create([
             'subject' => $request->subject,
             'message' => $request->message,
-            'send_by' => auth()->user()->id,
+            'send_by' => Auth::user()->name,
             'attachments' => $image,
         ]);
         return redirect()->route('customer_queries.index');

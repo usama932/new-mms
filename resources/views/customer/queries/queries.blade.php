@@ -83,7 +83,7 @@
                                 <div class="nk-msg-info">
                                     <div class="nk-msg-from">
                                         <div class="nk-msg-sender">
-                                            <div class="name">{{ $query->user->name  }}</div>
+                                            <div class="name">{{ $query->send_by }}</div>
                                             <div class="lable-tag dot bg-pink"></div>
                                         </div>
                                         <div class="nk-msg-meta">
@@ -118,7 +118,7 @@
                             <ul class="nk-msg-tags">
                                 <li><span class="label-tag">
                                     <!-- <em class="icon ni ni-flag-fill"></em>  -->
-                                    <span>{{ $query->user->name }}</span></span></li>
+                                    <span>{{ $query->send_by }}</span></span></li>
                             </ul>
                         </div>
 
@@ -136,14 +136,14 @@
                                 <div class="user-avatar sm bg-blue">
                                     <span>{{ $query->id }}</span>
                                 </div>
-                                <div class="user-name">{{ $query->user->name}}</div>
+                                <div class="user-name">{{ $query->send_by}}</div>
                             </div>
                             <div class="date-time">{{ $query->created_at}}</div>
                         </div>
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
 
-                                <p>{{ $query->message }} </p> <p> {{$query->user->name  }} </p>
+                                <p>{{ $query->message }} </p> <p> {{$query->send_by  }} </p>
                             </div>
                             <div class="attach-files">
 

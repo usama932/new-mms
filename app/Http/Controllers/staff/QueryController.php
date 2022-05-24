@@ -17,6 +17,7 @@ class QueryController extends Controller
      */
     public function index()
     {
+
         $queries = Query::all();
         return view('staff.query.index',compact('queries'));
     }
