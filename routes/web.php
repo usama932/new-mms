@@ -23,6 +23,8 @@ use App\Http\Controllers\customer\NewsController as customer_NewsController;
 use App\Http\Controllers\customer\QueryController as Customer_QueryController;
 use App\Http\Controllers\customer\ProfileController as Customer_ProfileController;
 use App\Http\Controllers\customer\OrderController as customer_OrderController;
+use App\Http\Controllers\customer\FaqsController as customer_FaqsController;
+use App\Http\Controllers\customer\AccountsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -86,7 +88,12 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::post('order/store/{id}', [customer_OrderController::class, 'order_store'])->name('order.store');
     Route::get('order/delete/{id}', [customer_OrderController::class, 'order_delete'])->name('order.delete');
 
+    //Faqs
 
+    Route::resource('customer_faqs',customer_FaqsController::class);
+    //accounts
+    Route::get('link/accounts', [AccountsController::class, 'link_account'])->name('link.account');
+    Route::get('consultant', [AccountsController::class, 'consultant'])->name('consultant');
     //stripe
      Route::get('stripe', [customer_OrderController::class, 'stripe']);
     Route::post('stripe', [customer_OrderController::class, 'stripePost'])->name('stripe.post');
