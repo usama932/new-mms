@@ -15,6 +15,59 @@
          <!-- .nk-block-head -->
 
       </div>
+      <div class="nk-block">
+        <div class="row g-gs">
+            <div class="col-xxl-6 col-md-6">
+                <div class="card   h-100">
+                    <div class="d-flex">
+                        <div class="m-5">
+                            <h5 class="text-secomdary">Welcome back</h5>
+                            <h4><b>{{ auth()->user()->name }}</b></h4>
+                             <p class="text-primary">User Since {{ date('m-d-Y', strtotime(auth()->user()->created_at)) }}</p>
+                                 </div>
+                                     <div class="card mt-4 mr-3 mb-4 p-3">
+                                         <!-- <div class="row"> -->
+                                            <div class="col-12">
+                                               <h1 class="text-center text-muted pt-3"><b>A +</b></h1>
+                                               <small class="text-primary">overall portfolio grade</small>
+                                              <!-- </div> -->
+                                         </div>
+
+                                     </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xxl-6 col-md-6">
+                <div class="card    h-100">
+                     <div class="d-flex">
+                        <!-- <div class="user-card">
+                            <img src="./images/product2.png" alt="" class="rounded bg-black-dim   mt-4 mx-3" width="30%" height="30%">
+                            <p class="mt-4">Gold<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                    </div> -->
+                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
+                            <img src="./images/product2.png" alt="">
+                        </div>
+                     <p class="mt-4">Gold<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
+                            <img src="./images/platinum.PNG" alt="">
+                        </div>
+                        <p class="mt-4">Platinum<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
+                            <img src="./images/silver.PNG" alt="">
+                        </div>
+                        <p class="mt-4">Silver<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
+                            <img src="./images/platinum.PNG" alt="">
+                        </div>
+                        <p class="mt-4">Palladium<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+</div></div>
       <div class="col-xxl-12">
          <div class="row g-gs">
             <div class="col-xxl-3  col-sm-3">
@@ -159,40 +212,40 @@
       </div>
    </div>
    <!-- .nk-block-head -->
-   <div class="nk-block">
-    <div class="row g-gs">
-        @foreach ($products as $product)
-        <a href="#">
-        <div class="col-xxl-3 col-lg-3 col-sm-6">
-            <div class="card card-bordered product-card">
-                <div class="product-thumb bg-light pt-5">
-                    <a href="{{ route('product.detail',$product->id) }}l">
-                        @if($products->images != null)
-                        <img src="{{asset($products->images->image)}}"  style="width:70px; height:70px;">
-                        @else
-                         No image
-                        @endif
-                    </a>
-                    <ul class="product-badges">
-                        <li><span class="badge badge-success">New</span></li>
-                    </ul>
+    <div class="nk-block">
+        <div class="row g-gs">
+            @foreach ($products as $product)
+            <a href="#">
+            <div class="col-xxl-3 col-lg-3 col-sm-6">
+                <div class="card card-bordered product-card">
+                    <div class="product-thumb bg-light pt-5">
+                        <a href="{{ route('product.detail',$product->id) }}l">
+                            @if($products->images != null)
+                            <img src="{{asset($products->images->image)}}"  style="width:70px; height:70px;">
+                            @else
+                            No image
+                            @endif
+                        </a>
+                        <ul class="product-badges">
+                            <li><span class="badge badge-success">New</span></li>
+                        </ul>
 
-                </div>
-                <div class="card-inner text-center">
-                    <ul class="product-tags">
-                        <li><a href="{{ route('product.detail',$product->id) }}">Item # {{ $product->product_id }}</a></li>
-                    </ul>
-                    <span class="product-title"><a href="{{ route('product.detail',$product->id) }}"><b>{{ $product->title }}</b></a></span>
-                    <div class="product-price text-primary h5">{{ $product->price }}</div>
+                    </div>
+                    <div class="card-inner text-center">
+                        <ul class="product-tags">
+                            <li><a href="{{ route('product.detail',$product->id) }}">Item # {{ $product->product_id }}</a></li>
+                        </ul>
+                        <span class="product-title"><a href="{{ route('product.detail',$product->id) }}"><b>{{ $product->title }}</b></a></span>
+                        <div class="product-price text-primary h5">{{ $product->price }}</div>
+                    </div>
                 </div>
             </div>
+            </a>
+            @endforeach
+            <!-- .col -->
+            <!-- .col -->
         </div>
-        </a>
-        @endforeach
-        <!-- .col -->
-        <!-- .col -->
     </div>
-</div>
 </div>
 </div><!-- .row -->
 </div><!-- .nk-block -->

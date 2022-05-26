@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\NewsController;
 use App\Http\Controllers\admin\QueryController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\downloadController;
+use App\Http\Controllers\admin\FaqsController;
 
 use App\Http\Controllers\staff\ProductController as Staff_ProductController;
 use App\Http\Controllers\staff\QueryController as Staff_QueryController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\staff\CustomerController as Staff_CustomerController;
 use App\Http\Controllers\staff\ProfileController as Staff_ProfileContoller;
 use App\Http\Controllers\staff\OrderController as Staff_OrderController;
 use App\Http\Controllers\staff\downloadController  as Staff_downloadController;
+use App\Http\Controllers\staff\FaqsController as Staff_FaqsController;
 
 use App\Http\Controllers\customer\NewsController as customer_NewsController;
 use App\Http\Controllers\customer\QueryController as Customer_QueryController;
@@ -55,7 +57,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::resource('orders',OrderController::class);
     Route::resource('profiles',ProfileController::class);
       //download file
-      Route::get('download/{file}', [downloadController::class, 'getDownload'])->name('admin.download');
+    Route::get('download/{file}', [downloadController::class, 'getDownload'])->name('admin.download');
+    //Faqs
+    Route::resource('faqs',FaqsController::class);
 
 });
 Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
@@ -66,6 +70,7 @@ Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
     Route::resource('staff_queries',Staff_QueryController::class);
     Route::resource('staff_profiles',Staff_ProfileContoller::class);
     Route::resource('staff_orders',Staff_OrderController::class);
+    Route::resource('staff_faqs',Staff_FaqsController::class);
 
       //download file
     Route::get('download/{file}', [Staff_downloadController::class, 'getDownload'])->name('staff.download');

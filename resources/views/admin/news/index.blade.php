@@ -12,14 +12,7 @@
                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                                 <div class="toggle-expand-content" data-content="pageMenu">
                                     <ul class="nk-block-tools g-3">
-                                        <li>
-                                            <div class="form-control-wrap">
-                                                <div class="form-icon form-icon-right">
-                                                    <em class="icon ni ni-search"></em>
-                                                </div>
-                                                <input type="text" class="form-control" id="default-04" placeholder="Search">
-                                            </div>
-                                        </li>
+
 
                                         <li class="nk-block-tools-opt">
                                             <a href="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
@@ -47,7 +40,14 @@
                                 @foreach($news as $new)
                                 <tr>
                                     <td>{{$new->title}}</td>
-                                    <td>{{$new->description}}</td>
+                                    <td>         @if(strlen($new->description) > 100)
+                                        {{substr($new->description,0,100)}}
+                                        <span class="read-more-show hide_content">Show More<i class="fa fa-angle-down"></i></span>
+                                        <span class="read-more-content"> {{substr($new->description,100,strlen($new->description))}}
+                                        <span class="read-more-hide hide_content">Show Less <i class="fa fa-angle-up"></i></span> </span>
+                                        @else
+                                        {{$new->description}}
+                                        @endif</td>
                                     <td>{{$new->tags}}</td>
                                     <td>{{$new->added_by}}</td>
                                     <td>
@@ -105,7 +105,7 @@
                                     <label class="form-label" for="tags">Image</label>
 
                                             <input type="file" name="image" class="form-control" placeholder="image">
-                                    
+
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary"><span>Save</span></button>

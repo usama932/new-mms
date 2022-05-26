@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\customer;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Faqs;
 
 class FaqsController extends Controller
@@ -16,7 +17,7 @@ class FaqsController extends Controller
     public function index()
     {
         $faqs = Faqs::all();
-        return view("customer.faqs.index",compact('faqs'));
+        return view("admin.faqs.index",compact('faqs'));
     }
 
     /**
@@ -37,7 +38,15 @@ class FaqsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Faqs::create([
+            'question' => $request->question,
+            'answer' => $request->answer,
+            'status' => "Active",
+            'added_by' => Auth::user()->name,
+
+        ]);
+        return redirect()->route('faqs.index')
+                        ->with('success','Faqs created successfully.');
     }
 
     /**
@@ -71,7 +80,15 @@ class FaqsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Faqs::where('id',$id)->update([
+            'question' => $request->question,
+            'answer' => $request->answer,
+            'status' => "Active",
+            'added_by' => Auth::user()->name,
+
+        ]);
+        return redirect()->route('faqs.index')
+                        ->with('success','Faqs created successfully.');
     }
 
     /**
@@ -82,6 +99,8 @@ class FaqsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $faqs= Faqs::find($id);
+        $faqs->delete();
+        return redirect()->route('faqs.index')->with('success','Faqs Deleted successfully.');
     }
 }

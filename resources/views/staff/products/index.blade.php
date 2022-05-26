@@ -11,14 +11,7 @@
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
-                                                        <li>
-                                                            <div class="form-control-wrap">
-                                                                <div class="form-icon form-icon-right">
-                                                                    <em class="icon ni ni-search"></em>
-                                                                </div>
-                                                                <input type="text" class="form-control" id="default-04" placeholder="Search">
-                                                            </div>
-                                                        </li>
+                                                   
                                                         <li class="nk-block-tools-opt">
                                                             <a href="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
                                                             <a href="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Product</span></a>
