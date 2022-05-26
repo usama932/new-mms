@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Query;
 
 
+
 class QueryController extends Controller
 {
     /**

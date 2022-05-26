@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\customer;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Product;
 use App\Models\Order;
+use App\Models\Product;
+use DB;
+use File;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Response;
 use Session;
 use Stripe;
-
 class OrderController extends Controller
 {
     public function suggest_product(){
@@ -81,4 +84,11 @@ class OrderController extends Controller
         return redirect()->route('purchase_history');
 
     }
+    public function getDownload($image)
+    {
+
+        $file = public_path($image);
+        return Response::download($file);
+    }
+
 }

@@ -10,12 +10,14 @@ use App\Http\Controllers\admin\StaffController;
 use App\Http\Controllers\admin\NewsController;
 use App\Http\Controllers\admin\QueryController;
 use App\Http\Controllers\admin\ProfileController;
+use App\Http\Controllers\admin\downloadController;
 
 use App\Http\Controllers\staff\ProductController as Staff_ProductController;
 use App\Http\Controllers\staff\QueryController as Staff_QueryController;
 use App\Http\Controllers\staff\CustomerController as Staff_CustomerController;
 use App\Http\Controllers\staff\ProfileController as Staff_ProfileContoller;
 use App\Http\Controllers\staff\OrderController as Staff_OrderController;
+use App\Http\Controllers\staff\downloadController  as Staff_downloadController;
 
 use App\Http\Controllers\customer\NewsController as customer_NewsController;
 use App\Http\Controllers\customer\QueryController as Customer_QueryController;
@@ -50,16 +52,22 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::resource('queries',QueryController::class);
     Route::resource('orders',OrderController::class);
     Route::resource('profiles',ProfileController::class);
+      //download file
+      Route::get('download/{file}', [downloadController::class, 'getDownload'])->name('admin.download');
 
 });
 Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
 
-    //admin Route
+    //staff Route
     Route::resource('staff_products',Staff_ProductController::class);
     Route::resource('staff_customers',Staff_CustomerController::class);
     Route::resource('staff_queries',Staff_QueryController::class);
     Route::resource('staff_profiles',Staff_ProfileContoller::class);
     Route::resource('staff_orders',Staff_OrderController::class);
+
+      //download file
+    Route::get('download/{file}', [Staff_downloadController::class, 'getDownload'])->name('staff.download');
+
 });
 Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], function() {
 
@@ -67,7 +75,9 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::resource('customer_news',customer_NewsController::class);
     Route::resource('customer_queries',Customer_QueryController::class);
     Route::resource('customer_profiles',Customer_ProfileController::class);
+
     //Orders
+    Route::get('download/{file}', [customer_OrderController::class, 'getDownload'])->name('download');
     Route::get('suggest', [customer_OrderController::class, 'suggest_product'])->name('suggest');
     Route::get('product_detail/{id}', [customer_OrderController::class, 'product_detail'])->name('product.detail');
     Route::get('/market_price;', [customer_OrderController::class, 'market_price'])->name('market_price');

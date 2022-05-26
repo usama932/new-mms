@@ -196,7 +196,18 @@
                             </div>
 
                             <div class="nk-tb-col">
-                                <span class="badge badge-dot badge-dot-xs badge-success">{{ $query->message }}</span>
+
+
+                                    @if(strlen($query->message) > 100)
+                                    {{substr($query->message,0,100)}}
+                                    <span class="read-more-show hide_content">More<i class="fa fa-angle-down"></i></span>
+                                    <span class="read-more-content"> {{substr($query->message,100,strlen($query->message))}}
+                                    <span class="read-more-hide hide_content">Less <i class="fa fa-angle-up"></i></span> </span>
+                                    @else
+                                    {{$query->message}}
+                                    @endif
+
+
                             </div>
 
                         </div>

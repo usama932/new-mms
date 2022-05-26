@@ -64,9 +64,6 @@
                             <button class="search-submit btn btn-icon"><em class="icon ni ni-search"></em></button>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                        Create Query
-                      </button>
 
                       <!-- Modal -->
                      <!-- .search-wrap -->
@@ -109,6 +106,17 @@
 
                 </div>
             </div>
+
+              <div class="nk-msg-head">
+                <h4 class="title d-none d-lg-block"> <span> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Create Query
+                  </button></span>   </h4>
+                <div class="nk-msg-head-meta">
+
+
+                </div>
+
+            </div><!-- .nk-msg-head -->
             @foreach ($queries as $row=>$query)
             <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white  hide_msg">
                 <div class="nk-msg-head">
@@ -143,10 +151,20 @@
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
 
-                                <p>{{ $query->message }} </p> <p> {{$query->send_by  }} </p>
+                                <p>
+                                    @if(strlen($query->message) > 100)
+                                    {{substr($query->message,0,100)}}
+                                    <span class="read-more-show hide_content">Show More<i class="fa fa-angle-down"></i></span>
+                                    <span class="read-more-content"> {{substr($query->message,100,strlen($query->message))}}
+                                    <span class="read-more-hide hide_content">Show Less <i class="fa fa-angle-up"></i></span> </span>
+                                    @else
+                                    {{$query->message}}
+                                    @endif</p> <p> {{$query->send_by  }} </p>
                             </div>
                             <div class="attach-files">
-
+                                @if(isset($query->attachments))
+                                    <a href="{{route('download',$query->attachments)}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
+                                @endif
 
                             </div>
                         </div>

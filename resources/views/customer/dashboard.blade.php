@@ -77,7 +77,7 @@
                         </div>
                         <div class="data">
                            <div class="data-group">
-                              <div   style="color:#488A99" class="amount">$3,890</div>
+                              <div   style="color:#488A99" class="amount">$0</div>
                               <div class="nk-ecwg6-ck">
                                  <canvas class="ecommerce-line-chart-s3" id="todayCustomers"></canvas>
                               </div>
@@ -114,15 +114,15 @@
                </div>
                <!-- .card -->
             </div>
-            <div class="nk-block-between">
+            <div class="nk-block-between ml-2">
                <div class="nk-block-head-content">
-                  <h5 class="nk-block-title page-title m-1">Recent News</h5>
+                  <h5 class="nk-block-title page-title m-1 ">Recent News</h5>
                </div>
             </div>
          </div>
          <!-- .row -->
          @foreach($news as $new)
-         <div class="card">
+         <div class="card pt-2">
             <div class="d-flex">
                <div class="card m-2">
                   <img src="{{ $new->image }}" class="rounded w-50% h-20% py-4 px-1" alt="">
@@ -150,8 +150,8 @@
    </div>
 
 </div>
-<div class="nk-block nk-block-lg">
-   <div class="nk-block-head mt-4">
+<div class="nk-block nk-block-lg ">
+   <div class="nk-block-head mt-4 ml-5">
       <div class="nk-block-between g-3">
          <div class="nk-block-head-content">
             <h3 class="nk-block-title page-title">Discover Exclusive Products</h3>

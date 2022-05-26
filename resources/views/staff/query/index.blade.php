@@ -71,6 +71,20 @@
 
                 </div>
             </div>
+            <div class="nk-msg-head">
+                <h4 class="title d-none d-lg-block">Queries  </h4>
+                <div class="nk-msg-head-meta">
+                    <div class="d-none d-lg-block">
+                        <ul class="nk-msg-tags">
+                            <li><span class="label-tag">
+                                <!-- <em class="icon ni ni-flag-fill"></em>  -->
+                                <span></span></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
             @foreach ($queries as $row=>$query)
             <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white  hide_msg">
                 <div class="nk-msg-head">
@@ -105,13 +119,21 @@
                         <div class="nk-reply-body">
                             <div class="nk-reply-entry entry">
 
-                                <p>{{ $query->message }} </p> <p>{{ $query->send_by}}</p>
+                                <p> @if(strlen($query->message) > 100)
+                                    {{substr($query->message,0,100)}}
+                                    <span class="read-more-show hide_content">More<i class="fa fa-angle-down"></i></span>
+                                    <span class="read-more-content"> {{substr($query->message,100,strlen($query->message))}}
+                                    <span class="read-more-hide hide_content">Less <i class="fa fa-angle-up"></i></span> </span>
+                                    @else
+                                    {{$query->message}}
+                                    @endif </p> <p>{{ $query->send_by}}</p>
                             </div>
                             <div class="attach-files">
 
                                 <div class="attach-foot">
-                                    <span class="attach-info">2 files attached</span>
-                                    <a class="attach-download link" href="#"><em class="icon ni ni-download"></em><span>Download All</span></a>
+                                    @if(isset($query->attachments))
+                                    <a href="{{route('staff.download',$query->attachments)}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
+                                @endif
                                 </div>
                             </div>
                         </div>
