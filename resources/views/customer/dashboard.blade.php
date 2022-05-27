@@ -40,30 +40,49 @@
             </div>
             <div class="col-xxl-6 col-md-6">
                 <div class="card    h-100">
-                     <div class="d-flex">
-                        <!-- <div class="user-card">
-                            <img src="./images/product2.png" alt="" class="rounded bg-black-dim   mt-4 mx-3" width="30%" height="30%">
-                            <p class="mt-4">Gold<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
-                    </div> -->
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                            <img src="./images/product2.png" alt="">
-                        </div>
-                     <p class="mt-4">Gold<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                            <img src="./images/platinum.PNG" alt="">
-                        </div>
-                        <p class="mt-4">Platinum<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                            {
+                                "width": "100%",
+                                "height": "100%",
+                                "symbolsGroups": [
+                                {
+                                    "name": "Metals",
+                                    "symbols": [
+                                        {
+                                            "name": "NYSE:GOLD",
+                                            "displayName": "GOLD"
+                                        },
+                                        {
+                                            "name": "CURRENCYCOM:SILVER",
+                                            "displayName": "SILVER"
+                                        },
+                                        {
+                                            "name": "CURRENCYCOM:PLATINUM",
+                                            "displayName": "PLATINUM"
+                                        },
+                                        {
+                                            "name": "CURRENCYCOM:PALLADIUM",
+                                            "displayName": "PALLADIUM"
+                                        },
+                                        {
+                                            "name": "LSE:XRH0",
+                                            "displayName": "RHODIUM"
+                                        }
+                                    ]
+                                }
+                            ],
+                                "showSymbolLogo": true,
+                                "colorTheme": "light",
+                                "isTransparent": false,
+                                "locale": "en"
+                            }
+                        </script>
                     </div>
-                    <div class="d-flex">
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                            <img src="./images/silver.PNG" alt="">
-                        </div>
-                        <p class="mt-4">Silver<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
-                        <div class="nk-msg-media user-avatar bg-white mt-4 mx-3">
-                            <img src="./images/platinum.PNG" alt="">
-                        </div>
-                        <p class="mt-4">Palladium<br><small> Current $31043<p class="text-warning pt-5">(+6%)</p></small> </p>
-                    </div>
+                    <!-- TradingView Widget END -->
                 </div>
             </div>
             </div>

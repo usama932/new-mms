@@ -16,6 +16,51 @@
              <!-- .nk-block-head -->
              <div class="col-12 d-flex my-3">
                 <div class="row">
+                    <div class="col-md-12">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container text-center">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <div class="tradingview-widget-copyright"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                                {
+                                    "width": "770",
+                                    "height": "450",
+                                    "symbolsGroups": [
+                                    {
+                                        "name": "Metals",
+                                        "symbols": [
+                                            {
+                                                "name": "NYSE:GOLD",
+                                                "displayName": "GOLD"
+                                            },
+                                            {
+                                                "name": "CURRENCYCOM:SILVER",
+                                                "displayName": "SILVER"
+                                            },
+                                            {
+                                                "name": "CURRENCYCOM:PLATINUM",
+                                                "displayName": "PLATINUM"
+                                            },
+                                            {
+                                                "name": "CURRENCYCOM:PALLADIUM",
+                                                "displayName": "PALLADIUM"
+                                            },
+                                            {
+                                                "name": "LSE:XRH0",
+                                                "displayName": "RHODIUM"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                    "showSymbolLogo": true,
+                                    "colorTheme": "light",
+                                    "isTransparent": false,
+                                    "locale": "en"
+                                }
+                            </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
                    <div class="col-6">
                       <div class="card mr-5">
                          <div class="nk-block nk-block-lg">

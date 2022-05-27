@@ -87,7 +87,7 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::get('download/{file}', [customer_OrderController::class, 'getDownload'])->name('download');
     Route::get('suggest', [customer_OrderController::class, 'suggest_product'])->name('suggest');
     Route::get('product_detail/{id}', [customer_OrderController::class, 'product_detail'])->name('product.detail');
-    Route::get('/market_price;', [customer_OrderController::class, 'market_price'])->name('market_price');
+    Route::get('/market_price', [customer_OrderController::class, 'market_price'])->name('market_price');
     Route::get('/purchase_history', [customer_OrderController::class, 'purchase_history'])->name('purchase_history');
     Route::get('checkout/{id}',[customer_OrderController::class,'checkout'])->name('checkout');
     Route::post('order/store/{id}', [customer_OrderController::class, 'order_store'])->name('order.store');
