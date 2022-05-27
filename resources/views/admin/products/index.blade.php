@@ -11,7 +11,7 @@ v<x-app-layout>
                    <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                    <div class="toggle-expand-content" data-content="pageMenu">
                       <ul class="nk-block-tools g-3">
-                   
+
                          <li class="nk-block-tools-opt">
                             <a href="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
                             <a href="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span>Add Product</span></a>
@@ -98,8 +98,8 @@ v<x-app-layout>
                       <div class="card card-body">
                          <form method='post' action="{{route('products.store')}}">
                             @csrf
-                            <label>Product Info:</label>
-                            <input type="text" name="product_id"></input>
+                            <label>Product Url:</label>
+                            <input type="text" name="product_url"></input>
                             <button class="btn btn-primary "><span>Submit</span></button>
                          </form>
                       </div>

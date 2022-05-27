@@ -11,6 +11,7 @@ use App\Models\Product_media;
 use Illuminate\Support\Facades\Redirect;
 use Exception;
 use Auth;
+use Symfony\Component\HttpClient\HttpClient;
 
 
 class ProductController extends Controller
@@ -48,35 +49,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $item_codes = explode(',',$request->product_id);
-        foreach ($item_codes as $item_code){
-            $url = 'https://www.gmrgold.com/store/Search.aspx?SearchTerms='.$item_code;
-       $resp = [];
-       $client = new Client();
-       $page =  $client->request('GET',$url);
+    try{
+        $url = $request->product_url;
+        $client = new Client(HttpClient::create(['verify_peer' => false, 'verify_host' => false]));
+        $page =  $client->request('GET',$url);
 
-       if($page->filter('.Search-productItem a')->count() > 0){
-           $link = $page->filter('.Search-productItem a')->attr('href');
-           $link = 'https://www.gmrgold.com/.'. $link;
-           $page =  $client->request('GET',$link);
-       }
-       if($page->filter('.ProductDetailsProductName')->count() > 0){
-           $resp['title'] = $page->filter('.ProductDetailsProductName')->text();
-           $resp['price'] = $page->filter('#lblPrice')->text();
-           $resp['itemNo'] = $page->filter('.ProductItemNr')->text();
-           $resp['description'] = $page->filter('.ProductDetailsBullets')->text();
-           $resp['features'] = $page->filter('#desc2 > ul > li')->each(function($item) {
-               return $item->text();
-           });
-           $resp['images'] = $page->filter('.product-thumbnails > li > a > img')->each(function($item) {
-               return 'https://www.gmrgold.com'.$item->attr('src');
-           });
+        $resp['title'] = $page->filter('.page-title')->text();
+        $resp['description'] = $page->filter('.overview')->text();
+        $resp['itemNo'] = $page->filter('.sku > .value')->text();
+        $resp['price'] = 0;
+        $resp['image'] = $page->filterXpath('//meta[@property="og:image"]')->attr('content');
 
-       }else{
-           print 'product not found';
-
-       }
-        }
         $item = Product::where('product_id', $resp['itemNo'])->count();
 
         if($item < 1)
@@ -91,18 +74,21 @@ class ProductController extends Controller
             $product->status =  '1';
             $product->save();
             $product_media = new Product_media;
-            foreach($resp['images'] as $key =>  $image){
-                $product_media->product_id =  $product->id;
-                $product_media->image = $image;
-                $product_media->save();
+            $product_media->product_id =  $product->id;
+            $product_media->image = $resp['image'];
+            $product_media->save();
 
-            }
             return redirect()->route('products.index')->with('success', 'Product Added Successfully');
 
+        }else{
+            return redirect()->route('products.index')->with('error', 'Product Already Exist');
         }
-            return redirect()->route('products.index')->with('success', 'Product exit already');
+        return redirect()->route('products.index')->with('success', 'Product exit already');
+    }catch (Exception $exception){
+        return redirect()->route('products.index')->with('error', 'Something went wrong');
+    }
 
-        }
+    }
 
 
 
