@@ -41,9 +41,10 @@ class QueryController extends Controller
     public function store(Request $request)
     {
         $image = null;
+
         if ($image = $request->file('attachments')) {
             $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $profileImage =  $image->getClientOriginalName();
            $image =  $image->move($destinationPath, $profileImage);
         }
 

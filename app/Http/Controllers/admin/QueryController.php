@@ -43,6 +43,7 @@ class QueryController extends Controller
             $name = $request->file('attachments')->getClientOriginalName();
             $image = Storage::putFileAs('files', $request->file('attachments'), $name);
         }
+       
         $image = "No attachments";
         Query::create([
             'message' => $request->message,
