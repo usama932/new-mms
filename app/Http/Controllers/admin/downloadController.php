@@ -13,8 +13,8 @@ class downloadController extends Controller
 {
     public function getDownload($attachments)
     {
-
-        $file = public_path($image);
+        dd("as");
+        $file = public_path($attachments);
         return Response::download($file);
     }
 }
