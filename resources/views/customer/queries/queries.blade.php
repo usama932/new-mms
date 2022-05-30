@@ -164,7 +164,7 @@
                             </div>
                             <div class="attach-files">
                                 @if(isset($query->attachments))
-                                    <a href="{{route('download',$query->attachments)}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
+                                    <a href="{{route('customer.download',$query->attachments)}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
                                 @endif
 
                             </div>

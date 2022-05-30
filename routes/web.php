@@ -60,7 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::resource('orders',OrderController::class);
     Route::resource('profiles',ProfileController::class);
       //download file
-    Route::get('download/{file}', [downloadController::class, 'getDownload'])->name('admin.download');
+    Route::get('admin/download/{file}', [downloadController::class, 'getDownload'])->name('admin.download');
     //Faqs
     Route::resource('faqs',FaqsController::class);
     Route::resource('meetings',Request_meetingController::class);
@@ -77,7 +77,7 @@ Route::group(['prefix' => 'staff', 'middleware' => ['role:staff']], function() {
     Route::resource('staff_faqs',Staff_FaqsController::class);
     Route::resource('staff_meetings',Staff_meetingController::class);
       //download file
-    Route::get('download/{file}', [Staff_downloadController::class, 'getDownload'])->name('staff.download');
+    Route::get('staff/download/{file}', [Staff_downloadController::class, 'getDownload'])->name('staff.download');
 
 });
 Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], function() {
@@ -89,7 +89,7 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::resource('customer_meetings',customer_meetingController::class);
 
     //Orders
-    Route::get('download/{file}', [customer_OrderController::class, 'getDownload'])->name('download');
+    Route::get('customer/download/{file}', [customer_OrderController::class, 'getDownload'])->name('customer.download');
     Route::get('suggest', [customer_OrderController::class, 'suggest_product'])->name('suggest');
     Route::get('product_detail/{id}', [customer_OrderController::class, 'product_detail'])->name('product.detail');
     Route::get('/market_price', [customer_OrderController::class, 'market_price'])->name('market_price');
