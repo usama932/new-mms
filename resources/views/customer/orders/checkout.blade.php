@@ -167,8 +167,7 @@
    </div>
 </div>
 </div>
-@endsection
-<script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+
 <script>
     $(document).ready(function() {
     $('#country-dropdown').on('change', function() {
@@ -212,8 +211,9 @@
     });
     });
     </script>
-
-<script>
+@endsection
+<script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script>
     $(document).ready(function() {
     $('#country-dropdown').on('change', function() {
     var country_id = this.value;
