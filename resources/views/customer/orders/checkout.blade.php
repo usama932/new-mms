@@ -63,11 +63,7 @@
                                              <div class="form-group">
                                                 <label class="form-label" for="fv-full-name">City</label>
                                                 <option value="">Select Country</option>
-                                                @foreach ($countries as $country)
-                                                <option value="{{$country->id}}">
-                                                {{$country->name}}
-                                                </option>
-                                                @endforeach
+                                                
                                              </div>
                                           </div>
                                           <div class="col-md-6">
