@@ -87,8 +87,8 @@ class OrderController extends Controller
     public function getDownload($image)
     {
         $link = base64_decode($image);
-        dd($link);
-        $file = public_path($image);
+
+        $file = public_path($link);
         return Response::download($file);
     }
 
