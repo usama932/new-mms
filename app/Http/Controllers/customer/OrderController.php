@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Storage;
 use Response;
 use Session;
 use Stripe;
+use Validator,Redirect;
+use App\Models\{Country,State,City};
+
 class OrderController extends Controller
 {
     public function suggest_product(){
@@ -34,8 +37,9 @@ class OrderController extends Controller
         return view('customer.orders.product_detail',compact('products'));
     }
     public function checkout(Request $request, $id){
+        $data['countries'] = Country::where('name','united states')->get(["name","id"]);
         $products = Product::where('id',$id)->with('user','images')->first();
-        return view('customer.orders.checkout',compact('products'));
+        return view('customer.orders.checkout',compact('products','data'));
     }
     public function stripe()
     {

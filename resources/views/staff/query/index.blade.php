@@ -131,6 +131,7 @@
                             <div class="attach-files">
 
                                 <div class="attach-foot">
+                                    <h5>Download attachments:</h5>
                                     @if(isset($query->attachments))
                                     <a href="{{route('staff.download',['attachments' => base64_encode($query->attachments)])}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
                                 @endif
