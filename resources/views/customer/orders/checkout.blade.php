@@ -50,40 +50,27 @@
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->id}}" name="product_id" required>
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->price}}" name="total" required>
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->description}}" name="description" required>
-
-                                          <div class="col-md-12">
-                                             <div class="form-group">
-                                                <label class="form-label" for="fv-full-name">Address </label>
-                                                <div class="form-control-wrap">
-                                                   <input type="text" class="form-control" id="fv-full-name" name="address" required>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                             <div class="form-group">
-                                                <label class="form-label" for="fv-full-name">City</label>
-                                                <option value="">Select Country</option>
-                                                @foreach ($countries as $country)
-                                                <option value="{{$country->id}}">
-                                                {{$country->name}}
-                                                </option>
-                                                @endforeach
-                                             </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                             <div class="form-group">
-                                                <label class="form-label" for="fv-topics">State</label>
-                                                <select class="form-control" id="state-dropdown">
-                                                </select>
-                                             </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <div class="form-group">
-                                               <label class="form-label" for="fv-topics">City</label>
-                                               <select class="form-control" id="city-dropdown">
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <select class="form-control" id="country-dropdown">
+                                            <option value="">Select Country</option>
+                                            @foreach ($countries as $country)
+                                            <option value="{{$country->id}}">
+                                            {{$country->name}}
+                                            </option>
+                                            @endforeach
                                             </select>
                                             </div>
-                                         </div>
+                                            <div class="form-group">
+                                            <label for="state">State</label>
+                                            <select class="form-control" id="state-dropdown">
+                                            </select>
+                                            </div>
+                                            <div class="form-group">
+                                            <label for="city">City</label>
+                                            <select class="form-control" id="city-dropdown">
+                                            </select>
+                                            </div>
 
                                           <div class="col-md-6">
                                              <div class="form-group">
