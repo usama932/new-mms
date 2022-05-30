@@ -3,7 +3,7 @@
  <div class="nk-content ">
                     <div class="container-fluid">
                         <div class="nk-content-inner">
-                            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark"><em class="icon ni ni-chevrons-left"></em>Place an Order</h5></div>
+                            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark">Faqs</h5></div>
                             <div class="nk-content-body col-12 " style="background-color: white">
                                 <div class="content-page  ">
                                     <div >
@@ -21,11 +21,11 @@
                                             <div id="faqs" class="accordion">
                                                 @foreach ($faqs as $faq)
                                                 <div class="accordion-item">
-                                                    <a href="#" class="accordion-head" data-toggle="collapse" data-target="#faq-q1">
+                                                    <a href="#" class="accordion-head" data-toggle="collapse" data-target="#faq-q1{{ $faq->id }}">
                                                         <h6 class="title">{{ $faq->question }}?</h6>
                                                         <span class="accordion-icon"></span>
                                                     </a>
-                                                    <div class="accordion-body collapse show" id="faq-q1" data-parent="#faqs">
+                                                    <div class="accordion-body collapse show" id="faq-q1{{ $faq->id }}" data-parent="#faqs">
                                                         <div class="accordion-inner">
 
                                                             <p>{{ $faq->answer }} </p>
@@ -40,7 +40,7 @@
                                             </div><!-- .accordion -->
                                         </div><!-- .card -->
                                     </div><!-- .nk-block -->
-                                    <form action="#">
+                                    {{-- <form action="#">
                                                     <div class="row g-5 pt-5">
                                                         <div class="col-lg-6">
                                                             <div class="form-group">
@@ -88,7 +88,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </form><!-- .nk-block -->
+                                                </form><!-- .nk-block --> --}}
                                 </div><!-- .content-page -->
                             </div>
                         </div>
