@@ -232,7 +232,7 @@
                             <li class="item">
                                 <div class="thumb">
                                     @if($product->images != null)
-                                    <img src="{{asset($product->images->image)}}"  class="rounded w-25% h-20% py-4 px-1"">
+                                    <img src="{{asset($product->images->image)}}"  class="rounded w-40% h-20% py-4 px-1"">
                                     @else
                                      No image
                                     @endif
