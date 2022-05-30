@@ -11,9 +11,9 @@ use File;
 
 class downloadController extends Controller
 {
-    public function getDownload($image)
+    public function getDownload($attachments)
     {
-       
+
         $file = public_path($image);
         return Response::download($file);
     }
