@@ -9,7 +9,7 @@
                                     <div >
                                         <div  class="nk-block-head-content d-flex " style="justify-content:space-between ;padding-block: 25px;">
                                             <div class="nk-block-head-sub    text-dark"><strong class="text-strat">FAQs</strong></div>
-                                            <div class="nk-block-head-sub    text-dark"><p class="text-end">View all</p></div>
+
                                             <!-- <h2 class="nk-block-title fw-normal">Frequently Asked Questions</h2> -->
                                             <!-- <div class="nk-block-des">
                                                 <p class="lead">Got a question? Can't find the answer you're looking for? Don't worry, drop us a line on our <a href="#">contact page</a>.</p>

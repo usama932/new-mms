@@ -2,7 +2,7 @@
 @section('content')
 <div class="nk-content ">
     <div class="container-fluid">
-        <div class="nk-block-head-sub    text-dark"><h5 class="text-dark"><em class="icon ni ni-chevrons-left"></em> Request Consultation</h5></div>
+        <div class="nk-block-head-sub text-dark"><h5 class="text-dark"><em class="icon ni ni-chevrons-left"></em> Request Consultation</h5></div>
         <div class="d-flex py-4">
             <div class="col-6 ">
                 <div class="card text-white ">
@@ -27,7 +27,7 @@
                 </div>
                 <div  class="pl-4 py-1">
                     <p class="card-title text-dark">Chat with our sales team</p>
-                    <button  style="background-color: #394048; color: white; " class="btn btn-xl  float-center">Live Chat</button>
+                    <button  style="background-color: #394048; color: white; " class="btn btn-sm  float-center">Live Chat << Comming Soon..! >> </button>
                 </div>
 
             </div>

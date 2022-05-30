@@ -186,7 +186,7 @@
                </div>
                <!-- .card -->
             </div>
-            <div class="nk-block-between ml-2">
+            <div class="nk-block-between ml-2 mt-2">
                <div class="nk-block-head-content">
                   <h5 class="nk-block-title page-title m-1 ">Recent News</h5>
                </div>
@@ -231,7 +231,7 @@
       </div>
    </div>
    <!-- .nk-block-head -->
-    <div class="nk-block">
+    <div class="nk-block mt-4 ml-5">
         <div class="row g-gs">
             @foreach ($products as $product)
             <a href="#">
@@ -240,7 +240,7 @@
                     <div class="product-thumb bg-light pt-5">
                         <a href="{{ route('product.detail',$product->id) }}l">
                             @if($product->images != null)
-                            <img src="{{asset($product->images->image)}}"  style="width:70px; height:70px;">
+                            <img src="{{asset($product->images->image)}}"  class="rounded w-50% h-20% py-4 px-1">
                             @else
                             No image
                             @endif
