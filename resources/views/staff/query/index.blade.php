@@ -132,7 +132,7 @@
 
                                 <div class="attach-foot">
                                     @if(isset($query->attachments))
-                                    <a href="{{route('staff.download',$query->attachments)}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
+                                    <a href="{{route('staff.download',['attachments' => base64_encode($query->attachments)])}}" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download  </a>
                                 @endif
                                 </div>
                             </div>

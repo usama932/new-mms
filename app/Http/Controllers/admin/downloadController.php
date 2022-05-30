@@ -11,10 +11,10 @@ use File;
 
 class downloadController extends Controller
 {
-    public function getDownload($attachments)
+    public function getDownload($image)
     {
-        dd("as");
-        $file = asset($attachments);
+        $link = base64_decode($image);
+        $file = public_path($link);
         return Response::download($file);
     }
 }
