@@ -211,8 +211,8 @@
     });
     });
     </script>
-@endsection
-<script>
+    </body>
+    <script>
     $(document).ready(function() {
     $('#country-dropdown').on('change', function() {
     var country_id = this.value;
