@@ -124,7 +124,8 @@
                                    <span class="sub-text">Notes</span>
                                 </div>
                                 <div class="col-9">
-                                    <span class="sub-text">
+                                  
+                                        <div>
                                         @if(strlen($meeting->notes) > 100)
                                         {{substr($meeting->notes,0,100)}}
                                         <span class="read-more-show hide_content">More<i class="fa fa-angle-down"></i></span>
@@ -133,7 +134,8 @@
                                         @else
                                         {{$meeting->notes}}
                                         @endif
-                                        </span>
+
+                                </div>
                                  </div>
                             </div>
                          </div>
