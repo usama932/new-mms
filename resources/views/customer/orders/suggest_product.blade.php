@@ -24,7 +24,7 @@
                             <div class="card card-bordered product-card">
                                 <div class="product-thumb bg-light pt-5">
                                     <a href="{{ route('product.detail',$product->id) }}l">
-                                        @if($products->images != null)
+                                        @if($product->images != null)
                                         <img src="{{asset($product->images->image)}}"  class="rounded w-50% h-20% py-4 px-1">
                                         @else
                                          No image
