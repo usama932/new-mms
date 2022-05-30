@@ -231,8 +231,8 @@
                             @foreach($products as $product)
                             <li class="item">
                                 <div class="thumb">
-                                    @if($products->images != null)
-                                    <img src="{{asset($products->images->image)}}"  style="width:70px; height:70px;">
+                                    @if($product->images != null)
+                                    <img src="{{asset($product->images->image)}}"  class="rounded w-25% h-20% py-4 px-1"">
                                     @else
                                      No image
                                     @endif
