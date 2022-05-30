@@ -157,6 +157,7 @@
 
 <script>
     $(document).ready(function() {
+        alert('asas');
     $('#country-dropdown').on('change', function() {
     var country_id = this.value;
     $("#state-dropdown").html('');
