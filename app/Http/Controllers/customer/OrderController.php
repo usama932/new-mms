@@ -37,9 +37,9 @@ class OrderController extends Controller
         return view('customer.orders.product_detail',compact('products'));
     }
     public function checkout(Request $request, $id){
-        $data['countries'] = Country::where('name','united states')->get(["name","id"]);
+        $countries = Country::where('name','united states')->get(["name","id"]);
         $products = Product::where('id',$id)->with('user','images')->first();
-        return view('customer.orders.checkout',compact('products','data'));
+        return view('customer.orders.checkout',compact('products','countries'));
     }
     public function stripe()
     {
