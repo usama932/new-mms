@@ -14,16 +14,16 @@
                 <!-- .nk-block-between -->
              </div>
              <!-- .nk-block-head -->
-             <div class="col-12 d-flex my-3">
+             <div class="col-12  ">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12">
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container text-center">
                             <div class="tradingview-widget-container__widget"></div>
                             <div class="tradingview-widget-copyright"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
                                 {
-                                    "width": "770",
+                                    "width": "100%",
                                     "height": "450",
                                     "symbolsGroups": [
                                     {
@@ -61,7 +61,7 @@
                         </div>
                         <!-- TradingView Widget END -->
                     </div>
-                   <div class="col-6">
+                   {{-- <div class="col-6">
                       <div class="card mr-5">
                          <div class="nk-block nk-block-lg">
                             <div>
@@ -148,7 +148,7 @@
                          </div>
                       </div>
                    </div>
-                   <div class="col-6">
+                   <div class="col-6 mb-4">
                       <div class="card mr-5">
                          <div class="nk-block nk-block-lg">
                             <div>
@@ -250,10 +250,10 @@
                             <!-- .card-preview -->
                          </div>
                       </div>
-                   </div>
+                   </div> --}}
                 </div>
              </div>
-             <div class="nk-block nk-block-lg">
+             {{-- <div class="nk-block nk-block-lg">
                 <div class="card card-preview">
                    <div class="nk-block-head">
                       <div class="nk-block-head-content">
@@ -734,7 +734,7 @@
                    </div>
                    <!-- .nk-block -->
                 </div>
-             </div>
+             </div> --}}
           </div>
        </div>
     </div>

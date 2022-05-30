@@ -107,6 +107,12 @@
                                     <span class="nk-menu-text">Manage Faqs</span>
                                 </a>
                             </li>
+                            <li class="nk-menu-item">
+                                <a href="{{ route('meetings.index') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
+                                    <span class="nk-menu-text">Consultation Requests</span>
+                                </a>
+                            </li>
 
 
                         </ul>

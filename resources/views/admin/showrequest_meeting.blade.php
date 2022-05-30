@@ -5,7 +5,10 @@
              <div class="nk-block-head nk-block-head-sm">
                 <div class="nk-block-between">
                    <div class="nk-block-head-content">
-                      <h3 class="nk-block-title page-title">Customers</h3>
+                      <h3 class="nk-block-title page-title">Consultation Meetings</h3>
+                      <h3 class="nk-block-title page-title"><a href="{{ route('meetings.index') }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                      </svg></a></h3>
                    </div>
                    <!-- .nk-block-head-content -->
                    <div class="nk-block-head-content">
@@ -36,11 +39,9 @@
                    <div class="card-inner">
                       <ul class="nav nav-tabs">
                          <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tabItem5"><em class="icon ni ni-user"></em><span>meeting</span></a>
+                            <a class="nav-link active" data-toggle="tab" href="#tabItem5"><em class="icon ni ni-user"></em><span>Meetings Detail</span></a>
                          </li>
-                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem6"><em class="icon ni ni-lock-alt"></em><span>Purchase History</span></a>
-                         </li>
+
                       </ul>
                       <div class="tab-content">
                          <div class="tab-pane active" id="tabItem5">
@@ -50,7 +51,7 @@
                                   <span class="sub-text"> Name</span>
                                </div>
                                <div class="col-3">
-                                  <span class="sub-text">{{$meeting->name}}</span>
+                                  <span class="sub-text">{{$meeting->client_name}}</span>
                                </div>
                                <div class="col-3">
                                   <span class="sub-text"> Email</span>
@@ -64,59 +65,66 @@
                                   <span class="sub-text">Contact No</span>
                                </div>
                                <div class="col-3">
-                                  <span class="sub-text">{{$meeting->contact}}</span>
+                                  <span class="sub-text">{{$meeting->phone}}</span>
                                </div>
                                <div class="col-3">
-                                  <span class="sub-text">Address</span>
+                                  <span class="sub-text">Requested Date</span>
                                </div>
                                <div class="col-3">
-                                  <span class="sub-text">{{$meeting->address}}</span>
+                                  <span class="sub-text">{{$meeting->requested_Date}}</span>
                                </div>
                             </div>
                             <div class="row mb-5">
                                <div class="col-3">
-                                  <span class="sub-text">Grade</span>
+                                  <span class="sub-text">Requested Time</span>
                                </div>
                                <div class="col-3">
-                                  <span class="sub-text">{{$meeting->grade}}</span>
+                                  <span class="sub-text">{{$meeting->requested_time}}</span>
                                </div>
+
+
+                                <div class="col-3">
+                                   <span class="sub-text">Website</span>
+                                </div>
+                                <div class="col-3">
+                                   <span class="sub-text">{{$meeting->website}}</span>
+                                </div>
+                            </div>
+                                <div class="row mb-5">
+                                <div class="col-3">
+                                   <span class="sub-text">Company Name</span>
+                                </div>
+                                <div class="col-3">
+                                   <span class="sub-text">{{$meeting->company_name}}</span>
+                                </div>
+
+
+                                <div class="col-3">
+                                   <span class="sub-text">Employees</span>
+                                </div>
+                                <div class="col-3">
+                                   <span class="sub-text">{{$meeting->employees}}</span>
+                                </div>
+                             </div>
+                             <div class="row mb-5">
+                                <div class="col-3">
+                                   <span class="sub-text">Notes</span>
+                                </div>
+                                <div class="col-9">
+                                    <span class="sub-text">
+                                        @if(strlen($meeting->notes) > 100)
+                                        {{substr($meeting->notes,0,100)}}
+                                        <span class="read-more-show hide_content">More<i class="fa fa-angle-down"></i></span>
+                                        <span class="read-more-content"> {{substr($meeting->notes,100,strlen($meeting->notes))}}
+                                        <span class="read-more-hide hide_content">Less <i class="fa fa-angle-up"></i></span> </span>
+                                        @else
+                                        {{$meeting->notes}}
+                                        @endif
+                                        </span>
+                                 </div>
                             </div>
                          </div>
-                         <div class="tab-pane" id="tabItem6">
-                            <div class="card card-preview">
-                               <div class="card-inner">
-                                  <table class="datatable-init table">
-                                     <thead>
-                                        <tr>
-                                           <th>Order #</th>
-                                           <th>Product</th>
-                                           <th>Date</th>
-                                           <th>Total</th>
-                                           <th>Status</th>
-                                           <th>Action</th>
-                                        </tr>
-                                     </thead>
-                                     <tbody>
 
-                                        <tr>
-                                           <td>{{$customer->id}}</td>
-                                           <td>{{$customer->product_id}}</td>
-                                           <td>{{$customer->Created_at}}</td>
-                                           <td>{{$customer->total}}</td>
-                                           <td>{{$customer->status}}</td>
-                                           <td>
-                                           </td>
-                                           <td>
-                                            <li><a href="{{route('orders.show',$customer->id)}}"><em class="icon ni ni-eye"></em><span>View Selected</span></a></li>
-                                            <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
-                                           </td>
-                                        </tr>
-
-                                     </tbody>
-                                  </table>
-                               </div>
-                            </div>
-                         </div>
                       </div>
                    </div>
                 </div>

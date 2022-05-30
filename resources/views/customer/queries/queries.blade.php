@@ -69,6 +69,16 @@
                      <!-- .search-wrap -->
                 </div><!-- .nk-msg-nav -->
                 <div class="nk-msg-list" data-simplebar>
+                    <div class="nk-msg-head">
+                        <h4 class="title d-none d-lg-block"> <span> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Create Query
+                          </button></span>   </h4>
+                        <div class="nk-msg-head-meta">
+
+
+                        </div>
+
+                    </div>
                     <div class="nk-msg-list" data-simplebar>
                         @foreach ($queries as $query)
 
@@ -107,16 +117,7 @@
                 </div>
             </div>
 
-              <div class="nk-msg-head">
-                <h4 class="title d-none d-lg-block"> <span> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                    Create Query
-                  </button></span>   </h4>
-                <div class="nk-msg-head-meta">
-
-
-                </div>
-
-            </div><!-- .nk-msg-head -->
+        <!-- .nk-msg-head -->
             @foreach ($queries as $row=>$query)
             <div id="msg{{ $query->id }}"  style="display: none;" class="nk-msg-body bg-white  hide_msg">
                 <div class="nk-msg-head">

@@ -194,7 +194,7 @@
          </div>
          <!-- .row -->
          @foreach($news as $new)
-         <div class="card pt-2">
+         <div class="card pt-2 mt-4">
             <div class="d-flex">
                <div class="card m-2">
                   <img src="{{ $new->image }}" class="rounded w-50% h-20% py-4 px-1" alt="">
