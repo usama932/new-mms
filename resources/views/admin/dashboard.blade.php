@@ -238,11 +238,11 @@
                                     @endif
                                 </div>
                                 <div class="info">
-                                    <div class="title">{{$products->title}} </div>
-                                    <div class="price">${{$products->product_id}}</div>
+                                    <div class="title">{{$product->title}} </div>
+                                    <div class="price">${{$product->product_id}}</div>
                                 </div>
                                 <div class="total">
-                                    <div style="color:#488A99" class="amount">{{$products->price}}</div>
+                                    <div style="color:#488A99" class="amount">{{$product->price}}</div>
 
                                 </div>
                             </li>
