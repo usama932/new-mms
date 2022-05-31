@@ -3,7 +3,7 @@
  <div class="nk-content ">
                     <div class="container-fluid">
                         <div class="nk-content-inner">
-                            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark">Faqs</h5></div>
+                            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark">FAQ's</h5></div>
                             <div class="nk-content-body col-12 " style="background-color: white">
                                 <div class="content-page  ">
                                     <div >

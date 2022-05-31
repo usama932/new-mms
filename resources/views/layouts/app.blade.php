@@ -113,7 +113,19 @@
                                     <span class="nk-menu-text">Consultation Requests</span>
                                 </a>
                             </li>
-
+                            <hr>
+                            <li class="nk-menu-item">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <div class="ml-4">
+                                        <i class="ni ni-user-run"></i> <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </div>  
+                                    </form>
+                            </li>
 
                         </ul>
                         </div><!-- .nk-sidebar-menu -->

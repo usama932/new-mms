@@ -17,8 +17,14 @@
              <div class="col-12  ">
                 <div class="row">
                     <div class="col-lg-12">
+                      
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container text-center">
+                            <div class="nk-block-head">
+                                <div class="nk-block-head-content">
+                                   <h4 class="nk-block-title mx-5 mt-5 mb-2">The world Spot Price - Asia/Europe/NY</h4>
+                                </div>
+                             </div>
                             <div class="tradingview-widget-container__widget"></div>
                             <div class="tradingview-widget-copyright"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>

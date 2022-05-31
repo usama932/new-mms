@@ -6,10 +6,10 @@
          <h5 class="text-dark"><em class="icon ni ni-chevrons-left"></em> Request Consultation</h5>
       </div>
       @if(session()->has('success'))
-    <div class="alert alert-success">
-        {{ session()->get('success') }}
-    </div>
-@endif
+      <div class="alert alert-success">
+         {{ session()->get('success') }}
+      </div>
+      @endif
       <div class="d-flex py-4">
          <div class="col-6 ">
             <div class="card text-white ">
@@ -55,7 +55,7 @@
                </div>
                <!-- .nk-block-head -->
                <form action="{{ route('customer_meetings.store') }}" method="post">
-                @csrf
+                  @csrf
                   <div class="row g-5 pt-5">
                      <div class="col-lg-6">
                         <div class="form-group">
@@ -111,45 +111,44 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-6">
-                        <div class="form-group">
-                            <label class="form-label" for="fv-topics">Requested Time</label>
-                           <div class="form-control-wrap">
-                            <input type="time" class="form-control" name="requested_time" id="email-address-1" placeholder="Requested time" required>
-                           </div>
-                        </div>
-                     </div>
-
-
+                 
                      <div class="col-md-6">
                         <div class="form-group">
-                           <label class="form-label" for="fv-topics">Requested Date</label>
+                           <label class="form-label" for="fv-topics">Choose a Day That Suits you Best</label>
                            <div class="form-control-wrap">
-                            <input type="date" class="form-control" name="requested_Date" id="email-address-1" placeholder="Requested time" required>
-                         </div>
+                              <input type="date" class="form-control" name="requested_Date" id="email-address-1" placeholder="Requested time" required>
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-12 mb-2x">
+                     <div class="col-lg-6">
                         <div class="form-group">
-                           <label class="form-label" for="cf-default-textarea">Additional notes</label>
+                           <label class="form-label" for="fv-topics">Choose a Time That Suits you Best</label>
                            <div class="form-control-wrap">
-                              <textarea class="form-control form-control-sm" id="cf-default-textarea" name="notes"></textarea>
+                              <input type="time" class="form-control" name="requested_time" id="email-address-1" placeholder="Requested time" required>
                            </div>
-                        </div>
-                     </div>
-                     <div  class="col-lg-12 text-center" >
-                        <div class="form-group " >
-                           <button type="submit" style="background-color: #394048; color: white; " class="btn btn-xl  float-center">Send message</button>
                         </div>
                      </div>
                   </div>
-               </form>
-               <!-- .nk-block -->
+                  <div class="col-lg-12 mb-2x mt-5">
+                     <div class="form-group">
+                        <label class="form-label" for="cf-default-textarea">Additional notes</label>
+                        <div class="form-control-wrap">
+                           <textarea class="form-control form-control-sm" id="cf-default-textarea" name="notes"></textarea>
+                        </div>
+                     </div>
+                  </div>
+                  <div  class="col-lg-12 text-center" >
+                     <div class="form-group " >
+                        <button type="submit" style="background-color: #394048; color: white; " class="btn btn-xl  float-center mt-3 ">Send message</button>
+                     </div>
+                  </div>
             </div>
-            <!-- .content-page -->
+            </form>
+            <!-- .nk-block -->
          </div>
+         <!-- .content-page -->
       </div>
    </div>
+</div>
 </div>
 @endsection

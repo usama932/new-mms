@@ -102,7 +102,7 @@
                             <li class="nk-menu-item">
                                 <a href="{{ route('customer_faqs.index') }}" class="nk-menu-link">
                                     <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
-                                    <span class="nk-menu-text">Faqs</span>
+                                    <span class="nk-menu-text">FAQ's</span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
@@ -117,9 +117,24 @@
                                     <span class="nk-menu-text">Request Consultation</span>
                                 </a>
                             </li>
-                     
+                            <hr>
+                            <li class="nk-menu-item">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <div class="ml-4">
+                                        <i class="ni ni-user-run"></i> <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </div>  
+                                    </form>
+                            </li>
 
                         </ul>
+                       
+                       
+                       
                         </div><!-- .nk-sidebar-menu -->
                     </div><!-- .nk-sidebar-content -->
                 </div><!-- .nk-sidebar-element -->
