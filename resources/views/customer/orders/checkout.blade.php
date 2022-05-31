@@ -1,5 +1,6 @@
 @extends('layouts.customer')
 @section('content')
+
 <style type="text/css">
     .panel-title {
     display: inline;
@@ -71,7 +72,6 @@
                                             <select class="form-control" id="city-dropdown">
                                             </select>
                                             </div>
-
                                           <div class="col-md-6">
                                              <div class="form-group">
                                                 <label class="form-label" for="fv-full-name">Zip Code</label>
@@ -157,7 +157,6 @@
 
 <script>
     $(document).ready(function() {
-        alert('asas');
     $('#country-dropdown').on('change', function() {
     var country_id = this.value;
     $("#state-dropdown").html('');
@@ -199,8 +198,7 @@
     });
     });
     </script>
-@endsection
-<script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+
     <script>
     $(document).ready(function() {
     $('#country-dropdown').on('change', function() {
@@ -242,3 +240,4 @@
     });
     });
     </script>
+@endsection

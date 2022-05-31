@@ -13,7 +13,8 @@
     <title>Precious Metals</title>
     <!-- StyleSheets  -->
     <!-- <link rel="stylesheet" href="./asssts/css/custom.css"> -->
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="{{asset('/assets/css/dashlite.css?ver=2.9.1')}}">
     <link rel="stylesheet" href="{{asset('/assets/css/dashlite.css?ver=2.9.1')}}">
