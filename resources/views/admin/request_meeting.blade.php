@@ -50,7 +50,7 @@
                         <td>{{$meeting->id}}</td>
                        <td>{{$meeting->client_name}}</td>
                        <td>{{$meeting->phone}}</td>
-                       <td>{{$meeting->requested_Date}}</td>
+                       <td>{{ \Carbon\Carbon::parse($meeting->requested_Date)->format('m/d/Y')}}</td>
                        <td>{{$meeting->requested_time}}</td>
 
 
