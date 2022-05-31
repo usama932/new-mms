@@ -160,14 +160,18 @@
 
                                                     <li>
                                                         <form method="POST" action="{{ route('logout') }}">
-                                                        @csrf
+                                                            @csrf
+                                                            <div class="">
+                                                                <a href="{{ "route('logout')" }}" class="nk-menu-link" onclick="event.preventDefault();
+                                                                this.closest('form').submit();">
+                                                                    <span class="nk-menu-icon"><em class="icon ni ni-users-fill"></em></span>
+                                                                    <span class="nk-menu-text">
+                                                                    {{ __('Log Out') }}
+                                                                </span>
+                                                                </a>
 
-                                                        <x-dropdown-link :href="route('logout')"
-                                                                onclick="event.preventDefault();
-                                                                            this.closest('form').submit();">
-                                                            {{ __('Log Out') }}
-                                                        </x-dropdown-link>
-                                                        </form>
+                                                            </div>
+                                                            </form>
                                                     </li>
                                                 </ul>
                                             </div>

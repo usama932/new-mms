@@ -32,7 +32,7 @@
                                 <p class="nk-error-text">Go from no-code to an in-demand junior web developer, at a fraction of the cost of a bootcamp.
                                     Start with the front-end by learning HTML, CSS, and JavaScript. Then, master the back-end
                                     and APIs to round out your full-stack skills.</p>
-                                <a href="html/index.html" style="background-color: #394048; color: white; " class="btn btn-lg btn-primary mt-2">Go back to dashboard </a>
+                                <a href="{{ route('dashboard') }}" style="background-color: #394048; color: white; " class="btn btn-lg btn-primary mt-2">Go back to dashboard </a>
                             </div>
                         </div><!-- .nk-block -->
                     </div>

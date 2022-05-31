@@ -14,10 +14,46 @@
                 <!-- .nk-block-between -->
              </div>
              <!-- .nk-block-head -->
+                   <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+          {
+              "symbols": [
+              {
+                  "description": "GOLD/USD",
+                  "proName": "TVC:GOLD"
+              },
+              {
+                  "description": "SILVER/USD",
+                  "proName": "TVC:SILVER"
+              },
+              {
+                  "description": "PLATINUM/USD",
+                  "proName": "TVC:PLATINUM"
+              },
+              {
+                  "description": "PALLADIUM/USD",
+                  "proName": "TVC:PALLADIUM"
+              },
+              {
+                  "description": "BTC/USD",
+                  "proName": "CRYPTOCAP:BTC"
+              }
+          ],
+              "colorTheme": "light",
+              "isTransparent": false,
+              "showSymbolLogo": false,
+              "locale": "en"
+          }
+      </script>
+  </div>
+  <!-- TradingView Widget END -->
              <div class="col-12  ">
                 <div class="row">
                     <div class="col-lg-12">
-                      
+
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container text-center">
                             <div class="nk-block-head">
