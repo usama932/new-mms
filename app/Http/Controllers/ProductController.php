@@ -50,14 +50,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
     try{
-        $url = $request->product_url;
+         $url = $request->product_url;
         $client = new Client(HttpClient::create(['verify_peer' => false, 'verify_host' => false]));
         $page =  $client->request('GET',$url);
-
         $resp['title'] = $page->filter('.page-title')->text();
-        $resp['description'] = $page->filter('.overview')->text();
+        $resp['description'] = ($page->filter('.overview')->count()  > 0) ? $page->filter('.overview')->text() : '';
         $resp['itemNo'] = $page->filter('.sku > .value')->text();
-        $resp['price'] = 0;
+        $resp['price'] = ($page->filter('.price')->count()  > 0) ? $page->filter('.price')->text() : 0;
         $resp['image'] = $page->filterXpath('//meta[@property="og:image"]')->attr('content');
 
         $item = Product::where('product_id', $resp['itemNo'])->count();

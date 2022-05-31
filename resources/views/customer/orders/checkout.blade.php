@@ -169,11 +169,11 @@
     },
     dataType : 'json',
     success: function(result){
-    $('#state-dropdown').html('<option value="">Select State</option>');
+    $('#state-dropdown').html('<option class="form-control" value="">Select State</option>');
     $.each(result.states,function(key,value){
     $("#state-dropdown").append('<option value="'+value.id+'">'+value.name+'</option>');
     });
-    $('#city-dropdown').html('<option value="">Select State First</option>');
+    $('#city-dropdown').html('<option class="form-control" value="">Select State First</option>');
     }
     });
     });
