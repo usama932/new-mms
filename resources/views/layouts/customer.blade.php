@@ -44,8 +44,8 @@
                     <div class="nk-sidebar-brand">
                         <a href="{{ route('dashboard') }}" class="logo-link nk-sidebar-logo">
                             <!-- <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo"> -->
-                            <img class="logo-dark logo-img" src="./images/GMRGold_Logos.png"  alt="logo-dark">
-                            <!-- <img class="logo-small logo-img logo-img-small" src="./images/logo-small.png" srcset="./images/logo-small2x.png 2x" alt="logo-small"> -->
+                            <img class="logo-dark logo-img" src="{{asset('/images/GMRGold_Logos.png')}}"  alt="logo-dark">
+                            <!-- <img class="logo-small logo-img logo-img-small" src="{{asset('/images/logo-small.png')}}" srcset="{{asset('./images/logo-small2x.png 2x')}}" alt="logo-small"> -->
                         </a>
                     </div>
                     <div class="nk-menu-trigger mr-n2">

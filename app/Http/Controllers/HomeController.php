@@ -16,8 +16,10 @@ class HomeController extends Controller
 
     public function index(){
 
-        $news = News::latest()->get();
+        $news = News::latest()->take(5)->get();
+
         $total_sales = Order::pluck('total')->sum();
+
         $total_order = Order::count();
         $total_customer = Role_user::where('role_id',3)->count();
         $total_staff = Role_user::where('role_id',2)->count();
@@ -44,5 +46,5 @@ class HomeController extends Controller
     public function login(){
         return view('auth.login');
     }
-    
+
 }

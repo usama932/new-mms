@@ -63,7 +63,7 @@
                      <div class="card mt-4 mr-3 mb-4 p-3">
                         <!-- <div class="row"> -->
                         <div class="col-12">
-                           <h1 class="text-center text-muted pt-3"><b>A +</b></h1>
+                           <h1 class="text-center text-muted pt-3"><b>{{ auth()->user()->grade }}</b></h1>
                            <small class="text-primary">overall portfolio grade</small>
                            <!-- </div> -->
                         </div>

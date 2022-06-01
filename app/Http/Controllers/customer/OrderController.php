@@ -33,8 +33,9 @@ class OrderController extends Controller
         return view('customer.orders.purchase_history',compact('orders'));
     }
     public function product_detail(Request $request, $id){
+        $r_product = Product::latest()->take(4)->get();
         $products = Product::where('id',$id)->with('user','images')->first();
-        return view('customer.orders.product_detail',compact('products'));
+        return view('customer.orders.product_detail',compact('products','r_product'));
     }
     public function checkout(Request $request, $id){
         $countries = Country::where('name','united states')->get(["name","id"]);
@@ -66,6 +67,7 @@ class OrderController extends Controller
 
     public function stripePost(Request $request)
     {
+        dd("ass");
         // $key = getenv('STRIPE_SECRET');
         // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));

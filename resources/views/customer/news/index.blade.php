@@ -29,7 +29,7 @@
                          <div class="col-3">
 
                             <div class="card">
-                               <img src="{{asset($recent_news->image)}}" class="card-img-top rounded w-50% h-20% py-3 px-3" alt="">
+                               <img src="{{asset($recent_news->image)}}" class="rounded w-50% h-20% py-4 px-1" alt="">
                                <div class="card-inner">
                                   <h6 class="card-title">{{$recent_news->title}}
                                   </h6>

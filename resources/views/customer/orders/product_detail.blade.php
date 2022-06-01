@@ -33,7 +33,14 @@
                                 </div><!-- .col -->
                                 <div class="col-lg-6">
                                     <div class="product-info mt-5 mr-xxl-5">
+                                        @if ($products->price != 0 )
                                         <h4 class="product-price text-primary">{{ $products->price }} </h4>
+
+                                        @else
+                                        <h4 class="product-price text-primary">Price Not Available </h4>
+
+                                        @endif
+
                                         <small class="product-title"><b>{{ $products->title }}</b></small>
                                         <p>Item # :{{ $products->product_id }}</p>
                                         <div class="product-rating">
@@ -53,13 +60,13 @@
                                         <p>Quantity:</p>
                                         <div class="product-meta">
                                             <ul class="flex-wrap ailgn-center g-2 ">
-                                                <li class="w-140px">
+                                                {{-- <li class="w-140px">
                                                     <div class="form-control-wrap number-spinner-wrap">
                                                         <button class="btn btn-icon btn-outline-light number-spinner-btn number-minus" data-number="minus"><em class="icon ni ni-minus"></em></button>
                                                         <input type="number" class="form-control number-spinner" value="0">
                                                         <button class="btn btn-icon btn-outline-light number-spinner-btn number-plus" data-number="plus"><em class="icon ni ni-plus"></em></button>
                                                     </div>
-                                                </li>
+                                                </li> --}}
                                                 <li>
                                                     @if ($products->price != 0 )
                                                     <a href="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><span>Add to Cart</span></a>
@@ -92,11 +99,14 @@
                         </div>
                     </div><!-- .nk-block-head -->
                     <div class="slider-init row" data-slick='{"slidesToShow": 4, "centerMode": false, "slidesToScroll": 1, "infinite":false, "responsive":[ {"breakpoint": 1540,"settings":{"slidesToShow": 3}},{"breakpoint": 992,"settings":{"slidesToShow": 2}}, {"breakpoint": 576,"settings":{"slidesToShow": 1}} ]}'>
+                       @foreach ($r_product as $product)
+
+
                         <div class="col">
                             <div class="card card-bordered product-card">
                                 <div class="product-thumb bg-light">
                                     <a href="#">
-                                        <img src="./images/product1.png"  class=" py-5  px-5" alt="">
+                                        <img src="{{asset($product->images->image)}}"  class=" py-5  px-5" alt="">
                                     </a>
                                     <ul class="product-badges">
                                         <li><span class="badge badge-success">New</span></li>
@@ -108,14 +118,14 @@
                                 </div>
                                 <div class="card-inner text-center">
                                     <ul class="product-tags">
-                                        <li><a href="#">Item # :{{ $products->product_id }}</a></li>
+                                        <li><a href="#">Item # :{{ $product->product_id }}</a></li>
                                     </ul>
                                     <h5 class="product-title"><a href="#">:{{ $products->title }}</a></h5>
                                     <div class="product-price text-primary h5">:{{ $products->price }}</div>
                                 </div>
                             </div>
                         </div><!-- .col -->
-
+                        @endforeach
                     </div>
                 </div>
 

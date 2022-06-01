@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('product_id');
-            $table->string('total')->nullable();
+            $table->integer('total')->nullable();
             $table->longText('description')->nullable();
             $table->longText('address')->nullable();
             $table->string('city')->nullable();

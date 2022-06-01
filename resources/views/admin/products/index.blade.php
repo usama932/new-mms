@@ -60,7 +60,15 @@ v<x-app-layout>
 
                         <td>{{$products->title}}</td>
                       <td>{{$products->product_id}}</td>
-                      <td>{{$products->description}}</td>
+                      <td>@if(strlen($products->description) > 100)
+                        {{substr($products->description,0,100)}}
+                        <span class="read-more-show hide_content">More<i class="fa fa-angle-down"></i></span>
+                        <span class="read-more-content"> {{substr($products->description,100,strlen($products->description))}}
+                        <span class="read-more-hide hide_content">Less <i class="fa fa-angle-up"></i></span> </span>
+                        @else
+                        {{$products->description}}
+                        @endif
+                        </td>
                       <td>{{$products->price}}</td>
                       <td>{{$products->availability}}</td>
                       <td>{{$products->status}}</td>
@@ -119,9 +127,9 @@ v<x-app-layout>
                       </div>
                    </div>
                 </div>
-                <div class="col-12">
+                {{-- <div class="col-12">
                    <button class="btn btn-primary  my-5  float-right"><span>Next</span></button>
-                </div>
+                </div> --}}
              </div>
           </div>
           <!-- .nk-block -->

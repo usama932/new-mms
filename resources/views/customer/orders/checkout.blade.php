@@ -72,6 +72,14 @@
                                             <select class="form-control" id="city-dropdown">
                                             </select>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                   <label class="form-label" for="fv-full-name">Address</label>
+                                                   <div class="form-control-wrap">
+                                                      <input type="text" class="form-control" id="fv-full-name" name="address" required>
+                                                   </div>
+                                                </div>
+                                             </div>
                                           <div class="col-md-6">
                                              <div class="form-group">
                                                 <label class="form-label" for="fv-full-name">Zip Code</label>

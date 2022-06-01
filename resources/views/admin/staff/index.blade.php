@@ -15,7 +15,7 @@ use App\Models\Role;
                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                                 <div class="toggle-expand-content" data-content="pageMenu">
                                     <ul class="nk-block-tools g-3">
-                                  
+
 
                                         <li class="nk-block-tools-opt">
                                             <a href="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
@@ -132,7 +132,7 @@ use App\Models\Role;
                                 <div class="form-group">
                                     <label class="form-label" for="product-title">Address</label>
                                     <div class="form-control-wrap">
-                                        <input type="text" class="form-control" id="product-title" placeholder="United kingdom" name="address">
+                                        <input type="text" class="form-control" id="product-title" placeholder="151 W.42nd Street New York" name="address">
                                     </div>
                                 </div>
                             </div>

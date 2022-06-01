@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(LaratrustSeeder::class);
         $this->call(AdminUserSeeder::class);
+        $this->call(CountryStateCityTableSeeder::class);
     }
 }

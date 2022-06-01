@@ -1,6 +1,7 @@
 @extends('layouts.customer')
 @section('content')
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 <style type="text/css">
    .panel-title {
    display: inline;

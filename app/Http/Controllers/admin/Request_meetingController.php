@@ -50,7 +50,7 @@ class Request_meetingController extends Controller
 
         ]);
         return redirect()->route('consultant')
-                        ->with('success','Book meeting successfully.');
+                        ->with('success','Request Submit Successfully.');
     }
 
     /**
