@@ -112,12 +112,14 @@
                      </div>
                      <div class="data">
                         <div class="data-group">
+                            <span class="change down text-danger py-2"><small> {{ $last_order->product->product_id  ?? ''}}</small></span>
                            <div  style="color:#DBAE58"  class="amount">${{ $last_order->total ?? '' }}</div>
+
                            <div class="nk-ecwg6-ck">
                               <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
                            </div>
                         </div>
-                        <div class="info"><span class="change down text-danger py-2"></span><small> {{ $last_order->product_id  ?? ''}}</small></div>
+                        <div class="info"></div>
                      </div>
                   </div>
                   <!-- .card-inner -->

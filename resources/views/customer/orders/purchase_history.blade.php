@@ -97,7 +97,10 @@
                             <td>{{ $order->user_id}}</td>
                             <td>{{ $order->total }}</td>
                             <td>{{ $order->status  }}</td>
-                            <td><a href="{{ route('order.delete',$order->id) }}" class="btn btn-danger btn-sm">Delete</a></td>
+                            <td>
+                                @if($order->status != "Completed" && $order->status != "Delivered" )
+                             <a href="{{ route('order.delete',$order->id) }}" class="btn btn-danger btn-sm">Delete</a></td>
+                             @endif
                             </tr>
                             @endforeach
                         </tbody>

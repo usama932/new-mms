@@ -236,6 +236,36 @@
         </div>
         <!-- main @e -->
     </div>
+    {{-- modal  --}}
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Call For Price</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="card text-white ">
+                    <div class="card-inner ">
+                       <div class="d-flex ">
+                          <div class="user-avatar bg-lighter p-5 border-dark">
+                             <em class="icon ni ni-call"></em>
+                          </div>
+                          <div  class="pl-4 py-2">
+                             <p class=" text-dark">Call us direct at</p>
+                             <h5 class=" text-dark">+45 52 67 29 31</h5>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    {{-- end modal --}}
     <!-- app-root @e -->
     <!-- select region modal -->
     <!-- <script>

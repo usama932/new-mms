@@ -1,6 +1,6 @@
 @extends('layouts.customer')
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid mb-5">
    <div class="nk-content-inner">
       <div class="nk-content-body">
          <div class="nk-block-head nk-block-head-sm">
@@ -15,16 +15,15 @@
          </div>
          <!-- .nk-block-head -->
          <div class="row">
-            <div lass="col-lg-2">
+            <div lass="col-lg-3">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
                   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TVC-GOLD/" rel="noopener" target="_blank"><span class="blue-text">GOLD Quotes</span></a> by TradingView</div>
                   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
                      {
-                    "margin-left:"50px",
                      "symbol": "TVC:GOLD",
-                     "width": 100%,
+                     "width": 350,
                      "height": 220,
                      "locale": "en",
                      "dateRange": "12M",
@@ -40,7 +39,7 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-2 ml-4">
+            <div lass="col-lg-3 ml-4">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -48,7 +47,7 @@
                   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
                      {
                      "symbol": "TVC:SILVER",
-                     "width": 100%,
+                     "width": 350,
                      "height": 220,
                      "locale": "en",
                      "dateRange": "12M",
@@ -64,15 +63,15 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-2 ml-4">
+            <div lass="col-lg-3 ml-4">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
-                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TVC-PLATINUM/" rel="noopener" target="_blank"><span class="blue-text">PLATINUM Quotes</span></a> by TradingView</div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/PLATINIUM/" rel="noopener" target="_blank"><span class="blue-text">PLATINIUM Quotes</span></a> by TradingView</div>
                   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
                      {
-                     "symbol": "TVC:PLATINUM",
-                     "width": 100%,
+                     "symbol": "PLATINIUM",
+                     "width": 350,
                      "height": 220,
                      "locale": "en",
                      "dateRange": "12M",
@@ -90,7 +89,7 @@
             </div>
          </div>
          <div class="row">
-            <div lass="col-lg-2 ">
+            <div lass="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -98,7 +97,7 @@
                   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
                      {
                      "symbol": "OANDA:XPDUSD",
-                     "width": 100%,
+                     "width": 350,
                      "height": 220,
                      "locale": "en",
                      "dateRange": "12M",
@@ -114,31 +113,7 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-2 ml-4">
-               <!-- TradingView Widget BEGIN -->
-               <div class="tradingview-widget-container">
-                  <div class="tradingview-widget-container__widget"></div>
-                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/RAYUSD/?exchange=EIGHTCAP" rel="noopener" target="_blank"><span class="blue-text">RAYUSD Rates</span></a> by TradingView</div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-                     {
-                     "symbol": "EIGHTCAP:RAYUSD",
-                     "width": 100%,
-                     "height": 220,
-                     "locale": "en",
-                     "dateRange": "12M",
-                     "colorTheme": "light",
-                     "trendLineColor": "rgba(41, 98, 255, 1)",
-                     "underLineColor": "rgba(41, 98, 255, 0.3)",
-                     "underLineBottomColor": "rgba(41, 98, 255, 0)",
-                     "isTransparent": false,
-                     "autosize": false,
-                     "largeChartUrl": ""
-                     }
-                  </script>
-               </div>
-               <!-- TradingView Widget END -->
-            </div>
-            <div lass="col-lg-2 my-4">
+            <div lass="col-lg-3 ml-4">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -146,10 +121,34 @@
                   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
                      {
                      "symbol": "BITSTAMP:BTCUSD",
-                     "width": 100%,
+                     "width": 350,
                      "height": 220,
                      "locale": "en",
                      "dateRange": "12M",
+                     "colorTheme": "light",
+                     "trendLineColor": "rgba(41, 98, 255, 1)",
+                     "underLineColor": "rgba(41, 98, 255, 0.3)",
+                     "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                     "isTransparent": false,
+                     "autosize": false,
+                     "largeChartUrl": ""
+                     }
+                  </script>
+               </div>
+               <!-- TradingView Widget END -->
+            </div>
+            <div lass="col-lg-3 my-4">
+               <!-- TradingView Widget BEGIN -->
+               <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/RHODIUM/" rel="noopener" target="_blank"><span class="blue-text">RHODIUM Quotes</span></a> by TradingView</div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                     {
+                     "symbol": "RHODIUM",
+                     "width": 350,
+                     "height": 220,
+                     "locale": "en",
+                     "dateRange": "1D",
                      "colorTheme": "light",
                      "trendLineColor": "rgba(41, 98, 255, 1)",
                      "underLineColor": "rgba(41, 98, 255, 0.3)",
@@ -163,7 +162,7 @@
                <!-- TradingView Widget END -->
             </div>
          </div>
-         <div lass="col-lg-6 ">
+         <div lass="col-lg-6 mb-5">
             <div class="tradingview-widget-container text-center">
                <div class="nk-block-head">
                   <div class="nk-block-head-content">
@@ -181,23 +180,23 @@
                           "name": "Metals",
                           "symbols": [
                               {
-                                  "name": "NYSE:GOLD",
+                                  "name": "TVC:GOLD",
                                   "displayName": "GOLD"
                               },
                               {
-                                  "name": "CURRENCYCOM:SILVER",
+                                  "name": "TVC:SILVER",
                                   "displayName": "SILVER"
                               },
                               {
-                                  "name": "CURRENCYCOM:PLATINUM",
+                                  "name": "TVC:PLATINUM",
                                   "displayName": "PLATINUM"
                               },
                               {
-                                  "name": "CURRENCYCOM:PALLADIUM",
+                                  "name": "OANDA:XPDUSD",
                                   "displayName": "PALLADIUM"
                               },
                               {
-                                  "name": "LSE:XRH0",
+                                  "name": "BSE:RODIUM",
                                   "displayName": "RHODIUM"
                               }
                           ]

@@ -40,7 +40,19 @@
                                         <li><a href="{{ route('product.detail',$product->id) }}">Item # {{ $product->product_id }}</a></li>
                                     </ul>
                                     <span class="product-title"><a href="{{ route('product.detail',$product->id) }}"><b>{{ $product->title }}</b></a></span>
-                                    <div class="product-price text-primary h5">{{ $product->price }}</div>
+                                    <div class="product-price text-primary h5">
+                                        @if ($product->price != 0 )
+                                        <a href="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><span>Add to Cart</span></a>
+
+                                        <button class="btn btn-icon btn-trigger text-primary"><em class="icon ni ni-heart"></em></button>
+
+                                        @else
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                            Call for Price
+                                          </button>
+                                        @endif
+
+                                        </div>
                                 </div>
                             </div>
                         </div>
