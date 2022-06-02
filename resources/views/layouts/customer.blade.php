@@ -90,7 +90,7 @@
                                 <li class="nk-menu-item">
                                     <a href="{{route('customer_queries.index')}}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-chat-fill"></em></span>
-                                        <span class="nk-menu-text">Queries</span>
+                                        <span class="nk-menu-text">Mail Box</span>
                                     </a>
                                 </li>
 
