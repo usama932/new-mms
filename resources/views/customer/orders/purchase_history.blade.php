@@ -93,8 +93,8 @@
                             @foreach($orders as $order)
                             <tr>
                             <td>{{ $order->id }}</td>
-                            <td>{{ $order->created_at }}</td>
-                            <td>{{ $order->user_id }}</td>
+                            <td>{{ \Carbon\Carbon::parse($order->created_at)->format('m/d/Y')}}</td>
+                            <td>{{ $order->user_id}}</td>
                             <td>{{ $order->total }}</td>
                             <td>{{ $order->status  }}</td>
                             <td><a href="{{ route('order.delete',$order->id) }}" class="btn btn-danger btn-sm">Delete</a></td>
