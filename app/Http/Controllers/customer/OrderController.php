@@ -46,8 +46,11 @@ class OrderController extends Controller
     {
         return view('customer.orders.payment');
     }
-    public function order_store(Request $request,$id){
+    public function order_store(Request $request, $id)
+    {
         $products = Product::where('id',$id)->with('user','images')->first();
+       $r =   str_replace("$", " ", $request->total);
+
         Order::create([
             'name' => $request->name,
             'address' => $request->address,
@@ -57,7 +60,7 @@ class OrderController extends Controller
             'phone' =>  $request->phone,
             'status' => 'Pending',
             'description' => $request->description,
-            'total' => $request->total,
+            'total' => $r,
             'user_id' => auth()->user()->id,
             'product_id' => $request->product_id
         ]);
@@ -67,7 +70,7 @@ class OrderController extends Controller
 
     public function stripePost(Request $request)
     {
-        dd("ass");
+        
         // $key = getenv('STRIPE_SECRET');
         // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
@@ -99,3 +102,4 @@ class OrderController extends Controller
     }
 
 }
+
