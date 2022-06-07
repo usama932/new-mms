@@ -14,11 +14,11 @@
          </div>
          <!-- .nk-block-head -->
       </div>
-          <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+         <div class="tradingview-widget-container__widget"></div>
+         <div class="tradingview-widget-copyright"></div>
+         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
             {
                 "symbols": [
                 {
@@ -47,20 +47,20 @@
                 "showSymbolLogo": false,
                 "locale": "en"
             }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
+         </script>
+      </div>
+      <!-- TradingView Widget END -->
       <div class="nk-block">
-         <div class="row g-gs">
-            <div class="col-xxl-12 col-md-12">
-               <div class="card   h-100">
+         <div class="row mb-5">
+            <div class="col-xxl-4 col-md-4">
+               <div class="card   h-100 ">
                   <div class="d-flex">
-                     <div class="m-5">
-                        <h5 class="text-secomdary">Welcome back</h5>
-                        <h4><b>{{ auth()->user()->name }}</b></h4>
-                        <p class="text-primary">User Since {{ date('m-d-Y', strtotime(auth()->user()->created_at)) }}</p>
+                     <div class="mt-5 ml-5 mr-3">
+                        <strong>Welcome back</strong><br>
+                       <b>{{ auth()->user()->name }}</b>
+                        <p class="text-primary">User Since <br>{{ date('m-d-Y', strtotime(auth()->user()->created_at)) }}</p>
                      </div>
-                     <div class="card mt-4 mr-3 mb-4 p-3">
+                     <div class="card mt-4 mr-3 p-3">
                         <!-- <div class="row"> -->
                         <div class="col-12">
                            <h1 class="text-center text-muted pt-3"><b>{{ auth()->user()->grade }}</b></h1>
@@ -70,6 +70,9 @@
                      </div>
                   </div>
                </div>
+            </div>
+            <div class="col-sm-8">
+                <img class="" src="{{asset('/images/pull.jpeg')}}" style="height: 100%; width:100%" alt="logo-dark">
             </div>
 
          </div>
@@ -112,9 +115,8 @@
                      </div>
                      <div class="data">
                         <div class="data-group">
-
+                           <span class="change down text-danger py-2"><small> {{ $last_order->product->product_id  ?? ''}}</small></span>
                            <div  style="color:#DBAE58"  class="amount">${{ $last_order->total ?? '' }}</div>
-
                            <div class="nk-ecwg6-ck">
                               <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
                            </div>
