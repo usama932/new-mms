@@ -134,6 +134,11 @@
                                     </div>
                                     </form>
                             </li>
+                            <hr>
+                            <li class="nk-menu-item ">
+                                <a href="https://www.gmrgold.com/" class="ml-5 " >
+                                <button class="btn btn-info " >Shop Now</button></a>
+                            </li>
 
                         </ul>
 

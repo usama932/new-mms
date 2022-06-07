@@ -113,6 +113,12 @@
                                     <span class="nk-menu-text">Consultation Requests</span>
                                 </a>
                             </li>
+                            <li class="nk-menu-item">
+                                <a href="{{ route('portfolios.index') }}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="icon ni ni-users-fill text-black"></em></span>
+                                    <span class="nk-menu-text">Customer Portfolio</span>
+                                </a>
+                            </li>
                             <hr>
                             <li class="nk-menu-item">
                                 <form method="POST" action="{{ route('logout') }}">

@@ -1,102 +1,111 @@
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
 <x-app-layout>
     <div class="container-fluid">
        <div class="nk-content-inner">
           <div class="nk-content-body">
              <div class="nk-block">
+
                 <div class="card">
-                   <div class="card-aside-wrap">
-                      <div class="card-inner card-inner-lg">
-                         <div class="tab-content">
-                            <div class="tab-pane active" id="personal">
-                               <div class="nk-block-head nk-block-head-lg">
-                                  <div class="nk-block-between">
-                                     <div class="nk-block-head-content">
-                                        <h4 class="nk-block-title">Profile Setting</h4>
-                                     </div>
-                                  </div>
-                               </div>
-                               <!-- .nk-block-head -->
-                                @if(session()->has('message'))
-                                <div class="alert alert-success">
-                                   {{ session()->get('message') }}
-                                </div>
-                                @endif
-                               <form action="{{route('profiles.update',$data->id)}}" method="post" enctype="multipart/form-data">
-                                 @csrf
-                                 @method('put')
-                               <div class="nk-block">
-                                  <div class="nk-data data-list">
-                                     <div class="data-head">
-                                        <h6 class="overline-title">Basics</h6>
-                                     </div>
-                                     <div class="data-item " data-toggle="modal" data-target="#profile-edit">
-                                        <div class="data-col">
-                                           <span class="data-label"> Profile Picture
-                                               <br>
-                                            <input type="file" name="profile_image"  placeholder="Upload Profile Image">
-                                           </span>
-
-                                           <img src="{{asset($data->profile_image)}}" style="width:15%; height:15%; margin-left:15%; border-radius:70%" class="card-img-top" alt="">
-
-
-                                        </div>
-                                     </div>
-                                     <div class="data-item " data-toggle="modal" data-target="#profile-edit">
-                                        <div class="data-col">
-                                           <span class="data-label"> Name</span>
-                                         <input type="text" class="form-control" name="name" value="{{ $data->name }}">
-                                        </div>
-                                     </div>
-                                     <!-- data-item -->
-                                     ><!-- data-item -->
-                                     <div class="data-item">
-                                        <div class="data-col">
-                                           <span class="data-label">Email</span>
-                                           <input type="email" class="form-control" name="email" value="{{$data->email}}">
-
-                                        </div>
-                                     </div>
-                                     <!-- data-item -->
-                                     <div class="data-item" data-toggle="modal" data-target="#profile-edit">
-                                        <div class="data-col">
-                                           <span class="data-label">Contact</span>
-                                           <input type="text" class="form-control" name="contact" value="{{$data->contact}}">
-                                        </div>
-                                     </div>
-                                     <!-- data-item -->
-                                     <!-- data-item -->
-                                     <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
-                                        <div class="data-col">
-                                           <span class="data-label">Address</span>
-                                           <input type="text" class="form-control" name="address" value="{{$data->address}}">
-                                        </div>
-                                     </div>
-                                     <div class="data-item" data-toggle="modal" data-target="#profile-edit">
-                                        <div class="data-col">
-                                           <span class="data-label">Role</span>
-                                           <input type="roled_as" class="form-control" name="roled_as" value="{{$data->roled_as}}" disabled>
-                                        </div>
-                                     </div>
-                                     <!-- data-item -->
-                                  </div>
-                                  <!-- data-list -->
-                               </div>
-                               <button type="submit"  style="float: right;">Update Profile</button>
-                               <!-- .nk-block -->
+                    <div class="card-inner">
+                       <div class="card-head">
+                          <h5 class="card-title">Profile Settinge</h5>
+                       </div>
+                       @if(session()->has('message'))
+                       <div class="alert alert-success">
+                          {{ session()->get('message') }}
+                       </div>
+                       @endif
+                       <form action="{{route('profiles.update',$data->id)}}" method="post" enctype="multipart/form-data">
+                          @csrf
+                          @method('put')
+                          <div class="row mb-0">
+                          <div class="col-sm-12 text-center mb-0">
+                            <img src="{{asset($data->profile_image)}}" style="width:30%; height:50%; margin-bottom:0% border-radius:70%" class="card-img-top" alt="">
                             </div>
-                           </form>
-                            <!-- .tab-pane -->
-                         </div>
-                         <!-- .tab-content -->
-                      </div>
+                          </div>
+                          <div class="row gy-4">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label">Profile Picture Upload</label>
+                                    <div class="form-control-wrap">
+                                        <div class="custom-file">
+                                            <input type="file" name="profile_image" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                      <!-- card-aside -->
-                   </div>
-                   <!-- .card-aside-wrap -->
-                </div>
-                <!-- .card -->
-             </div>
-             <!-- .nk-block -->
+                          </div>
+                          <div class="row g-4">
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="full-name-1">Full Name</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="name" value="{{ $data->name }}" id="full-name-1">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="email-address-1">Email address</label>
+                                   <div class="form-control-wrap">
+                                      <input type="email" class="form-control" name="email" value="{{$data->email}}" id="email-address-1">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="phone-no-1">Phone No</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="contact" value="{{$data->contact}}" id="phone-no-1">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="pay-amount-1">Street Address</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="street_address" value="{{$data->street_address}}">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="pay-amount-1">City</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="city" value="{{$data->city}}">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="pay-amount-1">State</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="state" value="{{$data->state}}">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="pay-amount-1">Phone Number</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="address" value="{{$data->contact}}" placeholder="123-456-7890"/>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-12">
+                                <div class="form-group">
+                                   <button type="submit" class="btn btn-lg btn-primary">Edit Profile</button>
+                                </div>
+                             </div>
+                          </div>
+                       </form>
+                    </div>
+                 </div>
           </div>
        </div>
     </div>

@@ -52,7 +52,7 @@
     <!-- TradingView Widget END -->
       <div class="nk-block">
          <div class="row g-gs">
-            <div class="col-xxl-6 col-md-6">
+            <div class="col-xxl-12 col-md-12">
                <div class="card   h-100">
                   <div class="d-flex">
                      <div class="m-5">
@@ -112,7 +112,7 @@
                      </div>
                      <div class="data">
                         <div class="data-group">
-                            <span class="change down text-danger py-2"><small> {{ $last_order->product->product_id  ?? ''}}</small></span>
+
                            <div  style="color:#DBAE58"  class="amount">${{ $last_order->total ?? '' }}</div>
 
                            <div class="nk-ecwg6-ck">

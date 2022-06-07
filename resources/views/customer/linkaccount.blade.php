@@ -3,7 +3,7 @@
 <div class="nk-content ">
     <div class="container-fluid">
         <div class="nk-content-inner">
-            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark"><em class="icon ni ni-chevrons-left"></em> Link an Account</h5></div>
+            <div class="nk-block-head-sub    text-dark"><h5 class="text-dark">Tell Us About Your Current Portfolio</h5></div>
             <div class="nk-content-body  " style="background-color: white">
                 <div class="content-page  ">
                     <div class="nk-content ">
@@ -28,13 +28,59 @@
                                 </svg>
                                 <!-- <img  src="./images/gfx/error-404.svg" alt=""> -->
                                 <h5 class="nk-error-title">Soon you will be able to</h5>
-                                <h5 class="nk-error-title">link all your retirement accounts into one dashboard</h5>
-                                <p class="nk-error-text">Go from no-code to an in-demand junior web developer, at a fraction of the cost of a bootcamp.
-                                    Start with the front-end by learning HTML, CSS, and JavaScript. Then, master the back-end
-                                    and APIs to round out your full-stack skills.</p>
-                                <a href="{{ route('dashboard') }}" style="background-color: #394048; color: white; " class="btn btn-lg btn-primary mt-2">Go back to dashboard </a>
+                                <h5 class="nk-error-title">List all your precious metals investments into your MintTrade dashboard in this tab.</h5>
+                                <p class="nk-error-text"> This will allow our experts to grade your portfolio. This will also help guide you in your future diversification goals.</p>
+                                <a href="{{ route('login') }}" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-color-main-1">Login</a>
                             </div>
                         </div><!-- .nk-block -->
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                            </div>
+                        @endif
+                        <form action="{{ route('portfolios.store') }}" method="post">
+                            @csrf
+                            <div class="row g-5 pt-5">
+                               <div class="col-lg-6">
+                                  <div class="form-group">
+                                     <label class="form-label" for="full-name-1">Product Name</label>
+                                     <div class="form-control-wrap">
+                                        <input type="text" class="form-control" name="product_name" placeholder="Client  Name" required>
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="col-md-6">
+                                  <div class="form-group">
+                                     <label class="form-label" for="fv-topics">Purchase Date</label>
+                                     <div class="form-control-wrap">
+                                        <input type="date" class="form-control" name="purchase_date" id="email-address-1" placeholder="Requested time" required>
+                                     </div>
+                                  </div>
+                               </div>
+
+                               <div class="col-md-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="fv-topics">Type Of Product </label>
+                                   <div class="form-control-wrap ">
+                                      <select class="form-control form-select"  name="type" data-placeholder="Select Employees" required>
+                                         <option label="Select Employees" value=""></option>
+                                         <option value="Gold">Gold</option>
+                                         <option value="Silver">Silver</option>
+                                         <option value="Platinium">Platinium</option>
+                                         <option value="Rhodium">Rhodium</option>
+                                         <option value="Rhodium">BTC</option>
+                                         <option value="Paladium">Paladium</option>
+                                      </select>
+                                   </div>
+                                </div>
+                             </div>
+                            <div  class="col-lg-12 text-center" >
+                               <div class="form-group " >
+                                  <button type="submit" style="background-color: #394048; color: white; " class="btn btn-xl  float-center mt-3 ">Submit Portfolio</button>
+                               </div>
+                            </div>
+                      </div>
+                      </form>
                     </div>
                 </div><!-- .content-page -->
             </div>

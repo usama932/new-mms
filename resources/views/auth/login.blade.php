@@ -19,7 +19,7 @@
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Sign-In</h4>
                                         <div class="nk-block-des">
-                                            <p>Access the DashLite panel using your email and passcode.</p>
+                                            <p>Access the MintTrade panel using your email and passcode.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                         <button class="btn btn-lg btn-primary btn-block">Sign in</button>
                                     </div>
                                 </form>
-                             
+
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="nk-block-content text-center text-lg-left">
-                                        <p class="text-soft">&copy; 2022 DashLite. All Rights Reserved.</p>
+                                        <p class="text-soft">&copy; 2022 MintTrade. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </div>

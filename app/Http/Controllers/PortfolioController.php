@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Auth;
 
-class ProfileController extends Controller
+class PortfolioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        $portfolios = Portfolio::all();
 
-        $q = Auth::user()->id;
-        $data = User::where('id',$q)->first();
-        return view('admin.profiles.profile',compact('data'));
-
+        return view('admin.portfolio',compact('portfolios'));
     }
 
     /**
@@ -41,7 +38,16 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Portfolio::create([
+            'product_name' => $request->product_name,
+            'purchase_date' => $request->purchase_date,
+            'type' => $request->type,
+            'contact' => auth()->user()->contact,
+            'full_name' =>  auth()->user()->name,
+        ]);
+
+        return redirect()->route('link.account')->with('success', 'Portfolio Added Successfully');
     }
 
     /**
@@ -75,30 +81,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $id = auth()->user()->id;
-        if ($request->has('profile_image')) {
-
-            $image = $request->file('profile_image');
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-           $image =  $image->move($destinationPath, $profileImage);
-           User::where('id',$id)->update([
-            'profile_image' => $image
-
-        ]);
-        }
-
-        $user = User::where('id',$id)->update([
-            'name' => $request->name,
-            'city' => $request->city,
-            'state' => $request->state,
-            'street_address' => $request->street_address,
-            'contact' => $request->contact,
-            'email' => $request->email,
-
-        ]);
-        return redirect()->route('profiles.index')->with('message','Profile update Successfully.');
+        //
     }
 
     /**
@@ -109,6 +92,8 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $portfolios = Portfolio::find($id);
+        $portfolios->delete();
+        return redirect()->route('portfolios.index')->with('success', 'Portfolio Deleted Successfully');
     }
 }

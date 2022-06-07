@@ -19,7 +19,7 @@
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Register</h4>
                                         <div class="nk-block-des">
-                                            <p>Create New Dashlite Account</p>
+                                            <p>Create New MintTrade Account</p>
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@
                                     <div class="form-group">
                                         <div class="custom-control custom-control-xs custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="checkbox">
-                                            <label class="custom-control-label" for="checkbox">I agree to Dashlite <a href="#">Privacy Policy</a> &amp; <a href="#"> Terms.</a></label>
+                                            <label class="custom-control-label" for="checkbox">I agree to MintTrade <a href="#">Privacy Policy</a> &amp; <a href="#"> Terms.</a></label>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="nk-block-content text-center text-lg-left">
-                                        <p class="text-soft">&copy; 2022 DashLite. All Rights Reserved.</p>
+                                        <p class="text-soft">&copy; 2022 MintTrade. All Rights Reserved.</p>
                                     </div>
                                 </div>
                             </div>

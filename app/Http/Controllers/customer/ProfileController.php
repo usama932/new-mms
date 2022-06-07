@@ -76,11 +76,25 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
+
         $id = auth()->user()->id;
+
+        if ($request->has('profile_image')) {
+            $image = $request->file('profile_image');
+            $destinationPath = 'image/';
+            $profileImage = $image->getClientOriginalName();
+           $image =  $image->move($destinationPath, $profileImage);
+
+           User::where('id',$id)->update([
+            'profile_image' => $image
+
+        ]);
+        }
         $user = User::where('id',$id)->update([
             'name' => $request->name,
-            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'street_address' => $request->street_address,
             'contact' => $request->contact,
             'email' => $request->email,
         ]);

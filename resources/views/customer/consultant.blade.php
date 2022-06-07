@@ -81,23 +81,23 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-lg-6">
+                     {{-- <div class="col-lg-6">
                         <div class="form-group">
                            <label class="form-label" for="email-address-1">Company name</label>
                            <div class="form-control-wrap">
                               <input type="text" class="form-control" name="company_name" id="email-address-1" placeholder="Company name" required>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-6">
+                     </div> --}}
+                     {{-- <div class="col-lg-6">
                         <div class="form-group">
                            <label class="form-label" for="email-address-1">Website URL</label>
                            <div class="form-control-wrap">
                               <input type="url" class="form-control" name="website" placeholder="Website URL" required>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-md-6">
+                     </div> --}}
+                     {{-- <div class="col-md-6">
                         <div class="form-group">
                            <label class="form-label" for="fv-topics">Employees</label>
                            <div class="form-control-wrap ">
@@ -110,11 +110,11 @@
                               </select>
                            </div>
                         </div>
-                     </div>
-                 
+                     </div> --}}
+
                      <div class="col-md-6">
                         <div class="form-group">
-                           <label class="form-label" for="fv-topics">Choose a Day That Suits you Best</label>
+                           <label class="form-label" for="fv-topics">Choose a Day That Suits You Best</label>
                            <div class="form-control-wrap">
                               <input type="date" class="form-control" name="requested_Date" id="email-address-1" placeholder="Requested time" required>
                            </div>
@@ -122,7 +122,7 @@
                      </div>
                      <div class="col-lg-6">
                         <div class="form-group">
-                           <label class="form-label" for="fv-topics">Choose a Time That Suits you Best</label>
+                           <label class="form-label" for="fv-topics">Choose a Time That Suits You Best</label>
                            <div class="form-control-wrap">
                               <input type="time" class="form-control" name="requested_time" id="email-address-1" placeholder="Requested time" required>
                            </div>
@@ -131,7 +131,7 @@
                   </div>
                   <div class="col-lg-12 mb-2x mt-5">
                      <div class="form-group">
-                        <label class="form-label" for="cf-default-textarea">Additional notes</label>
+                        <label class="form-label" for="cf-default-textarea">Please Tell Us, What You want to discuss.</label>
                         <div class="form-control-wrap">
                            <textarea class="form-control form-control-sm" id="cf-default-textarea" name="notes"></textarea>
                         </div>
@@ -139,7 +139,7 @@
                   </div>
                   <div  class="col-lg-12 text-center" >
                      <div class="form-group " >
-                        <button type="submit" style="background-color: #394048; color: white; " class="btn btn-xl  float-center mt-3 ">Send message</button>
+                        <button type="submit" style="background-color: #394048; color: white; " class="btn btn-xl  float-center mt-3 ">Schedule Consultation</button>
                      </div>
                   </div>
             </div>

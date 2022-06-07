@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\CountryStateCityController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\admin\CustomerController;
@@ -46,6 +47,8 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 });
+
+Route::resource('portfolios',PortfolioController::class);
 Route::get('country-state-city', [CountryStateCityController::class, 'index']);
     Route::post('get-states-by-country', [CountryStateCityController::class, 'getState']);
     Route::post('get-cities-by-state', [CountryStateCityController::class, 'getCity']);

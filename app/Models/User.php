@@ -27,8 +27,11 @@ class User extends Authenticatable
         'password',
         'roled_as',
         'is_active',
-        'grade'.
-        'profile_image'
+        'grade',
+        'profile_image',
+        'state',
+        'street_address',
+        'city'
     ];
 
     /**
