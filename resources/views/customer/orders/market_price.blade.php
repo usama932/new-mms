@@ -14,8 +14,8 @@
             <!-- .nk-block-between -->
          </div>
          <!-- .nk-block-head -->
-         <div class="row">
-            <div lass="col-lg-3">
+         <div class="row ">
+            <div class="col-lg-3">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -39,7 +39,8 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-3 ml-4">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 ml-4">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -63,33 +64,35 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-3 ml-4">
-             <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TVC-PLATINUM/" rel="noopener" target="_blank"><span class="blue-text">PLATINUM Quotes</span></a> by TradingView</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-    {
-    "symbol": "TVC:PLATINUM",
-    "width": 350,
-    "height": 220,
-    "locale": "en",
-    "dateRange": "12M",
-    "colorTheme": "light",
-    "trendLineColor": "rgba(41, 98, 255, 1)",
-    "underLineColor": "rgba(41, 98, 255, 0.3)",
-    "underLineBottomColor": "rgba(41, 98, 255, 0)",
-    "isTransparent": false,
-    "autosize": false,
-    "largeChartUrl": ""
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-3 ml-4">
+               <!-- TradingView Widget BEGIN -->
+               <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TVC-PLATINUM/" rel="noopener" target="_blank"><span class="blue-text">PLATINUM Quotes</span></a> by TradingView</div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                     {
+                     "symbol": "TVC:PLATINUM",
+                     "width": 350,
+                     "height": 220,
+                     "locale": "en",
+                     "dateRange": "12M",
+                     "colorTheme": "light",
+                     "trendLineColor": "rgba(41, 98, 255, 1)",
+                     "underLineColor": "rgba(41, 98, 255, 0.3)",
+                     "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                     "isTransparent": false,
+                     "autosize": false,
+                     "largeChartUrl": ""
+                     }
+                  </script>
+               </div>
+               <!-- TradingView Widget END -->
             </div>
          </div>
-         <div class="row">
-            <div lass="col-lg-3 ">
+         <div class="row mt-3">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -113,7 +116,8 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-3 ml-4">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 ml-4">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -137,29 +141,30 @@
                </div>
                <!-- TradingView Widget END -->
             </div>
-            <div lass="col-lg-3 my-4">
-           <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BSE-RODIUM/" rel="noopener" target="_blank"><span class="blue-text">RODIUM Quotes</span></a> by TradingView</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-    {
-    "symbol": "BSE:RODIUM",
-    "width": 350,
-    "height": 220,
-    "locale": "en",
-    "dateRange": "12M",
-    "colorTheme": "light",
-    "trendLineColor": "rgba(41, 98, 255, 1)",
-    "underLineColor": "rgba(41, 98, 255, 0.3)",
-    "underLineBottomColor": "rgba(41, 98, 255, 0)",
-    "isTransparent": false,
-    "autosize": false,
-    "largeChartUrl": ""
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 ml-4">
+               <!-- TradingView Widget BEGIN -->
+               <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BSE-RODIUM/" rel="noopener" target="_blank"><span class="blue-text">RODIUM Quotes</span></a> by TradingView</div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                     {
+                     "symbol": "BSE:RODIUM",
+                     "width": 350,
+                     "height": 220,
+                     "locale": "en",
+                     "dateRange": "12M",
+                     "colorTheme": "light",
+                     "trendLineColor": "rgba(41, 98, 255, 1)",
+                     "underLineColor": "rgba(41, 98, 255, 0.3)",
+                     "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                     "isTransparent": false,
+                     "autosize": false,
+                     "largeChartUrl": ""
+                     }
+                  </script>
+               </div>
+               <!-- TradingView Widget END -->
             </div>
          </div>
          <div lass="col-lg-6 mb-5">
