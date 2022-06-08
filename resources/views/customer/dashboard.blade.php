@@ -57,13 +57,13 @@
                   <div class="d-flex">
                      <div class="mt-5 ml-5 mr-3">
                         <strong>Welcome back</strong><br>
-                       <b>{{ auth()->user()->name }}</b>
+                       <b>{{ auth()->user()->first_name }}&nbsp&nbsp{{ auth()->user()->last_name }}</b>
                         <p class="text-primary">User Since <br>{{ date('m-d-Y', strtotime(auth()->user()->created_at)) }}</p>
                      </div>
-                     <div class="card mt-4 mr-3 p-3">
+                     <div class="card mt-4 mr-3 ml-5">
                         <!-- <div class="row"> -->
                         <div class="col-12">
-                           <h1 class="text-center text-muted pt-3"><b>{{ auth()->user()->grade }}</b></h1>
+                           <h1 class="text-center text-muted "><b>{{ auth()->user()->grade }}</b></h1>
                            <small class="text-primary">overall portfolio grade</small>
                            <!-- </div> -->
                         </div>

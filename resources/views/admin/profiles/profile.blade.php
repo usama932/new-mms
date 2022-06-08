@@ -43,9 +43,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelIn
                           <div class="row g-4">
                              <div class="col-lg-6">
                                 <div class="form-group">
-                                   <label class="form-label" for="full-name-1">Full Name</label>
+                                   <label class="form-label" for="full-name-1">First Name</label>
                                    <div class="form-control-wrap">
-                                      <input type="text" class="form-control" name="name" value="{{ $data->name }}" id="full-name-1">
+                                      <input type="text" class="form-control" name="first_name" value="{{ $data->first_name }}" id="full-name-1">
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="full-name-1">Last Name</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="last_name" value="{{ $data->last_name }}" id="full-name-1">
                                    </div>
                                 </div>
                              </div>

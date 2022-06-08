@@ -90,7 +90,9 @@ class ProfileController extends Controller
         }
 
         $user = User::where('id',$id)->update([
-            'name' => $request->name,
+            'name' => '',
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'city' => $request->city,
             'state' => $request->state,
             'street_address' => $request->street_address,
