@@ -97,8 +97,10 @@ class ProfileController extends Controller
             'city' => $request->city,
             'state' => $request->state,
             'street_address' => $request->street_address,
+            'street_address1' => $request->street_address1,
             'contact' => $request->contact,
             'email' => $request->email,
+            'country' => $request->country,
         ]);
         return redirect()->route('customer_profiles.index')->with('message','Profile update Successfully.');
     }
