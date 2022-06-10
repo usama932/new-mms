@@ -22,6 +22,8 @@
                             <img class="logo-light logo-img logo-img-lg" src="{{asset('/images/GMRGold_Logos.png')}}" srcset="{{asset('/images/GMRGold_Logos.png')}}" alt="logo">
                             <img class="logo-dark logo-img logo-img-lg" src="{{asset('/images/GMRGold_Logos.png')}}" srcset="" alt="logo-dark">
                             </a>
+                            <br>
+                            <label>Open Your New MintTrade Account</label>
                          </div>
                          <div class="card-inner">
                             @if($errors->any())
@@ -75,12 +77,20 @@
                                   </div>
                                   <div class="col-md-6">
                                      <div class="form-group">
-                                        <label class="form-label" for="fw-email-address">Street Address</label>
+                                        <label class="form-label" for="fw-email-address">Street Address 1</label>
                                         <div class="form-control-wrap">
-                                           <input type="text" data-msg="Required" data-msg-email="Wrong Email" class="form-control required email" id="street_address" name="street_address" placeholder="Enter Your Street Address" required>
+                                           <input type="text" data-msg="Required" data-msg-email="Wrong Email" class="form-control required email" id="street_address" name="street_address" placeholder="Enter Your Street Address 1" required>
                                         </div>
                                      </div>
                                   </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label class="form-label" for="fw-email-address">Street Address 2</label>
+                                       <div class="form-control-wrap">
+                                          <input type="text" data-msg="Required" data-msg-email="Wrong Email" class="form-control required email" id="street_address1" name="street_address1" placeholder="Enter Your Street Address 2" required>
+                                       </div>
+                                    </div>
+                                 </div>
                                   <div class="col-md-6">
                                      <div class="form-group">
                                         <label class="form-label" for="fw-mobile-number">City</label>
@@ -97,6 +107,14 @@
                                         </div>
                                      </div>
                                   </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label class="form-label" for="fw-mobile-number">Country</label>
+                                       <div class="form-control-wrap">
+                                          <input type="text" data-msg="Required" class="form-control required" id="fw-mobile-number" name="country" placeholder="Enter Your Country" required>
+                                       </div>
+                                    </div>
+                                 </div>
                                   <div class="col-md-6">
                                      <div class="form-group">
                                         <label class="form-label" for="fw-mobile-number">Profile Picture (Optional)</label>
@@ -145,30 +163,7 @@
                    </div>
                    <!-- .nk-block -->
                 </div>
-                <div class="nk-footer nk-auth-footer-full">
-                   <div class="container wide-lg">
-                      <div class="row g-3">
-                         <div class="col-lg-6 order-lg-last">
-                            <ul class="nav nav-sm justify-content-center justify-content-lg-end">
-                               <li class="nav-item">
-                                  <a class="nav-link" href="#">Terms & Condition</a>
-                               </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" href="#">Privacy Policy</a>
-                               </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" href="#">Help</a>
-                               </li>
-                            </ul>
-                         </div>
-                         <div class="col-lg-6">
-                            <div class="nk-block-content text-center text-lg-left">
-                               <p class="text-soft">&copy; 2022 MintTrade. All Rights Reserved.</p>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
+
              </div>
              <!-- wrap @e -->
           </div>

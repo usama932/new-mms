@@ -59,6 +59,8 @@ class RegisteredUserController extends Controller
             'state' => $request->state,
             'city' => $request->city,
             'street_address' => $request->street_address,
+            'street_address1' => $request->street_address1,
+            'country' => $request->country,
             'contact' =>  $request->contact,
             'grade' => $request->grade,
             'is_active' => $request->is_active,

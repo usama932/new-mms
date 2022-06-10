@@ -37,9 +37,10 @@
                     <tr>
                         <th>Full Name</th>
                        <th>Product Name</th>
+                       <th>Type</th>
+                       <th>Quantity</th>
                        <th>Phone</th>
                        <th>Purchase Date</th>
-
                        <th>Action</th>
 
                     </tr>
@@ -49,6 +50,8 @@
                     <tr>
                         <td>{{$portfolio->full_name}}</td>
                        <td>{{$portfolio->product_name}}</td>
+                       <td>{{$portfolio->type}}</td>
+                       <td>{{$portfolio->quantity}}</td>
                        <td>{{$portfolio->contact}}</td>
                        <td>{{ \Carbon\Carbon::parse($portfolio->purchase_date)->format('m/d/Y')}}</td>
                        <td>

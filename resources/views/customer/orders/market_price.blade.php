@@ -14,7 +14,7 @@
             <!-- .nk-block-between -->
          </div>
          <!-- .nk-block-head -->
-         <div class="row ">
+         <div class="row mr-5">
             <div class="col-lg-3">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
@@ -91,7 +91,7 @@
                <!-- TradingView Widget END -->
             </div>
          </div>
-         <div class="row mt-3">
+         <div class="row mt-3 mr-5">
             <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">

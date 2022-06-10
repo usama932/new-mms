@@ -131,7 +131,7 @@
                   </div>
                   <div class="col-lg-12 mb-2x mt-5">
                      <div class="form-group">
-                        <label class="form-label" for="cf-default-textarea">Please Tell Us, What You want to discuss.</label>
+                        <label class="form-label" for="cf-default-textarea">Please Tell Us, What You Would like To Discuss.</label>
                         <div class="form-control-wrap">
                            <textarea class="form-control form-control-sm" id="cf-default-textarea" name="notes"></textarea>
                         </div>

@@ -30,10 +30,6 @@
                                          No image
                                         @endif
                                     </a>
-                                    <ul class="product-badges">
-                                        <li><span class="badge badge-success">New</span></li>
-                                    </ul>
-
                                 </div>
                                 <div class="card-inner text-center">
                                     <ul class="product-tags">

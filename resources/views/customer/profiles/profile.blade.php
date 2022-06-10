@@ -77,6 +77,14 @@
                            </div>
                         </div>
                      </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <label class="form-label" for="fw-email-address">Street Address 2</label>
+                           <div class="form-control-wrap">
+                              <input type="text" data-msg="Required" data-msg-email="Wrong Email" class="form-control required email" id="street_address1" name="street_address1" value="{{$data->street_address1}}" placeholder="Enter Your Street Address 2" required>
+                           </div>
+                        </div>
+                     </div>
                      <div class="col-lg-6">
                         <div class="form-group">
                            <label class="form-label" for="pay-amount-1">City</label>
@@ -90,6 +98,14 @@
                            <label class="form-label" for="pay-amount-1">State</label>
                            <div class="form-control-wrap">
                               <input type="text" class="form-control" name="state" value="{{$data->state}}">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="form-group">
+                           <label class="form-label" for="pay-amount-1">Country</label>
+                           <div class="form-control-wrap">
+                              <input type="text" class="form-control" name="address" value="{{$data->country}}">
                            </div>
                         </div>
                      </div>

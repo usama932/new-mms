@@ -109,7 +109,7 @@
                             <li class="nk-menu-item">
                                 <a href="{{ route('link.account') }}" class="nk-menu-link">
                                     <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
-                                    <span class="nk-menu-text">Link an Account</span>
+                                    <span class="nk-menu-text">Submit Your Portfolio</span>
                                 </a>
                             </li>
                             <li class="nk-menu-item">
@@ -134,14 +134,14 @@
                                     </div>
                                     </form>
                             </li>
-                            <hr>
-                            <li class="nk-menu-item ">
-                                <a href="https://www.gmrgold.com/" class="ml-5 " >
-                                <button class="btn btn-info " >Shop Now</button></a>
-                            </li>
+
+
 
                         </ul>
+                        <hr>
 
+                            <a href="https://www.gmrgold.com/" class="ml-3" >
+                            <button class="btn btn-info " style="width:90%; justify-content:center" >Shop Now</button></a>
 
 
                         </div><!-- .nk-sidebar-menu -->
@@ -174,7 +174,7 @@
                                         <a href="#" class="dropdown-toggle mr-n1" data-toggle="dropdown">
                                             <div class="user-toggle ">
                                                 <div  class="user-avatar sm  " style="background-color:#DBAE58">
-                                                    <em class="icon ni ni-user-alt  "></em>
+                                                    <img src="{{asset(Auth::user()->profile_image)}}" alt="">
                                                 </div>
                                                 <div class="user-info d-none d-xl-block  ">
                                                     <div  style="color: #DBAE58;"   class="user-status user-status-active ">{{Auth::user()->name}}</div>

@@ -27,10 +27,10 @@
                                     <path d="M53.45,58.85v9.41a1.9,1.9,0,0,1-1,1.65l-5.79,3.34a1.92,1.92,0,0,1-1.91,0L39,69.91a1.9,1.9,0,0,1-1-1.65V61.57a1.9,1.9,0,0,1,1-1.65l5.78-3.34a1.92,1.92,0,0,1,1.91,0l1.09.63V55.58l-.91-.53a2.28,2.28,0,0,0-2.26,0l-6.85,4a2.25,2.25,0,0,0-1.13,2v7.91a2.27,2.27,0,0,0,1.13,2l6.85,4a2.28,2.28,0,0,0,2.26,0l6.84-4a2.27,2.27,0,0,0,1.13-2V59.68Z" fill="#394048" />
                                 </svg>
                                 <!-- <img  src="./images/gfx/error-404.svg" alt=""> -->
-                                <h5 class="nk-error-title">Soon you will be able to</h5>
+                                {{-- <h5 class="nk-error-title">Soon you will be able to</h5> --}}
                                 <h5 class="nk-error-title">List all your precious metals investments into your MintTrade dashboard in this tab.</h5>
-                                <p class="nk-error-text"> This will allow our experts to grade your portfolio. This will also help guide you in your future diversification goals.</p>
-                                <a href="{{ route('login') }}" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-color-main-1">Login</a>
+                                <p class="nk-error-text"> This will allow our experts to grade your portfolio.<br> This will also help guide you in your future diversification goals.</p>
+
                             </div>
                         </div><!-- .nk-block -->
                         @if(session()->has('success'))
@@ -45,15 +45,23 @@
                                   <div class="form-group">
                                      <label class="form-label" for="full-name-1">Product Name</label>
                                      <div class="form-control-wrap">
-                                        <input type="text" class="form-control" name="product_name" placeholder="Client  Name" required>
+                                        <input type="text" class="form-control" name="product_name" placeholder="Product  Name" required>
                                      </div>
                                   </div>
                                </div>
                                <div class="col-md-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="fv-topics">Quantity</label>
+                                   <div class="form-control-wrap">
+                                      <input type="number" class="form-control" name="quantity" id="email-address-1" placeholder="Quantity" required>
+                                   </div>
+                                </div>
+                             </div>
+                               <div class="col-md-6">
                                   <div class="form-group">
                                      <label class="form-label" for="fv-topics">Purchase Date</label>
                                      <div class="form-control-wrap">
-                                        <input type="date" class="form-control" name="purchase_date" id="email-address-1" placeholder="Requested time" required>
+                                        <input type="date" class="form-control" name="purchase_date" id="email-address-1" placeholder="Purchase date" required>
                                      </div>
                                   </div>
                                </div>
@@ -63,7 +71,7 @@
                                    <label class="form-label" for="fv-topics">Type Of Product </label>
                                    <div class="form-control-wrap ">
                                       <select class="form-control form-select"  name="type" data-placeholder="Select Employees" required>
-                                         <option label="Select Employees" value=""></option>
+
                                          <option value="Gold">Gold</option>
                                          <option value="Silver">Silver</option>
                                          <option value="Platinium">Platinium</option>

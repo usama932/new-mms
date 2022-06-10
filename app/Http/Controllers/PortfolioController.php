@@ -43,8 +43,9 @@ class PortfolioController extends Controller
             'product_name' => $request->product_name,
             'purchase_date' => $request->purchase_date,
             'type' => $request->type,
+            'quantity' => $request->quantity,
             'contact' => auth()->user()->contact,
-            'full_name' =>  auth()->user()->name,
+            'full_name' =>  auth()->user()->first_name.''.auth()->user()->last_name,
         ]);
 
         return redirect()->route('link.account')->with('success', 'Portfolio Added Successfully');

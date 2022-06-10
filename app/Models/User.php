@@ -33,7 +33,9 @@ class User extends Authenticatable
         'profile_image',
         'state',
         'street_address',
-        'city'
+        'city',
+        'country',
+        'street_address1'
     ];
 
     /**
