@@ -105,7 +105,7 @@
                         <div class="form-group">
                            <label class="form-label" for="pay-amount-1">Country</label>
                            <div class="form-control-wrap">
-                              <input type="text" class="form-control" name="address" value="{{$data->country}}">
+                              <input type="text" class="form-control" name="country" value="{{$data->country}}">
                            </div>
                         </div>
                      </div>
