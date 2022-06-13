@@ -1,4 +1,7 @@
 @extends('layouts.customer')
+@php
+    use App\Models\User;
+@endphp
 @section('content')
 <div class="container-fluid">
     <div class="nk-content-inner">
@@ -83,7 +86,7 @@
                             <tr>
                                 <th>Order No</th>
                                 <th>Order Date</th>
-                                <th>Order to Name</th>
+                                <th>Order By</th>
                                 <th>Total</th>
                                 <th>Status</th>
                                 <th>Action</th>
@@ -94,7 +97,13 @@
                             <tr>
                             <td>{{ $order->id }}</td>
                             <td>{{ \Carbon\Carbon::parse($order->created_at)->format('m/d/Y')}}</td>
-                            <td>{{ $order->user_id}}</td>
+                            <td>
+                            @php
+
+                                $user = User::where('id',$order->user_id)->value('name');
+                                echo $user;
+                            @endphp
+                            </td>
                             <td>{{ $order->total }}</td>
                             <td>{{ $order->status  }}</td>
                             <td>

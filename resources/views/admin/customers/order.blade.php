@@ -1,3 +1,8 @@
+
+@php
+
+    use App\Models\Product;
+@endphp
 <x-app-layout>
     <div class="nk-content ">
         <div class="container-fluid">
@@ -33,7 +38,7 @@
                               </thead>
                               <tbody>
                                 @foreach($orders as $order)
-                                @if(isset($order))
+
                                     <tr>
                                         <td>
                                             {{ $order->id }}
@@ -43,7 +48,12 @@
                                             {{ date('d-m-Y', strtotime($order->created_at)) }}
                                         </td>
                                         <td>
-                                            {{ $order->product->title }}
+                                            @if(!empty($order->product_id))
+                                                @php
+                                                    $title = Product::where('id',$order->product_id)->value('title');
+                                                    echo $title;
+                                                @endphp
+                                            @endif
                                         </td>
                                         <td>
                                             {{ $order->description }}
@@ -101,7 +111,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                @endif
+
                                 @endforeach
                               </tbody>
                            </table>
