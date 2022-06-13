@@ -50,7 +50,6 @@ class OrderController extends Controller
     {
         $products = Product::where('id',$id)->with('user','images')->first();
        $r =   str_replace("$", " ", $request->total);
-
         Order::create([
             'name' => $request->name,
             'address' => $request->address,
