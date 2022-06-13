@@ -48,18 +48,13 @@
                                             {{ date('d-m-Y', strtotime($order->created_at)) }}
                                         </td>
                                         <td>
-                                            @if(!empty($order->product_id))
-                                                @php
-                                                    $title = Product::where('id',$order->product_id)->value('title');
-                                                    echo $title;
-                                                @endphp
-                                            @endif
+                                           {{  $order->product_id}}
                                         </td>
                                         <td>
                                             {{ $order->description }}
                                         </td>
                                         <td>
-                                            {{ $order-> }}
+                                            {{ $order->user_id }}
                                         </td>
                                         <td>
                                             {{ $order->total }}
