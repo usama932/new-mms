@@ -48,7 +48,7 @@
                                         @csrf
                                        <div class="row g-gs">
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  auth()->user()->name}}" name="name" required>
-                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->id}}" name="product_id" required>
+                                        <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->name}}" name="product_id" required>
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->price}}" name="total" required>
                                         <input type="hidden" class="form-control" id="fv-full-name" value="{{  $products->description}}" name="description" required>
                                         <div class="form-group">

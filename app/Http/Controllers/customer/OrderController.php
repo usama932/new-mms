@@ -61,7 +61,7 @@ class OrderController extends Controller
             'status' => 'Pending',
             'description' => $request->description,
             'total' => $r,
-            'user_id' => auth()->user()->id,
+            'user_id' => auth()->user()->name,
             'product_id' => $request->product_id
         ]);
         return view('customer.orders.payment',compact('products'));
@@ -70,7 +70,7 @@ class OrderController extends Controller
 
     public function stripePost(Request $request)
     {
-        
+
         // $key = getenv('STRIPE_SECRET');
         // $stripe = new Stripe\Stripe($key);
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));

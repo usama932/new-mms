@@ -59,7 +59,7 @@
                                             {{ $order->description }}
                                         </td>
                                         <td>
-                                            {{ $order->user->name }}
+                                            {{ $order-> }}
                                         </td>
                                         <td>
                                             {{ $order->total }}
