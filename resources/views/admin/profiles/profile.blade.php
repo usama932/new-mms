@@ -106,8 +106,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelIn
                                 </div>
                              </div>
                              <div class="col-12">
-                                <div class="form-group">
-                                   <button type="submit" class="btn btn-lg btn-primary">Edit Profile</button>
+                                <div class="text-center">
+                                   <button type="submit" class="btn btn-primary btn-sm">Update Profile</button>
                                 </div>
                              </div>
                           </div>

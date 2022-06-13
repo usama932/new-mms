@@ -35,9 +35,8 @@ use App\Models\Role;
                                     <th>User ID</th>
                                     <th>Full Name</th>
                                     <th>Contact</th>
-                                    <th>Address</th>
                                     <th>Email</th>
-                                    <th>Status</th>
+                                    {{-- <th>Status</th> --}}
                                     <th>Role</th>
                                     <th>Action</th>
                                 </tr>
@@ -48,11 +47,10 @@ use App\Models\Role;
                                     <td>{{$staffs->id}}</td>
                                     <td>{{$staffs->name}}</td>
                                     <td>{{$staffs->contact}}</td>
-                                    <td>{{$staffs->address}}</td>
                                     <td>{{$staffs->email}}</td>
-                                    <td>
+                                    {{-- <td>
                                         {{$staffs->status}}
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         @php
                                             $user = Role::where('id',$staffs->role->role_id)->value('name');
@@ -98,41 +96,33 @@ use App\Models\Role;
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="product-title">Full Name</label>
+                                    <label class="form-label" for="product-title">First Name</label>
                                     <div class="form-control-wrap">
-                                        <input type="text" class="form-control" id="product-title" placeholder="loremipsum" name="name">
+                                        <input type="text" class="form-control" id="product-title" placeholder="First Name" name="first_name">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="product-title">Contact</label>
+                                    <label class="form-label" for="product-title">Last Name</label>
                                     <div class="form-control-wrap">
-                                        <input type="text" class="form-control" id="product-title" name="contact" >
+                                        <input type="text" class="form-control" id="product-title" placeholder="Last Name" name="last_name">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="product-title">Email</label>
+                                    <label class="form-label" for="product-title">Phone Number</label>
                                     <div class="form-control-wrap">
-                                        <input type="email" class="form-control" id="product-title" placeholder="lorem@gmail.com" name="email">
+                                        <input type="text" class="form-control" id="product-title" placeholder="(111) 222-3333" name="contact" >
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="product-title">Password</label>
+                                    <label class="form-label" for="product-title">Contact Email</label>
                                     <div class="form-control-wrap">
-                                        <input type="text" class="form-control" id="product-title" placeholder="124$$qwr" name="password">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label" for="product-title">Address</label>
-                                    <div class="form-control-wrap">
-                                        <input type="text" class="form-control" id="product-title" placeholder="151 W.42nd Street New York" name="address">
+                                        <input type="email" class="form-control" id="product-title" placeholder="abc@gmail.com" name="email">
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +139,14 @@ use App\Models\Role;
                                 </div>
                             </div>
 
-
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label" for="product-title">Password</label>
+                                    <div class="form-control-wrap">
+                                        <input type="text" class="form-control" id="product-title" placeholder="124$$qwr" name="password">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <button class="btn btn-primary"><span>Save</span></button>
                             </div>

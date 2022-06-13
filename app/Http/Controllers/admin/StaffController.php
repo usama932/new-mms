@@ -55,10 +55,10 @@ class StaffController extends Controller
 
         ]);
         $user = User::create([
-            'name' => $request->name,
+            'first_name' => $request->first_name,
+            'last_name' => $request->first_name,
             'email' => $request->email,
             'contact' => $request->contact,
-            'address' => $request->address,
             'roled_as' => $request->role_id,
             'password' => Hash::make($request->password),
         ]);

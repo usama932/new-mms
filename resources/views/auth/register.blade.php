@@ -148,7 +148,7 @@
                                   <div class="col-md-12">
                                      <div class="custom-control custom-checkbox">
                                         <input type="checkbox" data-msg="Required" class="custom-control-input required" name="fw-policy" id="fw-policy" required>
-                                        <label class="custom-control-label" for="fw-policy">I agreed Terms and policy</label>
+                                        <label class="custom-control-label" for="fw-policy">Agree to Terms and Conditions</label>
                                      </div>
                                   </div>
                                </div>

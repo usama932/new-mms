@@ -111,7 +111,7 @@
                      </div>
                      <div class="col-12">
                         <div class="text-center">
-                           <button type="submit" class="btn btn-primary btn-sm">Edit Profile</button>
+                           <button type="submit" class="btn btn-primary btn-sm">Update Profile</button>
                         </div>
                      </div>
                   </div>
