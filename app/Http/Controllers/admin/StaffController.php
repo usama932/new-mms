@@ -49,14 +49,16 @@ class StaffController extends Controller
     {
 
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required',  'max:255'],
-            'address' => ['required', 'max:255'],
+
 
         ]);
         $user = User::create([
+            'name' => '',
             'first_name' => $request->first_name,
-            'last_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'contact' => $request->contact,
             'roled_as' => $request->role_id,

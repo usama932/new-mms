@@ -33,7 +33,8 @@ use App\Models\Role;
                             <thead>
                                 <tr>
                                     <th>User ID</th>
-                                    <th>Full Name</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
                                     <th>Contact</th>
                                     <th>Email</th>
                                     {{-- <th>Status</th> --}}
@@ -45,7 +46,8 @@ use App\Models\Role;
                                 @foreach($staff as $staffs)
                                 <tr>
                                     <td>{{$staffs->id}}</td>
-                                    <td>{{$staffs->name}}</td>
+                                    <td>{{$staffs->first_name}}</td>
+                                    <td>{{$staffs->last_name}}</td>
                                     <td>{{$staffs->contact}}</td>
                                     <td>{{$staffs->email}}</td>
                                     {{-- <td>
@@ -89,6 +91,16 @@ use App\Models\Role;
                         </div>
                     </div><!-- .nk-block-head -->
                     <div class="nk-block">
+                        @if($errors->any())
+                        <div class="alert alert-danger">
+                           <p><strong>Opps Something went wrong</strong></p>
+                           <ul>
+                              @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                              @endforeach
+                           </ul>
+                        </div>
+                        @endif
                     <form method="post" action="{{route('staffs.store')}}">
                         @csrf
 
