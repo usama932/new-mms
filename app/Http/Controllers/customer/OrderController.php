@@ -61,7 +61,7 @@ class OrderController extends Controller
             'status' => 'Pending',
             'description' => $request->description,
             'total' => $r,
-            'user_id' => auth()->user()->name,
+            'user_id' => auth()->user()->id,
             'product_id' => $request->product_id
         ]);
         return view('customer.orders.payment',compact('products'));
