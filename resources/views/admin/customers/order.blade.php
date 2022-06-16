@@ -2,6 +2,7 @@
 @php
 
     use App\Models\Product;
+    use App\Models\User;
 @endphp
 <x-app-layout>
     <div class="nk-content ">
@@ -48,13 +49,25 @@
                                             {{ date('d-m-Y', strtotime($order->created_at)) }}
                                         </td>
                                         <td>
-                                           {{  $order->product_id}}
+
+                                           @php
+                                               $title = Product::where('id','$order->product_id')->value('title');
+                                               echo $title;
+                                           @endphp
                                         </td>
                                         <td>
                                             {{ $order->description }}
                                         </td>
                                         <td>
-                                            {{ $order->user_id }}
+                                            @if(!empty($order->user_id))
+                                            @php
+                                            $first_name = User::where('id','$order->user_id')->value('first_name');
+                                            $last_name = User::where('id','$order->user_id')->value('last_name');
+                                            echo $first_name.' '.$last_name;
+
+
+                                        @endphp
+                                         @endif
                                         </td>
                                         <td>
                                             {{ $order->total }}
