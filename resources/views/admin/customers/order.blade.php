@@ -50,10 +50,7 @@
                                         </td>
                                         <td>
 
-                                           @php
-                                               $title = Product::where('id','$order->product_id')->value('title');
-                                               echo $title;
-                                           @endphp
+                                         
                                         </td>
                                         <td>
                                             {{ $order->description }}

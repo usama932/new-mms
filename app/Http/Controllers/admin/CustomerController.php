@@ -51,9 +51,10 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-       $profile = User::where('id',$id)->first();
-       $customers = Order::where('user_id',$id)->latest()->with('user','product')->get();
-       return view('admin.customers.show',compact('profile','customers'));
+    
+       $meeting = User::where('id',$id)->first();
+       $customers = Order::where('user_id',$id)->get();
+       return view('admin.customers.show',compact('meeting','customers'));
     }
 
     /**

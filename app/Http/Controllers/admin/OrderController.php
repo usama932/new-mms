@@ -17,7 +17,7 @@ class OrderController extends Controller
     {
 
         $orders = Order::with('product','user')->latest()->get();
-        
+
         return view('admin.customers.order',compact('orders'));
     }
 
@@ -51,8 +51,9 @@ class OrderController extends Controller
     public function show($id)
     {
 
-        $order = Order::where('id', $id)->first();
-        return view('admin.customers.order',compact('order'));
+        $orders = Order::where('id', $id)->get();
+        dd($orders);
+        return view('admin.customers.order',compact('orders'));
     }
 
     /**

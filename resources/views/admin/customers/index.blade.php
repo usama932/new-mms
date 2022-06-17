@@ -30,7 +30,8 @@
              <table class="datatable-init table">
                 <thead>
                    <tr>
-                      <th>Name</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
                       <th>Grade</th>
                       <th>Purchase</th>
                       <th>Contact</th>
@@ -42,7 +43,8 @@
                 <tbody>
                    @foreach($customers as $customer)
                    <tr>
-                      <td>{{$customer->name}}</td>
+                      <td>{{$customer->first_name}}</td>
+                      <td>{{$customer->last_name}}</td>
                       <td>{{$customer->grade}}</td>
                       <td>{{$customer->Purcahse}}</td>
                       <td>{{$customer->contact}}</td>
