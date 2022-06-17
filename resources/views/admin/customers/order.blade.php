@@ -46,11 +46,11 @@
                                         </td>
                                         <td>
 
-                                            {{ date('d-m-Y', strtotime($order->created_at)) }}
+                                            {{ date('m-d-Y', strtotime($order->created_at)) }}
                                         </td>
                                         <td>
 
-                                         
+
                                         </td>
                                         <td>
                                             {{ $order->description }}

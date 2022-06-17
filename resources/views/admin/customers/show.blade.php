@@ -109,7 +109,7 @@
                                            <th>Date</th>
                                            <th>Total</th>
                                            <th>Status</th>
-                                           <th>Action</th>
+                                           {{-- <th>Action</th> --}}
                                         </tr>
                                      </thead>
                                      <tbody>
@@ -117,15 +117,15 @@
                                         <tr>
                                             <td>{{$customer->id}}</td>
                                             <td>{{$customer->product_id}}</td>
-                                            <td>{{$customer->Created_at}}</td>
+                                            <td> {{ date('m-d-Y', strtotime($customer->created_at)) }}</td>
                                             <td>{{$customer->total}}</td>
                                             <td>{{$customer->status}}</td>
                                             <td>
                                             </td>
-                                            <td>
+                                             {{-- <td>
                                              <li><a href="{{route('orders.show',$customer->id)}}"><em class="icon ni ni-eye"></em><span>View Selected</span></a></li>
                                              <li><a href="#"><em class="icon ni ni-trash"></em><span>Remove Order</span></a></li>
-                                            </td>
+                                            </td> --}}
                                          </tr>
                                         @endforeach
 

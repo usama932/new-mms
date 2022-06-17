@@ -49,7 +49,7 @@ class OrderController extends Controller
     public function order_store(Request $request, $id)
     {
         $products = Product::where('id',$id)->with('user','images')->first();
-       $r =   str_replace("$", " ", $request->total);
+        $r = str_replace("$", " ", $request->total);
         Order::create([
             'name' => $request->name,
             'address' => $request->address,
@@ -60,7 +60,7 @@ class OrderController extends Controller
             'status' => 'Pending',
             'description' => $request->description,
             'total' => $r,
-            'user_id' => auth()->user()->id,
+            'user_id' => auth()->user()->first_name.''.auth()->user()->last_name,
             'product_id' => $request->product_id
         ]);
         return view('customer.orders.payment',compact('products'));
