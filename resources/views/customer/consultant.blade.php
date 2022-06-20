@@ -10,7 +10,53 @@
          {{ session()->get('success') }}
       </div>
       @endif
-      <div class="d-flex py-4">
+
+      <!--  -->
+
+
+      <div class="nk-block">
+                                    <div class="row g-gs">
+                                        <div class="col-sm-6 col-lg-6 col-xxl-3">
+                                        <div class="card text-white " style="position:relative">
+               <div class="card-inner ">
+                  <div class="d-flex ">
+                     <div class="user-avatar bg-lighter p-5 border-dark">
+                        <em class="icon ni ni-call"></em>
+                     </div>
+                     <div  class="pl-4 py-2">
+                        <p class=" text-dark">Call us direct at</p>
+                        <h5 class=" text-dark">+45 52 67 29 31</h5>
+                     </div>
+                  </div>
+               </div>
+            </div>   
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-xxl-3">
+                                        <div class="card text-white " style="position:relative">
+               <div class="card-inner ">
+                  <div class="d-flex mx-3">
+                     <div class="user-avatar bg-lighter p-5" >
+                        <em class="icon ni ni-chat-circle "></em>
+                     </div>
+                     <div  class="pl-4 py-1">
+                        <p class="card-title text-dark">Chat with our sales team</p>
+                        <button  style="background-color: #394048; color: white; " class="btn btn-sm  float-center">Live Chat << Comming Soon..! >> </button>
+                     </div>
+                  </div>
+               </div>
+            </div>   
+                                        </div>
+                                       
+                                       
+                                     
+                                     
+                                     
+<!--                                        
+                                    </div>
+                                </div> -->
+
+      <!--  -->
+      <!-- <div class="d-flex py-4">
          <div class="col-6 ">
             <div class="card text-white ">
                <div class="card-inner ">
@@ -41,7 +87,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <div class="nk-content-inner">
          <div class="nk-content-body col-12 " style="background-color: white">
             <div class="content-page  ">

@@ -32,7 +32,8 @@
     @endif
         <div class="card card-preview">
            <div class="card-inner">
-              <table class="datatable-init table">
+            <div class="table-responsive">
+              <table class="datatable-init table"  data-auto-responsive="false">
                  <thead>
                     <tr>
                         <th>Full Name</th>
@@ -72,6 +73,7 @@
                     @endforeach
                  </tbody>
               </table>
+</div>
            </div>
         </div>
 

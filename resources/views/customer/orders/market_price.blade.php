@@ -15,7 +15,7 @@
          </div>
          <!-- .nk-block-head -->
          <div class="row mr-5">
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -40,7 +40,7 @@
                <!-- TradingView Widget END -->
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-3 ml-4">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-1"></div>
 
-            <div class="col-lg-3 ml-4">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -117,7 +117,7 @@
                <!-- TradingView Widget END -->
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-3 ml-4">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>
@@ -142,7 +142,7 @@
                <!-- TradingView Widget END -->
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-3 ml-4">
+            <div class="col-lg-3 ">
                <!-- TradingView Widget BEGIN -->
                <div class="tradingview-widget-container">
                   <div class="tradingview-widget-container__widget"></div>

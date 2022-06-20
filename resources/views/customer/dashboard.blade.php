@@ -60,7 +60,7 @@
                        <b>{{ auth()->user()->first_name }}&nbsp&nbsp{{ auth()->user()->last_name }}</b>
                         <p class="text-primary">User Since <br>{{ date('m-d-Y', strtotime(auth()->user()->created_at)) }}</p>
                      </div>
-                     <div class="card mt-4 mr-3 ml-5">
+                     <div class="card my-3 mx-3">
                         <!-- <div class="row"> -->
                         <div class="col-12">
                            <h1 class="text-center text-muted "><b>{{ auth()->user()->grade }}</b></h1>
@@ -110,7 +110,7 @@
                   <div class="card-inner">
                      <div class="card-title-group">
                         <div class="card-title">
-                           <h6 class="title">Last Order</h6>
+                           <h6 class="title pt-3">Last Order</h6>
                         </div>
                      </div>
                      <div class="data">
@@ -160,7 +160,7 @@
                   <div class="card-inner">
                      <div class="card-title-group">
                         <div class="card-title">
-                           <h6 class="title">Total Investment</h6>
+                           <h6 class="title pt-3">Total Investment</h6>
                         </div>
                      </div>
                      <div class="data">
