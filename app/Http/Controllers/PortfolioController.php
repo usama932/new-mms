@@ -50,7 +50,7 @@ class PortfolioController extends Controller
             'full_name' =>  auth()->user()->first_name.''.auth()->user()->last_name,
         ]);
 
-        return redirect()->route('link.account')->with('success', 'Portfolio Added Successfully');
+        return redirect()->back()->with('success', 'Portfolio Added Successfully');
     }
 
     /**
