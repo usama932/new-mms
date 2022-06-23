@@ -50,7 +50,7 @@
                                             {{ date('m-d-Y', strtotime($order->created_at)) }}
                                         </td>
                                         <td>
-
+                                            {{ $order->product_id }}
 
                                         </td>
                                         <td>

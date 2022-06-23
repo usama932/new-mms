@@ -17,7 +17,7 @@ class OrderController extends Controller
     {
 
         $orders = Order::with('product','user')->latest()->get();
-
+       
         return view('admin.customers.order',compact('orders'));
     }
 
@@ -52,7 +52,7 @@ class OrderController extends Controller
     {
 
         $orders = Order::where('id', $id)->get();
-        dd($orders);
+
         return view('admin.customers.order',compact('orders'));
     }
 
