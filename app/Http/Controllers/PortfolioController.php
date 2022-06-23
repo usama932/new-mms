@@ -44,6 +44,8 @@ class PortfolioController extends Controller
             'purchase_date' => $request->purchase_date,
             'type' => $request->type,
             'quantity' => $request->quantity,
+            'sku' => $request->sku,
+            'purchase_from' => $request->purchase_from,
             'contact' => auth()->user()->contact,
             'full_name' =>  auth()->user()->first_name.''.auth()->user()->last_name,
         ]);

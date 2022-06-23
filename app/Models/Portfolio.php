@@ -9,6 +9,6 @@ class Portfolio extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'product_name', 'purchase_date', 'type', 'contact','full_name','quantity'
+        'product_name', 'purchase_date', 'type', 'contact','full_name','quantity','sku','purchase_from','purchase_price'
     ];
 }

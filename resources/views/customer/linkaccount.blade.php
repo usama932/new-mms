@@ -49,7 +49,31 @@
                                      </div>
                                   </div>
                                </div>
+                               <div class="col-lg-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="full-name-1">SKU</label>
+                                   <div class="form-control-wrap">
+                                      <input type="number" class="form-control" name="sku" placeholder="SKU" required>
+                                   </div>
+                                </div>
+                             </div>
                                <div class="col-md-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="fv-topics">Purchase From</label>
+                                   <div class="form-control-wrap">
+                                      <input type="text" class="form-control" name="purchase_from" id="email-address-1" placeholder="Purchase_from" required>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                   <label class="form-label" for="fv-topics">Purchase Price</label>
+                                   <div class="form-control-wrap">
+                                      <input type="number" class="form-control" name="purchase_price" id="email-address-1" placeholder="Purchase_price" required>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-md-6">
                                 <div class="form-group">
                                    <label class="form-label" for="fv-topics">Quantity</label>
                                    <div class="form-control-wrap">
@@ -72,12 +96,12 @@
                                    <div class="form-control-wrap ">
                                       <select class="form-control form-select"  name="type" data-placeholder="Select Employees" required>
 
-                                         <option value="Gold">Gold</option>
-                                         <option value="Silver">Silver</option>
-                                         <option value="Platinium">Platinium</option>
-                                         <option value="Rhodium">Rhodium</option>
-                                         <option value="Rhodium">BTC</option>
-                                         <option value="Paladium">Paladium</option>
+                                         <option value="Bullion">Bullion</option>
+                                         <option value="Semi-Rare">Semi-Rare</option>
+                                         <option value="Graded">Graded</option>
+                                         <option value="Rare">Rare</option>
+                                         <option value="Collector">Collector</option>
+                                         <option value="Other">Other</option>
                                       </select>
                                    </div>
                                 </div>

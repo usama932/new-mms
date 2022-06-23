@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('portfolios', function (Blueprint $table) {
+            $table->string('sku')->nullable();
+            $table->string('purchase_from')->nullable();
             $table->integer('quantity')->nullable();
+            $table->string('purchase_price')->nullable();
         });
     }
 
