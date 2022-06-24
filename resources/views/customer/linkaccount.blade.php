@@ -40,6 +40,7 @@
                         @endif
                         <form action="{{ route('portfolios.store') }}" method="post">
                             @csrf
+                            <input type="hidden" name="full_name" value="{{ Auth::user()->first_name."  ".Auth::user()->last_name}}">
                             <div class="row g-5 pt-5">
                                <div class="col-lg-6">
                                   <div class="form-group">

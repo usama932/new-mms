@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class PortfolioController extends Controller
 {
@@ -16,8 +17,9 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolios = Portfolio::all();
+        $users = User::where('roled_as','customer')->get();
 
-        return view('admin.portfolio',compact('portfolios'));
+        return view('admin.portfolio',compact('portfolios','users'));
     }
 
     /**
@@ -47,7 +49,7 @@ class PortfolioController extends Controller
             'sku' => $request->sku,
             'purchase_from' => $request->purchase_from,
             'contact' => auth()->user()->contact,
-            'full_name' =>  auth()->user()->first_name.''.auth()->user()->last_name,
+            'full_name' =>  $request->full_name,
         ]);
 
         return redirect()->back()->with('success', 'Portfolio Added Successfully');

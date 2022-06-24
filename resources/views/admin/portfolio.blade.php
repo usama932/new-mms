@@ -3,7 +3,7 @@
        <div class="nk-block-head nk-block-head-sm">
           <div class="nk-block-between">
              <div class="nk-block-head-content">
-                <h3 class="nk-block-title page-title">Consultation Meetings</h3>
+                <h3 class="nk-block-title page-title">Customer Porfolios</h3>
              </div>
              <ul class="nk-block-tools g-3 float-right">
                 <li class="nk-block-tools-opt ">
@@ -110,6 +110,16 @@
        <div class="nk-block">
           <form action="{{ route('portfolios.store') }}" method="post">
              @csrf
+             <div class="col-lg-12">
+                <div class="form-group">
+                   <label class="form-label" for="fv-topics">Customer </label>
+                      <select class="form-control form-select"  name="full_name" data-placeholder="Select Customer" required>
+                        @foreach ($users as $user)
+                        <option value="{{ $user->first_name."  ".$user->last_name }}">{{ $user->first_name."  ".$user->last_name }}</option>
+                        @endforeach
+                      </select>
+                </div>
+             </div>
              <div class="row g-5 pt-5">
                 <div class="col-lg-12">
                    <div class="form-group">
