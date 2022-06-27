@@ -26,8 +26,8 @@
                                     <path d="M53.45,58.85v9.41a1.9,1.9,0,0,1-1,1.65l-5.79,3.34a1.92,1.92,0,0,1-1.91,0L39,69.91a1.9,1.9,0,0,1-1-1.65V61.57a1.9,1.9,0,0,1,1-1.65l5.78-3.34a1.92,1.92,0,0,1,1.91,0l1.09.63V55.58l-.91-.53a2.28,2.28,0,0,0-2.26,0l-6.85,4a2.25,2.25,0,0,0-1.13,2v7.91a2.27,2.27,0,0,0,1.13,2l6.85,4a2.28,2.28,0,0,0,2.26,0l6.84-4a2.27,2.27,0,0,0,1.13-2V59.68Z" fill="#394048" />
                                 </svg>
                                 <!-- <img  src="./images/gfx/error-404.svg" alt=""> -->
-                               
-                                <h5 class="nk-error-title">COMING SOON!</h5>
+
+                                <h3 class="nk-error-title">COMING SOON!</h3>
                                 <p class="nk-error-text">We are currently working on this feature. We will be here soon.</p>
                                 <a href="{{ route('dashboard') }}" style="background-color: #394048; color: white; " class="btn btn-lg btn-primary mt-2">Go back to dashboard </a>
                             </div>
