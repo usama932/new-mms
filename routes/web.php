@@ -31,6 +31,7 @@ use App\Http\Controllers\customer\OrderController as customer_OrderController;
 use App\Http\Controllers\customer\FaqsController as customer_FaqsController;
 use App\Http\Controllers\Request_meetingController as customer_meetingController;
 use App\Http\Controllers\customer\AccountsController;
+use App\Http\Controllers\customer\TradeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -108,8 +109,11 @@ Route::group(['prefix' => 'customer', 'middleware' => ['role:customer']], functi
     Route::get('link/accounts', [AccountsController::class, 'link_account'])->name('link.account');
     Route::get('consultant', [AccountsController::class, 'consultant'])->name('consultant');
     //stripe
-     Route::get('stripe', [customer_OrderController::class, 'stripe']);
+    Route::get('stripe', [customer_OrderController::class, 'stripe']);
     Route::post('stripe', [customer_OrderController::class, 'stripePost'])->name('stripe.post');
+    //
+    Route::get('trades', [TradeController::class, 'trade'])->name('trade.index');
+    Route::get('fund', [TradeController::class, 'fund_wallet'])->name('fund.wallet');
 
 
 

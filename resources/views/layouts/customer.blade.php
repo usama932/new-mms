@@ -64,6 +64,12 @@
                                     </a>
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
+                                    <a href="{{ route('trade.index') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-briefcase"></em></span>
+                                        <span class="nk-menu-text">Make a Trade</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
                                     <a href="{{route('suggest')}}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-bag-fill"></em></span>
                                         <span class="nk-menu-text">Suggested Products</span>
@@ -100,24 +106,30 @@
                             <hr>
                             <span class=" nk-menu-item">Accounts</span>
                             <ul class="nk-menu">
-                            <li class="nk-menu-item">
-                                <a href="{{ route('customer_faqs.index') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
-                                    <span class="nk-menu-text">FAQ's</span>
-                                </a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="{{ route('link.account') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
-                                    <span class="nk-menu-text">Submit Your Portfolio</span>
-                                </a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="{{ route('consultant') }}" class="nk-menu-link">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-server-fill"></em></span>
-                                    <span class="nk-menu-text">Request Consultation</span>
-                                </a>
-                            </li>
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('fund.wallet') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
+                                        <span class="nk-menu-text">Funding My Wallet</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('customer_faqs.index') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-view-list-fill"></em></span>
+                                        <span class="nk-menu-text">FAQ's</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('link.account') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-tile-thumb-fill"></em></span>
+                                        <span class="nk-menu-text">Submit Your Portfolio</span>
+                                    </a>
+                                </li>
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('consultant') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-list-thumb-alt"></em></span>
+                                        <span class="nk-menu-text">Request Consultation</span>
+                                    </a>
+                                </li>
                             <hr>
                             <li class="nk-menu-item">
                                 <form method="POST" action="{{ route('logout') }}">
