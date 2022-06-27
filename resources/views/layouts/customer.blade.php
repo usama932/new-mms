@@ -65,7 +65,7 @@
                                 </li><!-- .nk-menu-item -->
                                 <li class="nk-menu-item">
                                     <a href="{{ route('trade.index') }}" class="nk-menu-link">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-briefcase"></em></span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-view-panel-fill"></em></span>
                                         <span class="nk-menu-text">Make a Trade</span>
                                     </a>
                                 </li>
@@ -108,7 +108,7 @@
                             <ul class="nk-menu">
                                 <li class="nk-menu-item">
                                     <a href="{{ route('fund.wallet') }}" class="nk-menu-link">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-bag"></em></span>
+                                        <span class="nk-menu-icon"><em class="icon ni ni-bag-fill"></em></span>
                                         <span class="nk-menu-text">Funding My Wallet</span>
                                     </a>
                                 </li>
